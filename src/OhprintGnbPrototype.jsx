@@ -536,6 +536,7 @@ const INITIAL_DATA = {
   ],
 };
 
+// NOTE: 과거 참고용. 현재 개편안은 OHPRINT_AFTER_CATEGORIES(아래)에 직접 박혀있음
 const NEW_CUP_CATEGORY = {
   id: "cup-tumbler",
   name: "컵/텀블러",
@@ -634,11 +635,1198 @@ const NEW_CUP_CATEGORY = {
   ],
 };
 
+// 오프린트미 개편안 - 아티팩트에서 편집 후 반영된 실제 기획안 구조
+const OHPRINT_AFTER_CATEGORIES = [
+    {
+      id: "sticker",
+      name: "스티커",
+      columns: [
+        {
+          id: "col-sticker-1",
+          groups: [
+            {
+              id: "sticker-single",
+              name: "싱글 스티커",
+              items: [
+                {
+                  id: "s1",
+                  name: "맞춤 싱글 스티커 (낱장)",
+                  badge: "HOT"
+                },
+                {
+                  id: "s2",
+                  name: "원형 싱글 스티커"
+                },
+                {
+                  id: "s3",
+                  name: "정사각 싱글 스티커"
+                },
+                {
+                  id: "s4",
+                  name: "타원 싱글 스티커"
+                },
+                {
+                  id: "s5",
+                  name: "직사각 싱글 스티커"
+                },
+                {
+                  id: "s6",
+                  name: "자유 반칼 스티커"
+                },
+                {
+                  id: "s7",
+                  name: "띠부 스티커"
+                },
+                {
+                  id: "s8",
+                  name: "우표 조각 스티커"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-sticker-2",
+          groups: [
+            {
+              id: "sticker-sheet",
+              name: "시트 스티커",
+              items: [
+                {
+                  id: "sh1",
+                  name: "맞춤 시트 스티커 (DIY)",
+                  badge: "HOT"
+                },
+                {
+                  id: "sh2",
+                  name: "원형 시트 스티커"
+                },
+                {
+                  id: "sh3",
+                  name: "정사각 시트 스티커"
+                },
+                {
+                  id: "sh4",
+                  name: "타원 시트 스티커"
+                },
+                {
+                  id: "sh5",
+                  name: "직사각 시트 스티커"
+                },
+                {
+                  id: "sh6",
+                  name: "와이드 시트 스티커"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-sticker-3",
+          groups: [
+            {
+              id: "sticker-roll",
+              name: "롤 스티커",
+              items: [
+                {
+                  id: "r1",
+                  name: "원형 롤 스티커"
+                },
+                {
+                  id: "r2",
+                  name: "정사각 롤 스티커"
+                },
+                {
+                  id: "r3",
+                  name: "타원 롤 스티커"
+                },
+                {
+                  id: "r4",
+                  name: "직사각 롤 스티커"
+                },
+                {
+                  id: "r5",
+                  name: "하트 롤 스티커"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-sticker-4",
+          groups: [
+            {
+              id: "sticker-decal",
+              name: "데칼 스티커",
+              items: [
+                {
+                  id: "d1",
+                  name: "컬러 데칼 스티커"
+                },
+                {
+                  id: "d2",
+                  name: "그래픽 데칼 스티커"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "card-bc",
+      name: "명함",
+      columns: [
+        {
+          id: "col-bc-1",
+          groups: [
+            {
+              id: "bc-best",
+              name: "베스트",
+              items: [
+                {
+                  id: "bb1",
+                  name: "오리지널 명함",
+                  badge: "HOT"
+                },
+                {
+                  id: "bb2",
+                  name: "프리미엄 매트 명함",
+                  badge: "HOT"
+                },
+                {
+                  id: "bb3",
+                  name: "소프트 명함",
+                  badge: "HOT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-bc-2",
+          groups: [
+            {
+              id: "bc-premium",
+              name: "고급",
+              items: [
+                {
+                  id: "bp1",
+                  name: "리넨 명함",
+                  badge: "HOT"
+                },
+                {
+                  id: "bp2",
+                  name: "펠트 명함",
+                  badge: "HOT"
+                },
+                {
+                  id: "bp3",
+                  name: "펄 명함",
+                  badge: "HOT"
+                },
+                {
+                  id: "bp4",
+                  name: "매트블랙 명함"
+                },
+                {
+                  id: "bp5",
+                  name: "투명 명함"
+                },
+                {
+                  id: "bp6",
+                  name: "투명 글로시 명함"
+                },
+                {
+                  id: "bp7",
+                  name: "골드 글로시 명함"
+                },
+                {
+                  id: "bp8",
+                  name: "실버 글로시 명함"
+                },
+                {
+                  id: "bp9",
+                  name: "홀로그램 글로시 명함"
+                },
+                {
+                  id: "bp10",
+                  name: "럭스 명함"
+                },
+                {
+                  id: "bp11",
+                  name: "박 명함"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-bc-3",
+          groups: [
+            {
+              id: "bc-shape",
+              name: "모양",
+              items: [
+                {
+                  id: "bs1",
+                  name: "기본 명함"
+                },
+                {
+                  id: "bs2",
+                  name: "둥근 기본 명함"
+                },
+                {
+                  id: "bs3",
+                  name: "글로벌 명함"
+                },
+                {
+                  id: "bs4",
+                  name: "둥근 글로벌 명함"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-bc-4",
+          groups: [
+            {
+              id: "bc-eco",
+              name: "친환경",
+              items: [
+                {
+                  id: "be1",
+                  name: "리사이클 명함"
+                },
+                {
+                  id: "be2",
+                  name: "크라프트 명함"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-bc-5",
+          groups: [
+            {
+              id: "bc-acc",
+              name: "액세서리",
+              items: [
+                {
+                  id: "ba1",
+                  name: "아크릴 명함 홀더"
+                },
+                {
+                  id: "ba2",
+                  name: "알루미늄 명함 케이스"
+                },
+                {
+                  id: "ba3",
+                  name: "자석 명함 케이스"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "promo",
+      name: "홍보물",
+      columns: [
+        {
+          id: "col-promo-1",
+          groups: [
+            {
+              id: "promo-ad",
+              name: "홍보용품",
+              items: [
+                {
+                  id: "pa1",
+                  name: "전단"
+                },
+                {
+                  id: "pa2",
+                  name: "브로슈어"
+                },
+                {
+                  id: "pa3",
+                  name: "쿠폰"
+                },
+                {
+                  id: "pa4",
+                  name: "포스터"
+                },
+                {
+                  id: "pa5",
+                  name: "현수막"
+                },
+                {
+                  id: "pa6",
+                  name: "양면 배너"
+                },
+                {
+                  id: "pa7",
+                  name: "부채"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-promo-2",
+          groups: [
+            {
+              id: "promo-store",
+              name: "가게용품",
+              items: [
+                {
+                  id: "ps1",
+                  name: "메뉴판"
+                },
+                {
+                  id: "ps2",
+                  name: "테이블탑 사인"
+                },
+                {
+                  id: "ps3",
+                  name: "A 프레임 사인"
+                },
+                {
+                  id: "ps4",
+                  name: "원형 롤 스티커"
+                },
+                {
+                  id: "ps5",
+                  name: "맞춤 싱글 스티커 (낱장)",
+                  badge: "HOT"
+                },
+                {
+                  id: "ps6",
+                  name: "그래픽 데칼 스티커"
+                },
+                {
+                  id: "ps7",
+                  name: "에이프런(앞치마)"
+                },
+                {
+                  id: "ps8",
+                  name: "쇼핑백"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-promo-3",
+          groups: [
+            {
+              id: "promo-gift",
+              name: "기념품",
+              items: [
+                {
+                  id: "pg1",
+                  name: "메모패드"
+                },
+                {
+                  id: "pg2",
+                  name: "베이직 볼펜"
+                },
+                {
+                  id: "pg3",
+                  name: "핀 버튼"
+                },
+                {
+                  id: "pg4",
+                  name: "포토 티켓"
+                },
+                {
+                  id: "pg5",
+                  name: "심플 글라스"
+                },
+                {
+                  id: "pg6",
+                  name: "리유저블컵"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "banner",
+      name: "현수막/배너",
+      columns: [
+        {
+          id: "col-banner-1",
+          groups: [
+            {
+              id: "banner-main",
+              name: "",
+              items: [
+                {
+                  id: "bn1",
+                  name: "현수막"
+                },
+                {
+                  id: "bn2",
+                  name: "스탠다드 배너"
+                },
+                {
+                  id: "bn3",
+                  name: "양면 배너"
+                },
+                {
+                  id: "bn4",
+                  name: "롤업 배너"
+                },
+                {
+                  id: "bn5",
+                  name: "미니 배너"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "poster",
+      name: "포스터/사인",
+      columns: [
+        {
+          id: "col-poster-1",
+          groups: [
+            {
+              id: "poster-main",
+              name: "",
+              items: [
+                {
+                  id: "po1",
+                  name: "포스터"
+                },
+                {
+                  id: "po2",
+                  name: "보드 사인"
+                },
+                {
+                  id: "po3",
+                  name: "아크릴 사인"
+                },
+                {
+                  id: "po4",
+                  name: "메탈 사인"
+                },
+                {
+                  id: "po5",
+                  name: "원목 사인"
+                },
+                {
+                  id: "po6",
+                  name: "테이블탑 사인"
+                },
+                {
+                  id: "po7",
+                  name: "A 프레임 사인"
+                },
+                {
+                  id: "po8",
+                  name: "카 마그넷"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "goods",
+      name: "굿즈",
+      badge: "HOT",
+      columns: [
+        {
+          id: "col-goods-1",
+          groups: [
+            {
+              id: "goods-diary",
+              name: "다이어리/메모",
+              items: [
+                {
+                  id: "gd1",
+                  name: "하드커버 다이어리",
+                  badge: "HOT"
+                },
+                {
+                  id: "gd2",
+                  name: "투명PVC커버 다이어리",
+                  badge: "HOT"
+                },
+                {
+                  id: "gd3",
+                  name: "소프트커버 다이어리",
+                  badge: "HOT"
+                },
+                {
+                  id: "gd4",
+                  name: "메모패드"
+                },
+                {
+                  id: "gd5",
+                  name: "노트패드"
+                }
+              ]
+            },
+            {
+              id: "lsnckkg5",
+              name: "스마트 액세서리",
+              items: [
+                {
+                  id: "s7wnquuo",
+                  name: "맥세이프 가죽 카드지갑"
+                },
+                {
+                  id: "d2ng5gln",
+                  name: "에어팟 케이스"
+                },
+                {
+                  id: "t0378azp",
+                  name: "버즈 케이스"
+                },
+                {
+                  id: "i37015jl",
+                  name: "스마트톡"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-goods-2",
+          groups: [
+            {
+              id: "57jexill",
+              name: "아크릴 키링",
+              items: [
+                {
+                  id: "hma5t6sr",
+                  name: "아크릴 키링",
+                  badge: "HOT"
+                },
+                {
+                  id: "03zl09ja",
+                  name: "투명 컬러 아크릴 키링"
+                },
+                {
+                  id: "92m5odi0",
+                  name: "컬러 아크릴 키링",
+                  badge: "HOT"
+                },
+                {
+                  id: "bjqooqot",
+                  name: "글리터 아크릴 키링"
+                },
+                {
+                  id: "5fg3n5iq",
+                  name: "반투명 아크릴 키링"
+                },
+                {
+                  id: "bago88im",
+                  name: "파스텔 아크릴 키링"
+                },
+                {
+                  id: "fsaibzzb",
+                  name: "반투명 파스텔 아크릴 키링"
+                },
+                {
+                  id: "6t340fhv",
+                  name: "자개 아크릴 키링"
+                },
+                {
+                  id: "c3u94z4w",
+                  name: "홀로그램 아크릴 키링"
+                },
+                {
+                  id: "6cte9c8i",
+                  name: "하프미러 아크릴 키링"
+                },
+                {
+                  id: "71sexx34",
+                  name: "미러 아크릴 키링"
+                },
+                {
+                  id: "s4o8i5br",
+                  name: "야광 아크릴 키링"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-goods-3",
+          groups: [
+            {
+              id: "goods-acrylic",
+              name: "아크릴 스탠드/코롯토",
+              items: [
+                {
+                  id: "t8snvucx",
+                  name: "DIY 아크릴 스탠드",
+                  badge: "HOT"
+                },
+                {
+                  id: "90ntni6y",
+                  name: "아크릴 등신대"
+                },
+                {
+                  id: "mud0j29n",
+                  name: "회전 아크릴 등신대"
+                },
+                {
+                  id: "p3sebx0k",
+                  name: "입체 아크릴 코롯토 자율형"
+                },
+                {
+                  id: "l53302fa",
+                  name: "양면 아크릴 코롯토"
+                },
+                {
+                  id: "mznzo8k7",
+                  name: "아크릴 코롯토 자율형"
+                }
+              ]
+            },
+            {
+              id: "i88oba01",
+              name: "아크릴 액세서리",
+              items: [
+                {
+                  id: "75saky9z",
+                  name: "아크릴 스마트톡",
+                  badge: "HOT"
+                },
+                {
+                  id: "q6fnec76",
+                  name: "아크릴 데코 마그넷"
+                },
+                {
+                  id: "5cbesd9x",
+                  name: "아크릴 마그넷"
+                },
+                {
+                  id: "m3ormipc",
+                  name: "아크릴 집게"
+                },
+                {
+                  id: "rg7bfbbk",
+                  name: "아크릴 뱃지"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-goods-4",
+          groups: [
+            {
+              id: "goods-btn",
+              name: "버튼",
+              items: [
+                {
+                  id: "gb1",
+                  name: "핀 버튼"
+                },
+                {
+                  id: "gb2",
+                  name: "거울 버튼"
+                },
+                {
+                  id: "gb3",
+                  name: "자석 버튼"
+                }
+              ]
+            },
+            {
+              id: "103banaq",
+              name: "마우스 패드",
+              items: [
+                {
+                  id: "beiaxdfy",
+                  name: "오바록 장패드"
+                },
+                {
+                  id: "o4lamekc",
+                  name: "블랙 오바록 장패드"
+                },
+                {
+                  id: "ua3tqhf0",
+                  name: "오바록 마우스패드"
+                },
+                {
+                  id: "oxd677d5",
+                  name: "오바록 게이밍 마우스패드"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-goods-5",
+          groups: [
+            {
+              id: "goods-pen",
+              name: "볼펜/필기류",
+              items: [
+                {
+                  id: "gp1",
+                  name: "베이직 볼펜"
+                },
+                {
+                  id: "gp2",
+                  name: "스탠다드 볼펜"
+                },
+                {
+                  id: "gp3",
+                  name: "친환경 볼펜"
+                }
+              ]
+            },
+            {
+              id: "goods-photo",
+              name: "포토 굿즈",
+              items: [
+                {
+                  id: "gph1",
+                  name: "필름 북마크"
+                },
+                {
+                  id: "gph2",
+                  name: "포토 티켓"
+                }
+              ]
+            },
+            {
+              id: "goods-fan",
+              name: "부채",
+              items: [
+                {
+                  id: "gf1",
+                  name: "부채"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "cup-tumbler",
+      name: "컵/텀블러",
+      isNew: true,
+      columns: [
+        {
+          id: "col-ct-1",
+          groups: [
+            {
+              id: "ct-mug",
+              name: "머그컵",
+              items: [
+                {
+                  id: "ctm1",
+                  name: "본차이나 머그컵 S/M"
+                },
+                {
+                  id: "ctm2",
+                  name: "내열유리 반투명 머그컵"
+                },
+                {
+                  id: "ctm3",
+                  name: "제로마크 캠프 스텐컵"
+                },
+                {
+                  id: "ctm4",
+                  name: "라운드 마블 머그컵"
+                },
+                {
+                  id: "ctm5",
+                  name: "컬러 스택 머그컵"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-ct-2",
+          groups: [
+            {
+              id: "ct-glass",
+              name: "유리컵",
+              items: [
+                {
+                  id: "vz2n7hkk",
+                  name: "내열유리 머그컵 S/M/L"
+                },
+                {
+                  id: "ltz889v0",
+                  name: "내열유리 블럭 머그컵 S/M"
+                },
+                {
+                  id: "jq0fgj1n",
+                  name: "위스키 테이스팅 글라스"
+                },
+                {
+                  id: "qgguiauc",
+                  name: "내열유리 고블렛잔"
+                },
+                {
+                  id: "sm00whw6",
+                  name: "내열유리 소주잔"
+                },
+                {
+                  id: "nu92mmwx",
+                  name: "내열유리 손잡이 소주잔"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-ct-3",
+          groups: [
+            {
+              id: "ct-reusable",
+              name: "리유저블컵",
+              items: [
+                {
+                  id: "ctr1",
+                  name: "리유저블컵"
+                },
+                {
+                  id: "ctr2",
+                  name: "반투명 리유저블컵"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-ct-4",
+          groups: [
+            {
+              id: "ct-tumbler",
+              name: "텀블러",
+              items: [
+                {
+                  id: "w0z7sd3v",
+                  name: "제로마크 모니 텀블러"
+                },
+                {
+                  id: "v0ms9vvb",
+                  name: "제로마크 메가 허블 텀블러"
+                },
+                {
+                  id: "gg9eg1pk",
+                  name: "제로마크 맥스 텀블러"
+                },
+                {
+                  id: "i4h0s4qm",
+                  name: "제로마크 몰리 스트로 텀블러"
+                },
+                {
+                  id: "wzo02lsr",
+                  name: "제로마크 다이브 텀블러"
+                },
+                {
+                  id: "4y25ppap",
+                  name: "제로마크 슬로링 텀블러 S/M"
+                },
+                {
+                  id: "o3ho3iar",
+                  name: "제로마크 패스트 텀블러"
+                },
+                {
+                  id: "4al7gf1a",
+                  name: "제로마크 로하스 텀블러"
+                },
+                {
+                  id: "2k78ui6k",
+                  name: "제로마크 카리브 텀블러"
+                },
+                {
+                  id: "vet059ws",
+                  name: "제로마크 코린 텀블러"
+                },
+                {
+                  id: "1hp1aiue",
+                  name: "제로마크 더벅스 텀블러"
+                },
+                {
+                  id: "yiylwl60",
+                  name: "제로마크 소다팝 텀블러"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-ct-5",
+          groups: [
+            {
+              id: "gx3qr6ke",
+              name: "스포츠보틀",
+              items: [
+                {
+                  id: "auxbxth7",
+                  name: "제로마크 메탈 스포츠보틀"
+                },
+                {
+                  id: "m9ympyy8",
+                  name: "제로마크 아쿠아 스포츠보틀"
+                }
+              ]
+            },
+            {
+              id: "tscr4na0",
+              name: "워터보틀",
+              items: [
+                {
+                  id: "meue84yp",
+                  name: "트라이탄 보틀 S/M"
+                },
+                {
+                  id: "1dv7onoc",
+                  name: "트라이탄 메탈캡 보틀 S/M"
+                },
+                {
+                  id: "ed2y132o",
+                  name: "트라이탄 티보틀 S/M"
+                },
+                {
+                  id: "v41kp5vq",
+                  name: "트라이탄 메탈캡 티보틀 S/M"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "card",
+      name: "카드",
+      columns: [
+        {
+          id: "col-card-1",
+          groups: [
+            {
+              id: "card-main",
+              name: "카드",
+              items: [
+                {
+                  id: "c1",
+                  name: "기본 카드"
+                },
+                {
+                  id: "c2",
+                  name: "2단 카드"
+                },
+                {
+                  id: "c3",
+                  name: "투명 글로시 카드"
+                },
+                {
+                  id: "c4",
+                  name: "실버 글로시 카드"
+                },
+                {
+                  id: "c5",
+                  name: "골드 글로시 카드"
+                },
+                {
+                  id: "c6",
+                  name: "홀로그램 글로시 카드"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-card-2",
+          groups: [
+            {
+              id: "card-env",
+              name: "카드봉투",
+              items: [
+                {
+                  id: "ce1",
+                  name: "카드 봉투"
+                },
+                {
+                  id: "ce2",
+                  name: "무지 카드 봉투"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "envelope",
+      name: "봉투/쇼핑백",
+      columns: [
+        {
+          id: "col-env-1",
+          groups: [
+            {
+              id: "env-main",
+              name: "",
+              items: [
+                {
+                  id: "e1",
+                  name: "봉투"
+                },
+                {
+                  id: "e2",
+                  name: "쇼핑백"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "calendar",
+      name: "캘린더",
+      columns: [
+        {
+          id: "col-cal-1",
+          groups: [
+            {
+              id: "cal-main",
+              name: "",
+              items: [
+                {
+                  id: "ca1",
+                  name: "탁상 캘린더"
+                },
+                {
+                  id: "ca2",
+                  name: "벽걸이 캘린더"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "accessory",
+      name: "액세서리",
+      columns: [
+        {
+          id: "col-acc-1",
+          groups: [
+            {
+              id: "acc-main",
+              name: "",
+              items: [
+                {
+                  id: "ac1",
+                  name: "무지봉투"
+                },
+                {
+                  id: "ac2",
+                  name: "아크릴 홀더"
+                },
+                {
+                  id: "ac3",
+                  name: "거치대 및 부자재"
+                },
+                {
+                  id: "ac4",
+                  name: "이젤"
+                },
+                {
+                  id: "ac5",
+                  name: "무지 크라프트 쇼핑백"
+                },
+                {
+                  id: "ac6",
+                  name: "롤스티커 디스펜서"
+                },
+                {
+                  id: "ac7",
+                  name: "PVC 펜 파우치"
+                },
+                {
+                  id: "ac8",
+                  name: "PVC 슬라이드 지퍼백"
+                },
+                {
+                  id: "ac9",
+                  name: "리유저블 스트로우"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "apparel",
+      name: "어패럴",
+      badge: "SALE",
+      columns: [
+        {
+          id: "col-ap-1",
+          groups: [
+            {
+              id: "ap-main",
+              name: "",
+              items: [
+                {
+                  id: "ap1",
+                  name: "티셔츠"
+                },
+                {
+                  id: "ap2",
+                  name: "맨투맨/후드/집업"
+                },
+                {
+                  id: "ap3",
+                  name: "모자"
+                },
+                {
+                  id: "ap4",
+                  name: "잡화"
+                },
+                {
+                  id: "ap5",
+                  name: "자수"
+                },
+                {
+                  id: "ap6",
+                  name: "단체추천"
+                },
+                {
+                  id: "ap7",
+                  name: "클리어런스",
+                  badge: "SALE"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ];
+
 const getInitialAfterData = () => {
-  const afterCategories = JSON.parse(JSON.stringify(INITIAL_DATA.categories));
-  const goodsIndex = afterCategories.findIndex((c) => c.id === "goods");
-  afterCategories.splice(goodsIndex + 1, 0, JSON.parse(JSON.stringify(NEW_CUP_CATEGORY)));
-  return { categories: afterCategories };
+  return { categories: JSON.parse(JSON.stringify(OHPRINT_AFTER_CATEGORIES)) };
 };
 
 // ============================================================================
@@ -2326,7 +3514,7 @@ function DiffSummary({ before, after }) {
 // 영속 저장 키 (아티팩트 storage용) - 사이트별로 분리
 // ============================================================================
 const STORAGE_KEYS = {
-  ohprint: "ohprint-gnb-after-data-v1",
+  ohprint: "ohprint-gnb-after-data-v2", // v2: 사용자 기획안 반영
   apparel: "apparel-gnb-after-data-v2", // v2: 아우터 추가된 개편안 구조
 };
 
