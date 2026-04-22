@@ -641,6 +641,278 @@ const getInitialAfterData = () => {
   return { categories: afterCategories };
 };
 
+// ============================================================================
+// 어패럴 사이트 초기 데이터 (실제 홈페이지 기반)
+// ============================================================================
+const APPAREL_INITIAL_DATA = {
+  categories: [
+    {
+      id: "ap-tshirt",
+      name: "티셔츠",
+      columns: [
+        {
+          id: "col-ap-t-1",
+          groups: [
+            {
+              id: "ap-t-main",
+              name: "",
+              items: [
+                { id: "apt1", name: "반소매 티셔츠" },
+                { id: "apt2", name: "긴소매 티셔츠" },
+                { id: "apt3", name: "민소매 티셔츠" },
+                { id: "apt4", name: "폴로셔츠" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-ap-t-2",
+          groups: [
+            {
+              id: "ap-t-sub",
+              name: "",
+              items: [
+                { id: "apt5", name: "유아동" },
+                { id: "apt6", name: "원피스" },
+                { id: "apt7", name: "자수" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "ap-mtm-hood",
+      name: "맨투맨/후드/집업",
+      columns: [
+        {
+          id: "col-ap-mh-1",
+          groups: [
+            {
+              id: "ap-mh-main",
+              name: "",
+              items: [
+                { id: "apmh1", name: "맨투맨" },
+                { id: "apmh2", name: "후드" },
+                { id: "apmh3", name: "후드집업" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-ap-mh-2",
+          groups: [
+            {
+              id: "ap-mh-sub",
+              name: "",
+              items: [
+                { id: "apmh4", name: "유아동" },
+                { id: "apmh5", name: "바지" },
+                { id: "apmh6", name: "자수" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "ap-hat",
+      name: "모자",
+      badge: "NEW",
+      columns: [
+        {
+          id: "col-ap-h-1",
+          groups: [
+            {
+              id: "ap-h-main",
+              name: "",
+              items: [
+                { id: "aph1", name: "볼캡" },
+                { id: "aph2", name: "스냅백" },
+                { id: "aph3", name: "비니" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-ap-h-2",
+          groups: [
+            {
+              id: "ap-h-sub",
+              name: "",
+              items: [
+                { id: "aph4", name: "버킷햇" },
+                { id: "aph5", name: "자수" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "ap-bag",
+      name: "잡화",
+      columns: [
+        {
+          id: "col-ap-b-1",
+          groups: [
+            {
+              id: "ap-b-1",
+              name: "",
+              items: [
+                { id: "apb1", name: "에코백" },
+                { id: "apb2", name: "파우치" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-ap-b-2",
+          groups: [
+            {
+              id: "ap-b-2",
+              name: "",
+              items: [
+                { id: "apb3", name: "앞치마" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "ap-embroidery",
+      name: "자수",
+      badge: "NEW",
+      columns: [
+        {
+          id: "col-ap-e-1",
+          groups: [
+            {
+              id: "ap-e-1",
+              name: "",
+              items: [
+                { id: "ape1", name: "티셔츠" },
+                { id: "ape2", name: "폴로셔츠" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-ap-e-2",
+          groups: [
+            {
+              id: "ap-e-2",
+              name: "",
+              items: [
+                { id: "ape3", name: "맨투맨/후드/후드집업" },
+                { id: "ape4", name: "모자" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "ap-group",
+      name: "단체 추천",
+      columns: [
+        {
+          id: "col-ap-g-1",
+          groups: [
+            {
+              id: "ap-g-1",
+              name: "",
+              items: [
+                { id: "apg1", name: "티셔츠" },
+                { id: "apg2", name: "맨투맨/후드/후드집업" },
+                { id: "apg3", name: "모자" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-ap-g-2",
+          groups: [
+            {
+              id: "ap-g-2",
+              name: "",
+              items: [
+                { id: "apg4", name: "잡화" },
+                { id: "apg5", name: "자수" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "ap-clearance",
+      name: "클리어런스",
+      badge: "SALE",
+      columns: [
+        {
+          id: "col-ap-c-1",
+          groups: [
+            {
+              id: "ap-c-main",
+              name: "",
+              items: [
+                { id: "apc1", name: "클리어런스" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+// 어패럴 개편안: 변경 전 데이터 복사 후 '아우터' 대카테고리 추가
+const APPAREL_NEW_OUTER_CATEGORY = {
+  id: "ap-outer",
+  name: "아우터",
+  isNew: true,
+  columns: [
+    {
+      id: "col-ap-o-1",
+      groups: [
+        {
+          id: "ap-o-1",
+          name: "",
+          items: [
+            { id: "apo1", name: "바람막이" },
+            { id: "apo2", name: "자켓" },
+            { id: "apo3", name: "조끼" },
+          ],
+        },
+      ],
+    },
+    {
+      id: "col-ap-o-2",
+      groups: [
+        {
+          id: "ap-o-2",
+          name: "",
+          items: [
+            { id: "apo4", name: "플리스" },
+            { id: "apo5", name: "패딩" },
+            { id: "apo6", name: "자수" },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+const getInitialApparelAfterData = () => {
+  const afterCategories = JSON.parse(JSON.stringify(APPAREL_INITIAL_DATA.categories));
+  // 맨투맨/후드/집업(ap-mtm-hood) 바로 뒤에 아우터 삽입
+  const mhIndex = afterCategories.findIndex((c) => c.id === "ap-mtm-hood");
+  afterCategories.splice(mhIndex + 1, 0, JSON.parse(JSON.stringify(APPAREL_NEW_OUTER_CATEGORY)));
+  return { categories: afterCategories };
+};
+
 const uid = () => Math.random().toString(36).slice(2, 10);
 
 const getAllItems = (category) => {
@@ -759,7 +1031,14 @@ function ItemBadge({ type }) {
 //   내부: max-width 1440px + margin auto + 좌우 40px 여백
 //   드롭다운: 내부 컨테이너 폭과 동일하게 펼쳐짐
 // ============================================================================
-function GnbPreview({ data, label, highlightNew = false, originalCategoryIds = [] }) {
+function GnbPreview({
+  data,
+  label,
+  highlightNew = false,
+  originalCategoryIds = [],
+  activeSite = "ohprint",
+  onSiteChange,
+}) {
   const [openId, setOpenId] = useState(null);
   // 각 카테고리의 화면 내 위치(left, width) 추적
   const [catRects, setCatRects] = useState({});
@@ -870,7 +1149,7 @@ function GnbPreview({ data, label, highlightNew = false, originalCategoryIds = [
                 <span style={{ color: COLORS.logoBlue }}>PRINT.ME</span>
               </div>
 
-              {/* 오프린트미/어패럴 스위처 */}
+              {/* 오프린트미/어패럴 스위처 - 실제 전환 가능 */}
               <div
                 style={{
                   display: "flex",
@@ -882,27 +1161,37 @@ function GnbPreview({ data, label, highlightNew = false, originalCategoryIds = [
                   position: "relative",
                 }}
               >
-                <span
+                <button
+                  onClick={() => onSiteChange && onSiteChange("ohprint")}
                   style={{
                     padding: "8px 18px",
                     fontSize: "14px",
-                    fontWeight: 600,
-                    backgroundColor: COLORS.textPrimary,
-                    color: "#fff",
+                    fontWeight: activeSite === "ohprint" ? 600 : 500,
+                    backgroundColor: activeSite === "ohprint" ? COLORS.textPrimary : "transparent",
+                    color: activeSite === "ohprint" ? "#fff" : "#9CA3AF",
                     borderRadius: "9999px",
                     lineHeight: 1,
+                    border: "none",
+                    cursor: "pointer",
+                    transition: "all 0.15s",
                   }}
                 >
                   오프린트미
-                </span>
-                <span
+                </button>
+                <button
+                  onClick={() => onSiteChange && onSiteChange("apparel")}
                   style={{
                     position: "relative",
                     padding: "8px 18px",
                     fontSize: "14px",
-                    fontWeight: 500,
-                    color: "#9CA3AF",
+                    fontWeight: activeSite === "apparel" ? 600 : 500,
+                    backgroundColor: activeSite === "apparel" ? COLORS.textPrimary : "transparent",
+                    color: activeSite === "apparel" ? "#fff" : "#9CA3AF",
+                    borderRadius: "9999px",
                     lineHeight: 1,
+                    border: "none",
+                    cursor: "pointer",
+                    transition: "all 0.15s",
                   }}
                 >
                   어패럴
@@ -924,7 +1213,7 @@ function GnbPreview({ data, label, highlightNew = false, originalCategoryIds = [
                   >
                     NEW
                   </span>
-                </span>
+                </button>
               </div>
             </div>
 
@@ -1068,6 +1357,7 @@ function GnbPreview({ data, label, highlightNew = false, originalCategoryIds = [
                 category={openCategory}
                 anchorRect={catRects[openCategory.id]}
                 barWidth={barRef.current?.offsetWidth || LAYOUT.containerMaxWidth}
+                variant={activeSite === "apparel" ? "apparel" : "ohprint"}
               />
             )}
           </div>
@@ -1101,7 +1391,7 @@ function GnbPreview({ data, label, highlightNew = false, originalCategoryIds = [
 // - 폭은 열 개수 × 컬럼 폭 기반으로 자동 결정
 // - 화면 우측을 넘어가지 않도록 자동 보정
 // ============================================================================
-function Dropdown({ category, anchorRect, barWidth }) {
+function Dropdown({ category, anchorRect, barWidth, variant = "ohprint" }) {
   if (!category) return null;
   const columns = (category.columns || []).filter(
     (col) => (col.groups || []).length > 0
@@ -1111,11 +1401,11 @@ function Dropdown({ category, anchorRect, barWidth }) {
   const showGroupName = hasAnyGroupName(category);
   const columnCount = Math.min(columns.length, MAX_COLUMNS);
 
-  // 레이아웃 상수
-  const COLUMN_WIDTH = 180; // 한 열 기준 폭
-  const COLUMN_GAP = 32;    // 열 간격
-  const PANEL_PADDING_X = 24; // 드롭다운 좌우 내부 패딩
-  const PANEL_PADDING_Y = 24;
+  // 레이아웃 상수 (사이트별 다르게)
+  const COLUMN_WIDTH = variant === "apparel" ? 200 : 180;
+  const COLUMN_GAP = variant === "apparel" ? 24 : 32;
+  const PANEL_PADDING_X = 24;
+  const PANEL_PADDING_Y = variant === "apparel" ? 20 : 24;
 
   // 패널 폭 = 열들 + 간격 + 좌우 패딩
   const panelWidth =
@@ -1125,7 +1415,6 @@ function Dropdown({ category, anchorRect, barWidth }) {
   const anchorLeft = anchorRect?.left ?? 0;
   const maxLeft = Math.max(0, barWidth - panelWidth);
   const left = Math.min(anchorLeft - PANEL_PADDING_X, maxLeft);
-  // left가 음수가 되지 않도록 보정
   const finalLeft = Math.max(0, left);
 
   return (
@@ -1151,14 +1440,67 @@ function Dropdown({ category, anchorRect, barWidth }) {
         }}
       >
         {columns.slice(0, MAX_COLUMNS).map((col) => (
-          <DropdownColumn key={col.id} column={col} showGroupName={showGroupName} />
+          <DropdownColumn
+            key={col.id}
+            column={col}
+            showGroupName={showGroupName}
+            variant={variant}
+          />
         ))}
       </div>
     </div>
   );
 }
 
-function DropdownColumn({ column, showGroupName }) {
+function DropdownColumn({ column, showGroupName, variant = "ohprint" }) {
+  // 어패럴 variant: 각 아이템을 볼드 + 화살표 (중카테고리 스타일)
+  if (variant === "apparel") {
+    return (
+      <div style={{ minWidth: 0, display: "flex", flexDirection: "column", gap: "14px" }}>
+        {column.groups.map((group) => (
+          <div key={group.id}>
+            {/* 그룹명은 있을 때만 표시 (상위 구분용) */}
+            {showGroupName && group.name ? (
+              <div
+                style={{
+                  marginBottom: "10px",
+                  fontSize: "12px",
+                  fontWeight: 500,
+                  color: COLORS.textMuted,
+                  letterSpacing: "0.02em",
+                }}
+              >
+                {group.name}
+              </div>
+            ) : null}
+            <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: "6px" }}>
+              {group.items.map((item) => (
+                <li
+                  key={item.id}
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    color: COLORS.textPrimary,
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "3px",
+                    padding: "6px 0",
+                  }}
+                >
+                  <span>{item.name}</span>
+                  <ChevronRight style={{ width: 12, height: 12 }} strokeWidth={2.5} />
+                  <ItemBadge type={item.badge} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  // 오프린트미 variant (기존)
   return (
     <div style={{ minWidth: 0, display: "flex", flexDirection: "column", gap: "20px" }}>
       {column.groups.map((group) => (
@@ -1981,41 +2323,81 @@ function DiffSummary({ before, after }) {
 }
 
 // ============================================================================
-// 영속 저장 키 (아티팩트 storage용)
+// 영속 저장 키 (아티팩트 storage용) - 사이트별로 분리
 // ============================================================================
-const STORAGE_KEY = "ohprint-gnb-after-data-v1";
+const STORAGE_KEYS = {
+  ohprint: "ohprint-gnb-after-data-v1",
+  apparel: "apparel-gnb-after-data-v2", // v2: 아우터 추가된 개편안 구조
+};
+
+// 사이트 메타데이터
+const SITE_META = {
+  ohprint: {
+    label: "오프린트미",
+    beforeData: INITIAL_DATA,
+    getAfterData: getInitialAfterData,
+  },
+  apparel: {
+    label: "어패럴",
+    beforeData: APPAREL_INITIAL_DATA,
+    getAfterData: getInitialApparelAfterData,
+  },
+};
 
 // ============================================================================
 // 메인
 // ============================================================================
 export default function OhprintGnbPrototype() {
-  const [beforeData] = useState(INITIAL_DATA);
-  const [afterData, setAfterData] = useState(getInitialAfterData());
+  // 현재 활성 사이트
+  const [activeSite, setActiveSite] = useState("ohprint");
+
+  // 사이트별 개편안 데이터 (each site has its own state)
+  const [ohprintAfterData, setOhprintAfterData] = useState(getInitialAfterData());
+  const [apparelAfterData, setApparelAfterData] = useState(getInitialApparelAfterData());
+
   const [viewMode, setViewMode] = useState("compare");
   const [saveStatus, setSaveStatus] = useState("idle"); // idle | saving | saved | error
   const [isLoaded, setIsLoaded] = useState(false);
   const fileInputRef = useRef(null);
+
+  // 현재 활성 사이트의 데이터 (computed)
+  const beforeData = SITE_META[activeSite].beforeData;
+  const afterData = activeSite === "ohprint" ? ohprintAfterData : apparelAfterData;
+  const setAfterData = activeSite === "ohprint" ? setOhprintAfterData : setApparelAfterData;
 
   const originalCategoryIds = useMemo(
     () => beforeData.categories.map((c) => c.id),
     [beforeData]
   );
 
-  // 앱 시작 시 저장된 데이터 자동 복원
+  // 앱 시작 시 저장된 데이터 자동 복원 (두 사이트 모두)
   useEffect(() => {
     const loadStored = async () => {
       try {
         if (typeof window !== "undefined" && window.storage && typeof window.storage.get === "function") {
-          const result = await window.storage.get(STORAGE_KEY);
-          if (result && result.value) {
-            const parsed = JSON.parse(result.value);
-            if (parsed && Array.isArray(parsed.categories)) {
-              setAfterData(parsed);
+          // 오프린트미 복원
+          try {
+            const ohResult = await window.storage.get(STORAGE_KEYS.ohprint);
+            if (ohResult && ohResult.value) {
+              const parsed = JSON.parse(ohResult.value);
+              if (parsed && Array.isArray(parsed.categories)) {
+                setOhprintAfterData(parsed);
+              }
             }
-          }
+          } catch (e) { /* no saved data */ }
+
+          // 어패럴 복원
+          try {
+            const apResult = await window.storage.get(STORAGE_KEYS.apparel);
+            if (apResult && apResult.value) {
+              const parsed = JSON.parse(apResult.value);
+              if (parsed && Array.isArray(parsed.categories)) {
+                setApparelAfterData(parsed);
+              }
+            }
+          } catch (e) { /* no saved data */ }
         }
       } catch (err) {
-        // 저장된 데이터가 없거나 오류 - 기본 데이터 그대로 사용
         console.log("저장된 데이터 없음, 기본값 사용");
       } finally {
         setIsLoaded(true);
@@ -2024,17 +2406,20 @@ export default function OhprintGnbPrototype() {
     loadStored();
   }, []);
 
-  // 데이터 변경 시 자동 저장 (디바운스 적용)
+  // 데이터 변경 시 자동 저장 - 현재 활성 사이트 기준
   useEffect(() => {
-    if (!isLoaded) return; // 초기 로드 전엔 저장 안 함
+    if (!isLoaded) return;
     if (typeof window === "undefined" || !window.storage || typeof window.storage.set !== "function") {
-      return; // 저장소 없는 환경 (일반 브라우저)
+      return;
     }
+
+    const currentKey = STORAGE_KEYS[activeSite];
+    const currentData = afterData;
 
     setSaveStatus("saving");
     const timer = setTimeout(async () => {
       try {
-        await window.storage.set(STORAGE_KEY, JSON.stringify(afterData));
+        await window.storage.set(currentKey, JSON.stringify(currentData));
         setSaveStatus("saved");
         setTimeout(() => setSaveStatus("idle"), 2000);
       } catch (err) {
@@ -2042,23 +2427,31 @@ export default function OhprintGnbPrototype() {
         setSaveStatus("error");
         setTimeout(() => setSaveStatus("idle"), 3000);
       }
-    }, 800); // 800ms 디바운스 - 빠른 연속 변경 시 마지막만 저장
+    }, 800);
 
     return () => clearTimeout(timer);
-  }, [afterData, isLoaded]);
+  }, [afterData, isLoaded, activeSite]);
 
+  // 통합 JSON 내보내기 - 두 사이트 데이터 모두 한 파일에
   const exportJson = () => {
     try {
-      const jsonStr = JSON.stringify(afterData, null, 2);
+      const unifiedData = {
+        version: 2,
+        exportedAt: new Date().toISOString(),
+        sites: {
+          ohprint: ohprintAfterData,
+          apparel: apparelAfterData,
+        },
+      };
+      const jsonStr = JSON.stringify(unifiedData, null, 2);
       const blob = new Blob([jsonStr], { type: "application/json;charset=utf-8" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `ohprint-gnb-${new Date().toISOString().slice(0, 10)}.json`;
+      a.download = `ohprint-gnb-all-${new Date().toISOString().slice(0, 10)}.json`;
       a.style.display = "none";
       document.body.appendChild(a);
       a.click();
-      // 약간의 지연 후 정리 (브라우저가 다운로드 처리할 시간 확보)
       setTimeout(() => {
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
@@ -2069,6 +2462,7 @@ export default function OhprintGnbPrototype() {
     }
   };
 
+  // 통합 JSON 불러오기 - 신/구 포맷 자동 판별
   const importJson = (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -2076,11 +2470,36 @@ export default function OhprintGnbPrototype() {
     reader.onload = (ev) => {
       try {
         const parsed = JSON.parse(ev.target.result);
-        if (parsed && Array.isArray(parsed.categories)) {
-          setAfterData(parsed);
-        } else {
-          alert("올바른 포맷이 아닙니다.");
+
+        // 신 포맷 (v2): { version, sites: { ohprint, apparel } }
+        if (parsed && parsed.sites && typeof parsed.sites === "object") {
+          const appliedSites = [];
+          if (parsed.sites.ohprint && Array.isArray(parsed.sites.ohprint.categories)) {
+            setOhprintAfterData(parsed.sites.ohprint);
+            appliedSites.push("오프린트미");
+          }
+          if (parsed.sites.apparel && Array.isArray(parsed.sites.apparel.categories)) {
+            setApparelAfterData(parsed.sites.apparel);
+            appliedSites.push("어패럴");
+          }
+          if (appliedSites.length > 0) {
+            alert(`불러오기 완료: ${appliedSites.join(", ")} 데이터가 복원되었습니다.`);
+          } else {
+            alert("파일에 유효한 사이트 데이터가 없습니다.");
+          }
+          return;
         }
+
+        // 구 포맷: { categories: [...] } - 현재 활성 사이트에만 적용
+        if (parsed && Array.isArray(parsed.categories)) {
+          const siteLabel = SITE_META[activeSite].label;
+          if (confirm(`구 포맷 파일입니다. 현재 활성 사이트(${siteLabel})에만 적용할까요?`)) {
+            setAfterData(parsed);
+          }
+          return;
+        }
+
+        alert("올바른 포맷이 아닙니다.");
       } catch {
         alert("JSON 파싱 실패");
       }
@@ -2090,12 +2509,12 @@ export default function OhprintGnbPrototype() {
   };
 
   const resetToInitial = async () => {
-    if (!confirm("개편안을 초기 상태로 되돌리시겠어요? 자동 저장된 내용도 삭제됩니다.")) return;
-    setAfterData(getInitialAfterData());
-    // 저장된 데이터도 삭제
+    const siteLabel = SITE_META[activeSite].label;
+    if (!confirm(`${siteLabel} 개편안을 초기 상태로 되돌리시겠어요? 자동 저장된 내용도 삭제됩니다.`)) return;
+    setAfterData(SITE_META[activeSite].getAfterData());
     try {
       if (typeof window !== "undefined" && window.storage && typeof window.storage.delete === "function") {
-        await window.storage.delete(STORAGE_KEY);
+        await window.storage.delete(STORAGE_KEYS[activeSite]);
       }
     } catch (err) {
       console.error("저장 삭제 실패:", err);
@@ -2108,7 +2527,16 @@ export default function OhprintGnbPrototype() {
         <div className="mb-4 flex flex-wrap items-center gap-3 justify-between">
           <div>
             <h1 className="text-xl font-bold text-gray-900 flex items-center gap-2">
-              오프린트미 GNB 개편 프로토타입
+              {SITE_META[activeSite].label} GNB 개편 프로토타입
+              <span
+                className="text-xs font-semibold px-2 py-0.5 rounded-full"
+                style={{
+                  backgroundColor: activeSite === "ohprint" ? "#FFF7ED" : "#EFF6FF",
+                  color: activeSite === "ohprint" ? "#C2410C" : "#1E40AF",
+                }}
+              >
+                {activeSite === "ohprint" ? "오프린트미" : "어패럴"}
+              </span>
               {/* 저장 상태 인디케이터 */}
               {saveStatus === "saving" && (
                 <span className="text-xs font-normal text-gray-500 flex items-center gap-1">
@@ -2130,16 +2558,17 @@ export default function OhprintGnbPrototype() {
               )}
             </h1>
             <p className="text-xs text-gray-500 mt-0.5">
-              실제 홈페이지 기준 콘텐츠 폭 {LAYOUT.containerMaxWidth}px · 중앙 정렬 · 최대 5열 그리드 · 편집 시 자동 저장
+              실제 홈페이지 기준 콘텐츠 폭 {LAYOUT.containerMaxWidth}px · 중앙 정렬 · 최대 5열 그리드 · 편집 시 자동 저장 · 스위처로 사이트 전환
             </p>
           </div>
           <div className="flex items-center gap-2">
             <button
               onClick={() => fileInputRef.current?.click()}
+              title="파일 하나에 오프린트미 + 어패럴 두 사이트 데이터 모두 포함"
               className="flex items-center gap-1.5 px-3 py-2 text-xs font-medium bg-white border border-gray-300 rounded-md hover:bg-gray-50"
             >
               <Upload className="w-3.5 h-3.5" />
-              JSON 불러오기
+              전체 불러오기
             </button>
             <input
               ref={fileInputRef}
@@ -2150,13 +2579,15 @@ export default function OhprintGnbPrototype() {
             />
             <button
               onClick={exportJson}
+              title="오프린트미 + 어패럴 두 사이트 데이터를 한 파일로 저장"
               className="flex items-center gap-1.5 px-3 py-2 text-xs font-medium bg-white border border-gray-300 rounded-md hover:bg-gray-50"
             >
               <Download className="w-3.5 h-3.5" />
-              JSON 내보내기
+              전체 내보내기
             </button>
             <button
               onClick={resetToInitial}
+              title="현재 활성 사이트만 초기화"
               className="flex items-center gap-1.5 px-3 py-2 text-xs font-medium bg-white border border-gray-300 rounded-md hover:bg-gray-50"
             >
               <RotateCcw className="w-3.5 h-3.5" />
@@ -2196,17 +2627,31 @@ export default function OhprintGnbPrototype() {
 
         {viewMode === "compare" && (
           <div className="space-y-6">
-            <GnbPreview data={beforeData} label="변경 전 (현재 GNB)" />
+            <GnbPreview
+              data={beforeData}
+              label="변경 전 (현재 GNB)"
+              activeSite={activeSite}
+              onSiteChange={setActiveSite}
+            />
             <GnbPreview
               data={afterData}
               label="변경 후 (개편안)"
               highlightNew
               originalCategoryIds={originalCategoryIds}
+              activeSite={activeSite}
+              onSiteChange={setActiveSite}
             />
           </div>
         )}
 
-        {viewMode === "before" && <GnbPreview data={beforeData} label="변경 전 (현재 GNB)" />}
+        {viewMode === "before" && (
+          <GnbPreview
+            data={beforeData}
+            label="변경 전 (현재 GNB)"
+            activeSite={activeSite}
+            onSiteChange={setActiveSite}
+          />
+        )}
 
         {viewMode === "after" && (
           <GnbPreview
@@ -2214,6 +2659,8 @@ export default function OhprintGnbPrototype() {
             label="변경 후 (개편안)"
             highlightNew
             originalCategoryIds={originalCategoryIds}
+            activeSite={activeSite}
+            onSiteChange={setActiveSite}
           />
         )}
 
@@ -2224,6 +2671,8 @@ export default function OhprintGnbPrototype() {
               label="실시간 미리보기 (개편안)"
               highlightNew
               originalCategoryIds={originalCategoryIds}
+              activeSite={activeSite}
+              onSiteChange={setActiveSite}
             />
             <div className="bg-white rounded-lg border border-gray-200 p-4">
               <EditorPanel
@@ -2236,7 +2685,7 @@ export default function OhprintGnbPrototype() {
               className="text-xs px-3 py-2 rounded-md border"
               style={{ backgroundColor: "#EFF6FF", borderColor: "#DBEAFE", color: "#1E40AF" }}
             >
-              💡 <b>사용법</b>: 그룹 카드 왼쪽의 핸들(⋮⋮)을 잡고 다른 열로 드래그하세요. 한 열에 여러 그룹을 쌓을 수 있고, 최대 5열까지 배치 가능합니다.
+              💡 <b>사용법</b>: 그룹 카드 왼쪽의 핸들(⋮⋮)을 잡고 다른 열로 드래그하세요. 한 열에 여러 그룹을 쌓을 수 있고, 최대 5열까지 배치 가능합니다. 스위처 버튼으로 오프린트미/어패럴 사이트를 전환할 수 있으며, 각자 독립적으로 자동 저장됩니다.
             </div>
           </div>
         )}
