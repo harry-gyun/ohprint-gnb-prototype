@@ -1981,12 +1981,19 @@ function DiffSummary({ before, after }) {
 }
 
 // ============================================================================
+// 영속 저장 키 (아티팩트 storage용)
+// ============================================================================
+const STORAGE_KEY = "ohprint-gnb-after-data-v1";
+
+// ============================================================================
 // 메인
 // ============================================================================
 export default function OhprintGnbPrototype() {
   const [beforeData] = useState(INITIAL_DATA);
   const [afterData, setAfterData] = useState(getInitialAfterData());
   const [viewMode, setViewMode] = useState("compare");
+  const [saveStatus, setSaveStatus] = useState("idle"); // idle | saving | saved | error
+  const [isLoaded, setIsLoaded] = useState(false);
   const fileInputRef = useRef(null);
 
   const originalCategoryIds = useMemo(
@@ -1994,14 +2001,72 @@ export default function OhprintGnbPrototype() {
     [beforeData]
   );
 
+  // 앱 시작 시 저장된 데이터 자동 복원
+  useEffect(() => {
+    const loadStored = async () => {
+      try {
+        if (typeof window !== "undefined" && window.storage && typeof window.storage.get === "function") {
+          const result = await window.storage.get(STORAGE_KEY);
+          if (result && result.value) {
+            const parsed = JSON.parse(result.value);
+            if (parsed && Array.isArray(parsed.categories)) {
+              setAfterData(parsed);
+            }
+          }
+        }
+      } catch (err) {
+        // 저장된 데이터가 없거나 오류 - 기본 데이터 그대로 사용
+        console.log("저장된 데이터 없음, 기본값 사용");
+      } finally {
+        setIsLoaded(true);
+      }
+    };
+    loadStored();
+  }, []);
+
+  // 데이터 변경 시 자동 저장 (디바운스 적용)
+  useEffect(() => {
+    if (!isLoaded) return; // 초기 로드 전엔 저장 안 함
+    if (typeof window === "undefined" || !window.storage || typeof window.storage.set !== "function") {
+      return; // 저장소 없는 환경 (일반 브라우저)
+    }
+
+    setSaveStatus("saving");
+    const timer = setTimeout(async () => {
+      try {
+        await window.storage.set(STORAGE_KEY, JSON.stringify(afterData));
+        setSaveStatus("saved");
+        setTimeout(() => setSaveStatus("idle"), 2000);
+      } catch (err) {
+        console.error("저장 실패:", err);
+        setSaveStatus("error");
+        setTimeout(() => setSaveStatus("idle"), 3000);
+      }
+    }, 800); // 800ms 디바운스 - 빠른 연속 변경 시 마지막만 저장
+
+    return () => clearTimeout(timer);
+  }, [afterData, isLoaded]);
+
   const exportJson = () => {
-    const blob = new Blob([JSON.stringify(afterData, null, 2)], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `ohprint-gnb-${new Date().toISOString().slice(0, 10)}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
+    try {
+      const jsonStr = JSON.stringify(afterData, null, 2);
+      const blob = new Blob([jsonStr], { type: "application/json;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `ohprint-gnb-${new Date().toISOString().slice(0, 10)}.json`;
+      a.style.display = "none";
+      document.body.appendChild(a);
+      a.click();
+      // 약간의 지연 후 정리 (브라우저가 다운로드 처리할 시간 확보)
+      setTimeout(() => {
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }, 100);
+    } catch (err) {
+      console.error("내보내기 실패:", err);
+      alert("JSON 내보내기 중 오류가 발생했습니다.");
+    }
   };
 
   const importJson = (e) => {
@@ -2024,9 +2089,17 @@ export default function OhprintGnbPrototype() {
     e.target.value = "";
   };
 
-  const resetToInitial = () => {
-    if (!confirm("개편안을 초기 상태로 되돌리시겠어요?")) return;
+  const resetToInitial = async () => {
+    if (!confirm("개편안을 초기 상태로 되돌리시겠어요? 자동 저장된 내용도 삭제됩니다.")) return;
     setAfterData(getInitialAfterData());
+    // 저장된 데이터도 삭제
+    try {
+      if (typeof window !== "undefined" && window.storage && typeof window.storage.delete === "function") {
+        await window.storage.delete(STORAGE_KEY);
+      }
+    } catch (err) {
+      console.error("저장 삭제 실패:", err);
+    }
   };
 
   return (
@@ -2034,9 +2107,30 @@ export default function OhprintGnbPrototype() {
       <div style={{ width: "100%", margin: "0 auto" }}>
         <div className="mb-4 flex flex-wrap items-center gap-3 justify-between">
           <div>
-            <h1 className="text-xl font-bold text-gray-900">오프린트미 GNB 개편 프로토타입</h1>
+            <h1 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+              오프린트미 GNB 개편 프로토타입
+              {/* 저장 상태 인디케이터 */}
+              {saveStatus === "saving" && (
+                <span className="text-xs font-normal text-gray-500 flex items-center gap-1">
+                  <span className="inline-block w-2 h-2 bg-gray-400 rounded-full animate-pulse" />
+                  저장 중...
+                </span>
+              )}
+              {saveStatus === "saved" && (
+                <span className="text-xs font-normal text-green-600 flex items-center gap-1">
+                  <span className="inline-block w-2 h-2 bg-green-500 rounded-full" />
+                  자동 저장됨
+                </span>
+              )}
+              {saveStatus === "error" && (
+                <span className="text-xs font-normal text-red-600 flex items-center gap-1">
+                  <span className="inline-block w-2 h-2 bg-red-500 rounded-full" />
+                  저장 실패
+                </span>
+              )}
+            </h1>
             <p className="text-xs text-gray-500 mt-0.5">
-              실제 홈페이지 기준 콘텐츠 폭 {LAYOUT.containerMaxWidth}px · 중앙 정렬 · 최대 5열 그리드
+              실제 홈페이지 기준 콘텐츠 폭 {LAYOUT.containerMaxWidth}px · 중앙 정렬 · 최대 5열 그리드 · 편집 시 자동 저장
             </p>
           </div>
           <div className="flex items-center gap-2">
