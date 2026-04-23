@@ -1786,38 +1786,48 @@ const OHPRINT_AFTER_CATEGORIES = [
           groups: [
             {
               id: "ap-main",
-              name: "",
-              items: [
-                {
-                  id: "ap1",
-                  name: "티셔츠"
-                },
-                {
-                  id: "ap2",
-                  name: "맨투맨/후드/집업"
-                },
-                {
-                  id: "ap3",
-                  name: "모자"
-                },
-                {
-                  id: "ap4",
-                  name: "잡화"
-                },
-                {
-                  id: "ap5",
-                  name: "자수"
-                },
-                {
-                  id: "ap6",
-                  name: "단체추천"
-                },
-                {
-                  id: "ap7",
-                  name: "클리어런스",
-                  badge: "SALE"
-                }
-              ]
+              name: "티셔츠",
+              items: []
+            },
+            {
+              id: "6ojymq65",
+              name: "맨투맨/후드/집업",
+              items: []
+            },
+            {
+              id: "0v1ujvl3",
+              name: "아우터",
+              items: []
+            },
+            {
+              id: "437cot4j",
+              name: "모자",
+              items: []
+            }
+          ]
+        },
+        {
+          id: "vf9ftcxy",
+          groups: [
+            {
+              id: "n02fzvxr",
+              name: "잡화",
+              items: []
+            },
+            {
+              id: "0xch4pp8",
+              name: "자수",
+              items: []
+            },
+            {
+              id: "yuo57dnn",
+              name: "단체추천",
+              items: []
+            },
+            {
+              id: "u1nv4228",
+              name: "클리어런스",
+              items: []
             }
           ]
         }
@@ -2056,49 +2066,385 @@ const APPAREL_INITIAL_DATA = {
   ],
 };
 
-// 어패럴 개편안: 변경 전 데이터 복사 후 '아우터' 대카테고리 추가
-const APPAREL_NEW_OUTER_CATEGORY = {
-  id: "ap-outer",
-  name: "아우터",
-  isNew: true,
-  columns: [
+// 어패럴 개편안 - 아티팩트에서 편집 후 반영된 실제 기획안 구조
+const APPAREL_AFTER_CATEGORIES = [
     {
-      id: "col-ap-o-1",
-      groups: [
+      id: "ap-tshirt",
+      name: "티셔츠",
+      columns: [
         {
-          id: "ap-o-1",
-          name: "",
-          items: [
-            { id: "apo1", name: "바람막이" },
-            { id: "apo2", name: "자켓" },
-            { id: "apo3", name: "조끼" },
-          ],
+          id: "col-ap-t-1",
+          groups: [
+            {
+              id: "ap-t-main",
+              name: "",
+              items: [
+                {
+                  id: "apt1",
+                  name: "반소매 티셔츠"
+                },
+                {
+                  id: "apt2",
+                  name: "긴소매 티셔츠"
+                },
+                {
+                  id: "apt3",
+                  name: "민소매 티셔츠"
+                },
+                {
+                  id: "apt4",
+                  name: "폴로셔츠"
+                }
+              ]
+            }
+          ]
         },
-      ],
+        {
+          id: "col-ap-t-2",
+          groups: [
+            {
+              id: "ap-t-sub",
+              name: "",
+              items: [
+                {
+                  id: "apt5",
+                  name: "유아동"
+                },
+                {
+                  id: "apt6",
+                  name: "원피스"
+                },
+                {
+                  id: "apt7",
+                  name: "자수"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-      id: "col-ap-o-2",
-      groups: [
+      id: "ap-mtm-hood",
+      name: "맨투맨/후드/집업",
+      columns: [
         {
-          id: "ap-o-2",
-          name: "",
-          items: [
-            { id: "apo4", name: "플리스" },
-            { id: "apo5", name: "패딩" },
-            { id: "apo6", name: "자수" },
-          ],
+          id: "col-ap-mh-1",
+          groups: [
+            {
+              id: "ap-mh-main",
+              name: "",
+              items: [
+                {
+                  id: "apmh1",
+                  name: "맨투맨"
+                },
+                {
+                  id: "apmh2",
+                  name: "후드"
+                },
+                {
+                  id: "apmh3",
+                  name: "후드집업"
+                }
+              ]
+            }
+          ]
         },
-      ],
+        {
+          id: "col-ap-mh-2",
+          groups: [
+            {
+              id: "ap-mh-sub",
+              name: "",
+              items: [
+                {
+                  id: "apmh4",
+                  name: "유아동"
+                },
+                {
+                  id: "apmh5",
+                  name: "바지"
+                },
+                {
+                  id: "apmh6",
+                  name: "자수"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
-  ],
-};
+    {
+      id: "ap-outer",
+      name: "아우터",
+      isNew: true,
+      columns: [
+        {
+          id: "col-ap-o-1",
+          groups: [
+            {
+              id: "ap-o-1",
+              name: "",
+              items: [
+                {
+                  id: "apo1",
+                  name: "바람막이"
+                },
+                {
+                  id: "apo2",
+                  name: "자켓"
+                },
+                {
+                  id: "apo3",
+                  name: "조끼"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-ap-o-2",
+          groups: [
+            {
+              id: "ap-o-2",
+              name: "",
+              items: [
+                {
+                  id: "apo4",
+                  name: "플리스"
+                },
+                {
+                  id: "apo5",
+                  name: "패딩"
+                },
+                {
+                  id: "apo6",
+                  name: "자수"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "ap-hat",
+      name: "모자",
+      badge: "NEW",
+      columns: [
+        {
+          id: "col-ap-h-1",
+          groups: [
+            {
+              id: "ap-h-main",
+              name: "",
+              items: [
+                {
+                  id: "aph1",
+                  name: "볼캡"
+                },
+                {
+                  id: "aph2",
+                  name: "스냅백"
+                },
+                {
+                  id: "aph3",
+                  name: "비니"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-ap-h-2",
+          groups: [
+            {
+              id: "ap-h-sub",
+              name: "",
+              items: [
+                {
+                  id: "aph4",
+                  name: "버킷햇"
+                },
+                {
+                  id: "aph5",
+                  name: "자수"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "ap-bag",
+      name: "잡화",
+      columns: [
+        {
+          id: "col-ap-b-1",
+          groups: [
+            {
+              id: "ap-b-1",
+              name: "",
+              items: [
+                {
+                  id: "apb1",
+                  name: "에코백"
+                },
+                {
+                  id: "apb2",
+                  name: "파우치"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-ap-b-2",
+          groups: [
+            {
+              id: "ap-b-2",
+              name: "",
+              items: [
+                {
+                  id: "apb3",
+                  name: "앞치마"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "ap-embroidery",
+      name: "자수",
+      badge: "NEW",
+      columns: [
+        {
+          id: "col-ap-e-1",
+          groups: [
+            {
+              id: "ap-e-1",
+              name: "",
+              items: [
+                {
+                  id: "ape1",
+                  name: "티셔츠"
+                },
+                {
+                  id: "ape2",
+                  name: "폴로셔츠"
+                },
+                {
+                  id: "djv6j54d",
+                  name: "아우터"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-ap-e-2",
+          groups: [
+            {
+              id: "ap-e-2",
+              name: "",
+              items: [
+                {
+                  id: "ape3",
+                  name: "맨투맨/후드/후드집업"
+                },
+                {
+                  id: "ape4",
+                  name: "모자"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "ap-group",
+      name: "단체 추천",
+      columns: [
+        {
+          id: "col-ap-g-1",
+          groups: [
+            {
+              id: "ap-g-1",
+              name: "",
+              items: [
+                {
+                  id: "apg1",
+                  name: "티셔츠"
+                },
+                {
+                  id: "apg2",
+                  name: "맨투맨/후드/후드집업"
+                },
+                {
+                  id: "59oijjyr",
+                  name: "아우터"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-ap-g-2",
+          groups: [
+            {
+              id: "ap-g-2",
+              name: "",
+              items: [
+                {
+                  id: "7mmlkn0c",
+                  name: "모자"
+                },
+                {
+                  id: "p1dvh8kd",
+                  name: "잡화"
+                },
+                {
+                  id: "npvc3k9d",
+                  name: "자수"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "ap-clearance",
+      name: "클리어런스",
+      badge: "SALE",
+      columns: [
+        {
+          id: "col-ap-c-1",
+          groups: [
+            {
+              id: "ap-c-main",
+              name: "",
+              items: [
+                {
+                  id: "apc1",
+                  name: "클리어런스"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ];
 
 const getInitialApparelAfterData = () => {
-  const afterCategories = JSON.parse(JSON.stringify(APPAREL_INITIAL_DATA.categories));
-  // 맨투맨/후드/집업(ap-mtm-hood) 바로 뒤에 아우터 삽입
-  const mhIndex = afterCategories.findIndex((c) => c.id === "ap-mtm-hood");
-  afterCategories.splice(mhIndex + 1, 0, JSON.parse(JSON.stringify(APPAREL_NEW_OUTER_CATEGORY)));
-  return { categories: afterCategories };
+  return { categories: JSON.parse(JSON.stringify(APPAREL_AFTER_CATEGORIES)) };
 };
 
 const uid = () => Math.random().toString(36).slice(2, 10);
@@ -3514,8 +3860,8 @@ function DiffSummary({ before, after }) {
 // 영속 저장 키 (아티팩트 storage용) - 사이트별로 분리
 // ============================================================================
 const STORAGE_KEYS = {
-  ohprint: "ohprint-gnb-after-data-v2", // v2: 사용자 기획안 반영
-  apparel: "apparel-gnb-after-data-v2", // v2: 아우터 추가된 개편안 구조
+  ohprint: "ohprint-gnb-after-data-v3", // v3: 어패럴 카테고리 2열 재구성 반영
+  apparel: "apparel-gnb-after-data-v3", // v3: 자수/단체 추천에 아우터 추가
 };
 
 // 사이트 메타데이터
