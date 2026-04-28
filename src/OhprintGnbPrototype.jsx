@@ -19,6 +19,10 @@ import {
   Columns3,
 } from "lucide-react";
 
+// 플랫폼 로고 (SVG)
+import snapsLogo from "./assets/snaps-logo.svg";
+import ohprintmeLogo from "./assets/ohprintme-logo.svg";
+
 // ============================================================================
 // 레이아웃 상수 (실제 오프린트미 기준)
 // ============================================================================
@@ -2447,6 +2451,721 @@ const getInitialApparelAfterData = () => {
   return { categories: JSON.parse(JSON.stringify(APPAREL_AFTER_CATEGORIES)) };
 };
 
+// ============================================================================
+// Snaps 사이트 초기 데이터 (실제 홈페이지 기반)
+// ============================================================================
+const SNAPS_INITIAL_DATA = {
+  categories: [
+    {
+      id: "snaps-all",
+      name: "전체 상품",
+      hasDropdown: true,
+      isAllProducts: true,
+      columns: [],
+    },
+    {
+      id: "snaps-photobook",
+      name: "포토북",
+      badge: "FREESHIP",
+      columns: [
+        {
+          id: "col-snaps-pb-1",
+          groups: [
+            {
+              id: "snaps-pb-recommend",
+              name: "추천",
+              items: [
+                { id: "spb-r1", name: "AI 포토북", badge: "NEW_AI" },
+                { id: "spb-r2", name: "공동 포토북", badge: "NEW" },
+                { id: "spb-r3", name: "시그니처 레이플랫 포토북" },
+                { id: "spb-r4", name: "졸업앨범" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-pb-2",
+          groups: [
+            {
+              id: "snaps-pb-products",
+              name: "상품",
+              items: [
+                { id: "spb-p1", name: "하드커버 포토북" },
+                { id: "spb-p2", name: "소프트커버 포토북" },
+                { id: "spb-p3", name: "패브릭커버 포토북" },
+                { id: "spb-p4", name: "레더커버 포토북" },
+                { id: "spb-p5", name: "스탠다드 레이플랫 포토북" },
+                { id: "spb-p6", name: "프리미엄 레이플랫 포토북" },
+                { id: "spb-p7", name: "시그니처 레이플랫 포토북", badge: "NEW" },
+                { id: "spb-p8", name: "미니 포토북" },
+                { id: "spb-p9", name: "졸업앨범" },
+                { id: "spb-p10", name: "포토북" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-pb-3",
+          groups: [
+            {
+              id: "snaps-pb-theme",
+              name: "테마",
+              items: [
+                { id: "spb-t1", name: "심플·일상" },
+                { id: "spb-t2", name: "여행" },
+                { id: "spb-t3", name: "커플·웨딩" },
+                { id: "spb-t4", name: "아기·돌잔치" },
+                { id: "spb-t5", name: "가족" },
+                { id: "spb-t6", name: "시즌·기념일" },
+                { id: "spb-t7", name: "반려동물" },
+                { id: "spb-t8", name: "팬북" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "snaps-print",
+      name: "사진인화",
+      columns: [
+        {
+          id: "col-snaps-pr-1",
+          groups: [
+            {
+              id: "snaps-pr-general",
+              name: "일반사진",
+              items: [
+                { id: "spr-g1", name: "일반사진인화" },
+                { id: "spr-g2", name: "대형사진인화" },
+                { id: "spr-g3", name: "증명사진" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-pr-2",
+          groups: [
+            {
+              id: "snaps-pr-design",
+              name: "디자인 사진",
+              items: [
+                { id: "spr-d1", name: "필름 북마크" },
+                { id: "spr-d2", name: "지갑용사진" },
+                { id: "spr-d3", name: "아코디언카드" },
+                { id: "spr-d4", name: "포스터" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-pr-3",
+          groups: [
+            {
+              id: "snaps-pr-pack",
+              name: "프린트팩",
+              items: [
+                { id: "spr-pk1", name: "폴라로이드팩" },
+                { id: "spr-pk2", name: "엽서팩" },
+                { id: "spr-pk3", name: "스퀘어프린트팩" },
+                { id: "spr-pk4", name: "우드블럭+프린트" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-pr-4",
+          groups: [
+            {
+              id: "snaps-pr-acc",
+              name: "액세서리",
+              items: [
+                { id: "spr-a1", name: "사진앨범" },
+                { id: "spr-a2", name: "우드 스탠드" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "snaps-frame",
+      name: "액자",
+      columns: [
+        {
+          id: "col-snaps-fr-1",
+          groups: [
+            {
+              id: "snaps-fr-main",
+              name: "상품",
+              items: [
+                { id: "sfr1", name: "원목액자" },
+                { id: "sfr2", name: "메탈액자" },
+                { id: "sfr3", name: "프리미엄 아크릴액자" },
+                { id: "sfr4", name: "보드액자" },
+                { id: "sfr5", name: "행잉액자" },
+                { id: "sfr6", name: "알루미늄액자" },
+                { id: "sfr7", name: "캔버스액자" },
+                { id: "sfr8", name: "아크릴 자작나무액자" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "snaps-goods",
+      name: "#굿즈",
+      badge: "NEW",
+      columns: [
+        {
+          id: "col-snaps-gd-1",
+          groups: [
+            {
+              id: "snaps-gd-keyring",
+              name: "키링",
+              groupBadge: "NEW",
+              items: [
+                { id: "sgd-k1", name: "인형 키링" },
+                { id: "sgd-k2", name: "만쥬 인형" },
+              ],
+            },
+            {
+              id: "snaps-gd-acc",
+              name: "액세서리",
+              items: [
+                { id: "sgd-a1", name: "슬로건앨범" },
+                { id: "sgd-a2", name: "포토카드 앨범" },
+                { id: "sgd-a3", name: "탑로더, 슬리브" },
+                { id: "sgd-a4", name: "올꾸팩" },
+                { id: "sgd-a5", name: "데코용 핀셋" },
+                { id: "sgd-a6", name: "홀로그램 지퍼백" },
+                { id: "sgd-a7", name: "카드지갑" },
+                { id: "sgd-a8", name: "볼 체인" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-gd-2",
+          groups: [
+            {
+              id: "snaps-gd-photocard",
+              name: "포토카드",
+              items: [
+                { id: "sgd-pc1", name: "포토카드(세트구성)", badge: "HOT" },
+                { id: "sgd-pc2", name: "투명 포토카드(세트구성)", badge: "HOT" },
+                { id: "sgd-pc3", name: "포토카드(10장세트)" },
+                { id: "sgd-pc4", name: "투명 포토카드(10장세트)" },
+                { id: "sgd-pc5", name: "포토티켓" },
+                { id: "sgd-pc6", name: "폴라로이드" },
+                { id: "sgd-pc7", name: "증명사진" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-gd-3",
+          groups: [
+            {
+              id: "snaps-gd-poster",
+              name: "포스터/슬로건",
+              items: [
+                { id: "sgd-ps1", name: "종이슬로건" },
+                { id: "sgd-ps2", name: "반사 슬로건" },
+                { id: "sgd-ps3", name: "매지컬 반사 슬로건" },
+                { id: "sgd-ps4", name: "홀로그램 슬로건" },
+                { id: "sgd-ps5", name: "포스터" },
+                { id: "sgd-ps6", name: "패브릭 포스터" },
+                { id: "sgd-ps7", name: "미니배너" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-gd-4",
+          groups: [
+            {
+              id: "snaps-gd-stationery",
+              name: "문구",
+              items: [
+                { id: "sgd-s1", name: "필름 북마크" },
+                { id: "sgd-s2", name: "틴케이스" },
+                { id: "sgd-s3", name: "핀뱃지" },
+                { id: "sgd-s4", name: "버튼거울" },
+                { id: "sgd-s5", name: "버튼자석" },
+                { id: "sgd-s6", name: "떡메모지" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-gd-5",
+          groups: [
+            {
+              id: "snaps-gd-photobook",
+              name: "포토북",
+              items: [
+                { id: "sgd-pb1", name: "팬북" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "snaps-tech",
+      name: "테크 액세서리",
+      badge: "NEW",
+      columns: [
+        {
+          id: "col-snaps-tc-1",
+          groups: [
+            {
+              id: "snaps-tc-phone",
+              name: "폰케이스",
+              groupBadge: "NEW",
+              items: [
+                { id: "stc-p1", name: "투명 범퍼 젤하드 케이스", badge: "NEW" },
+                { id: "stc-p2", name: "맥세이프 투명 범퍼 젤하드 케이스", badge: "NEW" },
+                { id: "stc-p3", name: "하드 케이스", badge: "NEW" },
+                { id: "stc-p4", name: "맥세이프 하드 케이스", badge: "NEW" },
+                { id: "stc-p5", name: "투명 하드 케이스 (Z Fold)" },
+                { id: "stc-p6", name: "하드 케이스 (Z Fold)" },
+                { id: "stc-p7", name: "맥세이프 하드 케이스 (Z Fold)" },
+                { id: "stc-p8", name: "투명 하드 케이스 (Z Flip)" },
+                { id: "stc-p9", name: "하드 케이스 (Z Flip)" },
+                { id: "stc-p10", name: "맥세이프 하드 케이스 (Z Flip)" },
+                { id: "stc-p11", name: "투명 젤리", badge: "NEW" },
+                { id: "stc-p12", name: "크리스탈 하이브리드" },
+                { id: "stc-p13", name: "투명 젤하드" },
+                { id: "stc-p14", name: "글리터" },
+                { id: "stc-p15", name: "홀로그램" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-tc-2",
+          groups: [
+            {
+              id: "snaps-tc-smart",
+              name: "스마트 액세서리",
+              items: [
+                { id: "stc-s1", name: "맥세이프 투명 카드지갑", badge: "NEW" },
+                { id: "stc-s2", name: "맥세이프 가죽 카드지갑", badge: "NEW" },
+                { id: "stc-s3", name: "에어팟 케이스" },
+                { id: "stc-s4", name: "버즈 케이스" },
+                { id: "stc-s5", name: "스마트톡" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-tc-3",
+          groups: [
+            {
+              id: "snaps-tc-mouse",
+              name: "마우스패드",
+              groupBadge: "NEW",
+              items: [
+                { id: "stc-m1", name: "오바록 장패드" },
+                { id: "stc-m2", name: "블랙 오바록 장패드" },
+                { id: "stc-m3", name: "오바록 마우스패드" },
+                { id: "stc-m4", name: "오바록 게이밍 마우스패드" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "snaps-acrylic",
+      name: "아크릴",
+      badge: "HOT",
+      columns: [
+        {
+          id: "col-snaps-ac-1",
+          groups: [
+            {
+              id: "snaps-ac-recommend",
+              name: "추천",
+              items: [
+                { id: "sac-r1", name: "DIY 아크릴 스탠드", badge: "HOT" },
+                { id: "sac-r2", name: "컬러 아크릴 키링" },
+                { id: "sac-r3", name: "입체 아크릴 코롯토 자율형" },
+                { id: "sac-r4", name: "아크릴 스마트톡" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-ac-2",
+          groups: [
+            {
+              id: "snaps-ac-keyring",
+              name: "아크릴 키링",
+              items: [
+                { id: "sac-k1", name: "아크릴 키링", badge: "HOT" },
+                { id: "sac-k2", name: "투명 컬러 아크릴 키링" },
+                { id: "sac-k3", name: "컬러 아크릴 키링" },
+                { id: "sac-k4", name: "글리터 아크릴 키링" },
+                { id: "sac-k5", name: "반투명 아크릴 키링" },
+                { id: "sac-k6", name: "파스텔 아크릴 키링" },
+                { id: "sac-k7", name: "반투명 파스텔 아크릴 키링" },
+                { id: "sac-k8", name: "자개 아크릴 키링" },
+                { id: "sac-k9", name: "홀로그램 아크릴 키링" },
+                { id: "sac-k10", name: "하프미러 아크릴 키링" },
+                { id: "sac-k11", name: "미러 아크릴 키링" },
+                { id: "sac-k12", name: "야광 아크릴 키링" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-ac-3",
+          groups: [
+            {
+              id: "snaps-ac-stand",
+              name: "아크릴 스탠드",
+              items: [
+                { id: "sac-s1", name: "DIY 아크릴 스탠드", badge: "HOT" },
+                { id: "sac-s2", name: "아크릴 등신대" },
+                { id: "sac-s3", name: "홀로그램 아크릴 등신대" },
+                { id: "sac-s4", name: "회전 아크릴 등신대" },
+                { id: "sac-s5", name: "아크릴 포토프롬" },
+                { id: "sac-s6", name: "아크릴 스탠드 액자" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-ac-4",
+          groups: [
+            {
+              id: "snaps-ac-corotto",
+              name: "아크릴 코롯토",
+              items: [
+                { id: "sac-c1", name: "입체 아크릴 코롯토 자율형" },
+                { id: "sac-c2", name: "입체 아크릴 코롯토 규격형" },
+                { id: "sac-c3", name: "양면 아크릴 코롯토" },
+                { id: "sac-c4", name: "아크릴 코롯토 자율형" },
+                { id: "sac-c5", name: "아크릴 코롯토 규격형" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-ac-5",
+          groups: [
+            {
+              id: "snaps-ac-acc",
+              name: "아크릴 액세서리",
+              items: [
+                { id: "sac-a1", name: "아크릴 스마트톡" },
+                { id: "sac-a2", name: "아크릴 데코 마그넷" },
+                { id: "sac-a3", name: "아크릴 마그넷" },
+                { id: "sac-a4", name: "아크릴 집게" },
+                { id: "sac-a5", name: "아크릴 뱃지" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "snaps-sticker",
+      name: "스티커",
+      columns: [
+        {
+          id: "col-snaps-st-1",
+          groups: [
+            {
+              id: "snaps-st-custom",
+              name: "커스텀 스티커",
+              items: [
+                { id: "sst-c1", name: "DIY 스티커" },
+                { id: "sst-c2", name: "DIY 낱장 스티커" },
+                { id: "sst-c3", name: "자유 반칼 스티커" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-st-2",
+          groups: [
+            {
+              id: "snaps-st-goods",
+              name: "굿즈 스티커",
+              items: [
+                { id: "sst-g1", name: "폰꾸 스티커" },
+                { id: "sst-g2", name: "씰 스티커" },
+                { id: "sst-g3", name: "롱포토 스티커" },
+                { id: "sst-g4", name: "카드 커버 스티커" },
+                { id: "sst-g5", name: "띠부 스티커" },
+                { id: "sst-g6", name: "데코 스티커" },
+                { id: "sst-g7", name: "우표 조각 스티커" },
+                { id: "sst-g8", name: "말랑 투명 스티커" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-st-3",
+          groups: [
+            {
+              id: "snaps-st-basic",
+              name: "기본 스티커",
+              items: [
+                { id: "sst-b1", name: "원형 스티커" },
+                { id: "sst-b2", name: "정사각형 스티커" },
+                { id: "sst-b3", name: "직사각형 스티커" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-st-4",
+          groups: [
+            {
+              id: "snaps-st-name",
+              name: "네임 스티커",
+              items: [
+                { id: "sst-n1", name: "유아 네임 스티커" },
+                { id: "sst-n2", name: "네임 스티커" },
+                { id: "sst-n3", name: "의류 라벨 스티커" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "snaps-fashion",
+      name: "패션의류",
+      columns: [
+        {
+          id: "col-snaps-fa-1",
+          groups: [
+            {
+              id: "snaps-fa-top",
+              name: "상의",
+              items: [
+                { id: "sfa-t1", name: "컴포트 티셔츠" },
+                { id: "sfa-t2", name: "루즈핏 맨투맨" },
+                { id: "sfa-t3", name: "데일리 후드티셔츠(남여공용)" },
+                { id: "sfa-t4", name: "세미 크롭티셔츠" },
+                { id: "sfa-t5", name: "레귤러핏 크루넥 티셔츠(여)" },
+                { id: "sfa-t6", name: "레귤러핏 크루넥 티셔츠(남)" },
+                { id: "sfa-t7", name: "스냅스 착한 반팔 티셔츠" },
+                { id: "sfa-t8", name: "베이직 반팔 티셔츠" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-fa-2",
+          groups: [
+            {
+              id: "snaps-fa-eco",
+              name: "에코백",
+              items: [
+                { id: "sfa-e1", name: "미니 핸디 에코백" },
+                { id: "sfa-e2", name: "스탠드 베이직 에코백" },
+                { id: "sfa-e3", name: "빅사이즈 쇼퍼 에코백" },
+                { id: "sfa-e4", name: "데일리 토트 에코백" },
+                { id: "sfa-e5", name: "데일리 숄더 에코백" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-fa-3",
+          groups: [
+            {
+              id: "snaps-fa-bag",
+              name: "잡화",
+              items: [
+                { id: "sfa-b1", name: "베이직 플랫 파우치" },
+                { id: "sfa-b2", name: "스탠드 삼각 파우치" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-fa-4",
+          groups: [
+            {
+              id: "snaps-fa-kids",
+              name: "유아동",
+              items: [
+                { id: "sfa-k1", name: "베이직 반팔 티셔츠 (키즈)" },
+                { id: "sfa-k2", name: "릴렉스 원피스 (키즈)" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "snaps-home",
+      name: "홈/리빙",
+      columns: [
+        {
+          id: "col-snaps-hm-1",
+          groups: [
+            {
+              id: "snaps-hm-fabric",
+              name: "패브릭",
+              items: [
+                { id: "shm-f1", name: "패브릭 포스터" },
+                { id: "shm-f2", name: "쉬폰 패브릭 포스터" },
+                { id: "shm-f3", name: "베이직 데일리 쿠션" },
+                { id: "shm-f4", name: "따스한 양면 기모담요" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-hm-2",
+          groups: [
+            {
+              id: "snaps-hm-frame",
+              name: "액자",
+              items: [
+                { id: "shm-fr1", name: "원목액자" },
+                { id: "shm-fr2", name: "메탈액자" },
+                { id: "shm-fr3", name: "프리미엄 아크릴액자" },
+                { id: "shm-fr4", name: "보드액자" },
+                { id: "shm-fr5", name: "행잉액자" },
+                { id: "shm-fr6", name: "알루미늄액자" },
+                { id: "shm-fr7", name: "캔버스액자" },
+                { id: "shm-fr8", name: "아크릴 자작나무액자" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-hm-3",
+          groups: [
+            {
+              id: "snaps-hm-mug",
+              name: "머그컵",
+              items: [
+                { id: "shm-m1", name: "포토 머그컵" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-hm-4",
+          groups: [
+            {
+              id: "snaps-hm-acc",
+              name: "액세서리",
+              items: [
+                { id: "shm-a1", name: "쿠션솜" },
+                { id: "shm-a2", name: "커튼 액세서리" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "snaps-card",
+      name: "카드·문구",
+      columns: [
+        {
+          id: "col-snaps-cd-1",
+          groups: [
+            {
+              id: "snaps-cd-card",
+              name: "카드",
+              items: [
+                { id: "scd-c1", name: "청첩장" },
+                { id: "scd-c2", name: "감사" },
+                { id: "scd-c3", name: "초대" },
+                { id: "scd-c4", name: "신년" },
+                { id: "scd-c5", name: "기념/이벤트" },
+                { id: "scd-c6", name: "축하" },
+                { id: "scd-c7", name: "크리스마스" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-cd-2",
+          groups: [
+            {
+              id: "snaps-cd-stationery",
+              name: "문구",
+              items: [
+                { id: "scd-s1", name: "틴케이스" },
+                { id: "scd-s2", name: "핀뱃지" },
+                { id: "scd-s3", name: "버튼거울" },
+                { id: "scd-s4", name: "버튼자석" },
+                { id: "scd-s5", name: "필름 북마크", badge: "NEW" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-cd-3",
+          groups: [
+            {
+              id: "snaps-cd-note",
+              name: "노트/메모",
+              items: [
+                { id: "scd-n1", name: "노트" },
+                { id: "scd-n2", name: "스프링 노트" },
+                { id: "scd-n3", name: "떡메모지" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "snaps-calendar",
+      name: "달력",
+      columns: [
+        {
+          id: "col-snaps-cl-1",
+          groups: [
+            {
+              id: "snaps-cl-desk",
+              name: "탁상용",
+              items: [
+                { id: "scl-d1", name: "탁상달력" },
+                { id: "scl-d2", name: "우드블럭 달력" },
+                { id: "scl-d3", name: "스케줄러" },
+              ],
+            },
+          ],
+        },
+        {
+          id: "col-snaps-cl-2",
+          groups: [
+            {
+              id: "snaps-cl-wall",
+              name: "벽걸이용",
+              items: [
+                { id: "scl-w1", name: "벽걸이달력" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+
+const getInitialSnapsAfterData = () => {
+  return { categories: JSON.parse(JSON.stringify(SNAPS_INITIAL_DATA.categories)) };
+};
+
 const uid = () => Math.random().toString(36).slice(2, 10);
 
 const getAllItems = (category) => {
@@ -2511,6 +3230,14 @@ function CategoryBadge({ type }) {
   if (type === "NEW_CAT") {
     return <span style={{ ...baseStyle, backgroundColor: COLORS.logoBlue, color: "#fff" }}>NEW</span>;
   }
+  if (type === "FREESHIP") {
+    // 무료배송 - Snaps 보라색 뱃지
+    return (
+      <span style={{ ...baseStyle, backgroundColor: "#A78BFA", color: "#fff" }}>
+        무료배송
+      </span>
+    );
+  }
   return null;
 }
 
@@ -2556,6 +3283,131 @@ function ItemBadge({ type }) {
     );
   }
   return null;
+}
+
+// ============================================================================
+// 상단 플랫폼 탭 - Snaps / OH PRINT.ME / pod SHOP
+// 실제 위블링 사이트 최상단의 플랫폼 간 이동 탭과 동일
+// ============================================================================
+function PlatformTabs({ activeSite, onSiteChange }) {
+  const activePlatform = SITE_META[activeSite]?.platform || "ohprint";
+
+  // 플랫폼별 로고 렌더링 (SVG 이미지 사용)
+  const renderLogo = (platformKey, isActive) => {
+    // 비활성 상태: grayscale + 반투명, 활성 상태: 컬러 그대로
+    const imgStyle = {
+      height: "20px",
+      width: "auto",
+      display: "block",
+      filter: isActive ? "none" : "grayscale(100%) opacity(0.5)",
+      transition: "filter 0.2s",
+    };
+
+    if (platformKey === "snaps") {
+      return <img src={snapsLogo} alt="Snaps" style={imgStyle} />;
+    }
+    if (platformKey === "ohprint") {
+      return (
+        <img
+          src={ohprintmeLogo}
+          alt="OH PRINT.ME"
+          style={{ ...imgStyle, height: "14px" }} // OH PRINT.ME는 가로가 길어서 약간 작게
+        />
+      );
+    }
+    if (platformKey === "podshop") {
+      // pod SHOP은 텍스트 유지 (이미지 없음)
+      return (
+        <span
+          style={{
+            fontFamily: "Inter, sans-serif",
+            fontWeight: 700,
+            fontSize: "13px",
+            letterSpacing: "0.02em",
+            color: "#9CA3AF",
+            display: "flex",
+            alignItems: "baseline",
+            gap: "4px",
+          }}
+        >
+          <span style={{ fontWeight: 800 }}>∞</span>
+          <span>pod SHOP</span>
+        </span>
+      );
+    }
+    return null;
+  };
+
+  // 플랫폼 클릭 처리: 해당 플랫폼의 첫 번째 사이트로 전환
+  const handlePlatformClick = (platformKey) => {
+    const platform = PLATFORM_META[platformKey];
+    if (!platform || !platform.enabled || platform.sites.length === 0) return;
+    // 이미 같은 플랫폼이면 무시 (사이트 전환은 내부 스위처로)
+    if (platformKey === activePlatform) return;
+    if (onSiteChange) onSiteChange(platform.sites[0]);
+  };
+
+  const platforms = ["snaps", "ohprint", "podshop"];
+
+  return (
+    <div
+      style={{
+        borderBottom: `1px solid ${COLORS.borderLight}`,
+        backgroundColor: "#fff",
+        padding: `10px ${LAYOUT.containerPaddingX}px`,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+      }}
+    >
+      <div style={{ display: "flex", alignItems: "stretch", gap: 0 }}>
+        {platforms.map((p) => {
+          const meta = PLATFORM_META[p];
+          const isActive = p === activePlatform;
+          const isDisabled = !meta.enabled;
+          return (
+            <button
+              key={p}
+              onClick={() => handlePlatformClick(p)}
+              disabled={isDisabled}
+              style={{
+                padding: "8px 18px",
+                border: isActive ? `1px solid ${COLORS.borderBase}` : "1px solid transparent",
+                borderBottom: isActive ? "1px solid #fff" : "none",
+                marginBottom: isActive ? "-1px" : 0,
+                borderTopLeftRadius: "8px",
+                borderTopRightRadius: "8px",
+                backgroundColor: isActive ? "#fff" : "transparent",
+                cursor: isDisabled ? "not-allowed" : "pointer",
+                opacity: isDisabled ? 0.5 : 1,
+                position: "relative",
+                zIndex: isActive ? 2 : 1,
+                transition: "all 0.15s",
+              }}
+            >
+              {renderLogo(p, isActive)}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* 우측 유틸 (실제 홈페이지의 회원 영역 모방) */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "16px",
+          fontSize: "11px",
+          color: "#6B7280",
+        }}
+      >
+        <span style={{ cursor: "pointer" }}>로그인/회원가입</span>
+        <span style={{ cursor: "pointer" }}>이벤트</span>
+        <span style={{ cursor: "pointer" }}>상품권</span>
+        <span style={{ cursor: "pointer" }}>브랜드 굿즈</span>
+      </div>
+    </div>
+  );
 }
 
 // ============================================================================
@@ -2654,6 +3506,9 @@ function GnbPreview({
             backgroundColor: "#fff",
           }}
         >
+          {/* ── 0줄: 상단 플랫폼 탭 (Snaps / OH PRINT.ME / pod SHOP) ── */}
+          <PlatformTabs activeSite={activeSite} onSiteChange={onSiteChange} />
+
           {/* ── 1줄: 로고 + 스위처 / 우측 유틸 ────────────────── */}
           <div
             style={{
@@ -2667,88 +3522,98 @@ function GnbPreview({
             }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: "36px", flexShrink: 0 }}>
-              {/* 로고 - OH PRINT.ME (공백 포함) */}
-              <div
-                style={{
-                  fontWeight: 900,
-                  fontSize: "30px",
-                  letterSpacing: "-0.01em",
-                  lineHeight: 1,
-                  display: "flex",
-                  alignItems: "baseline",
-                  gap: "8px",
-                }}
-              >
-                <span style={{ color: COLORS.logoOrange }}>OH</span>
-                <span style={{ color: COLORS.logoBlue }}>PRINT.ME</span>
-              </div>
-
-              {/* 오프린트미/어패럴 스위처 - 실제 전환 가능 */}
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  backgroundColor: "#fff",
-                  border: `1px solid ${COLORS.borderBase}`,
-                  borderRadius: "9999px",
-                  padding: "4px",
-                  position: "relative",
-                }}
-              >
-                <button
-                  onClick={() => onSiteChange && onSiteChange("ohprint")}
+              {activeSite === "snaps" ? (
+                /* Snaps 로고 - SVG 이미지 */
+                <img
+                  src={snapsLogo}
+                  alt="Snaps"
                   style={{
-                    padding: "8px 18px",
-                    fontSize: "14px",
-                    fontWeight: activeSite === "ohprint" ? 600 : 500,
-                    backgroundColor: activeSite === "ohprint" ? COLORS.textPrimary : "transparent",
-                    color: activeSite === "ohprint" ? "#fff" : "#9CA3AF",
-                    borderRadius: "9999px",
-                    lineHeight: 1,
-                    border: "none",
-                    cursor: "pointer",
-                    transition: "all 0.15s",
+                    height: "44px",
+                    width: "auto",
+                    display: "block",
                   }}
-                >
-                  오프린트미
-                </button>
-                <button
-                  onClick={() => onSiteChange && onSiteChange("apparel")}
-                  style={{
-                    position: "relative",
-                    padding: "8px 18px",
-                    fontSize: "14px",
-                    fontWeight: activeSite === "apparel" ? 600 : 500,
-                    backgroundColor: activeSite === "apparel" ? COLORS.textPrimary : "transparent",
-                    color: activeSite === "apparel" ? "#fff" : "#9CA3AF",
-                    borderRadius: "9999px",
-                    lineHeight: 1,
-                    border: "none",
-                    cursor: "pointer",
-                    transition: "all 0.15s",
-                  }}
-                >
-                  어패럴
-                  <span
+                />
+              ) : (
+                <>
+                  {/* OH PRINT.ME 로고 - SVG 이미지 */}
+                  <img
+                    src={ohprintmeLogo}
+                    alt="OH PRINT.ME"
                     style={{
-                      position: "absolute",
-                      top: "-9px",
-                      left: "50%",
-                      transform: "translateX(-50%)",
-                      backgroundColor: COLORS.badgeNew,
-                      color: "#fff",
-                      fontSize: "8px",
-                      fontWeight: 700,
-                      padding: "1px 5px",
+                      height: "26px",
+                      width: "auto",
+                      display: "block",
+                    }}
+                  />
+
+                  {/* 오프린트미/어패럴 스위처 - 실제 전환 가능 */}
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      backgroundColor: "#fff",
+                      border: `1px solid ${COLORS.borderBase}`,
                       borderRadius: "9999px",
-                      lineHeight: 1,
-                      whiteSpace: "nowrap",
+                      padding: "4px",
+                      position: "relative",
                     }}
                   >
-                    NEW
-                  </span>
-                </button>
-              </div>
+                    <button
+                      onClick={() => onSiteChange && onSiteChange("ohprint")}
+                      style={{
+                        padding: "8px 18px",
+                        fontSize: "14px",
+                        fontWeight: activeSite === "ohprint" ? 600 : 500,
+                        backgroundColor: activeSite === "ohprint" ? COLORS.textPrimary : "transparent",
+                        color: activeSite === "ohprint" ? "#fff" : "#9CA3AF",
+                        borderRadius: "9999px",
+                        lineHeight: 1,
+                        border: "none",
+                        cursor: "pointer",
+                        transition: "all 0.15s",
+                      }}
+                    >
+                      오프린트미
+                    </button>
+                    <button
+                      onClick={() => onSiteChange && onSiteChange("apparel")}
+                      style={{
+                        position: "relative",
+                        padding: "8px 18px",
+                        fontSize: "14px",
+                        fontWeight: activeSite === "apparel" ? 600 : 500,
+                        backgroundColor: activeSite === "apparel" ? COLORS.textPrimary : "transparent",
+                        color: activeSite === "apparel" ? "#fff" : "#9CA3AF",
+                        borderRadius: "9999px",
+                        lineHeight: 1,
+                        border: "none",
+                        cursor: "pointer",
+                        transition: "all 0.15s",
+                      }}
+                    >
+                      어패럴
+                      <span
+                        style={{
+                          position: "absolute",
+                          top: "-9px",
+                          left: "50%",
+                          transform: "translateX(-50%)",
+                          backgroundColor: COLORS.badgeNew,
+                          color: "#fff",
+                          fontSize: "8px",
+                          fontWeight: 700,
+                          padding: "1px 5px",
+                          borderRadius: "9999px",
+                          lineHeight: 1,
+                          whiteSpace: "nowrap",
+                        }}
+                      >
+                        NEW
+                      </span>
+                    </button>
+                  </div>
+                </>
+              )}
             </div>
 
             {/* 우측 유틸 */}
@@ -2763,20 +3628,38 @@ function GnbPreview({
                 flexShrink: 0,
               }}
             >
-              <span style={{ cursor: "pointer", whiteSpace: "nowrap" }}>대량구매</span>
-              <span style={{ cursor: "pointer", whiteSpace: "nowrap" }}>브랜드 굿즈</span>
-              <span
-                style={{
-                  padding: "9px 18px",
-                  border: `1px solid ${COLORS.borderBase}`,
-                  borderRadius: "9999px",
-                  fontSize: "13px",
-                  cursor: "pointer",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                All about 오프린트미
-              </span>
+              {activeSite === "snaps" ? (
+                /* Snaps 우측 유틸 - All about 스냅스만 */
+                <span
+                  style={{
+                    padding: "9px 18px",
+                    border: `1px solid ${COLORS.borderBase}`,
+                    borderRadius: "9999px",
+                    fontSize: "13px",
+                    cursor: "pointer",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  All about 스냅스
+                </span>
+              ) : (
+                <>
+                  <span style={{ cursor: "pointer", whiteSpace: "nowrap" }}>대량구매</span>
+                  <span style={{ cursor: "pointer", whiteSpace: "nowrap" }}>브랜드 굿즈</span>
+                  <span
+                    style={{
+                      padding: "9px 18px",
+                      border: `1px solid ${COLORS.borderBase}`,
+                      borderRadius: "9999px",
+                      fontSize: "13px",
+                      cursor: "pointer",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    All about 오프린트미
+                  </span>
+                </>
+              )}
               <User style={{ width: 22, height: 22, color: "#1F2937", flexShrink: 0 }} strokeWidth={1.5} />
               <ShoppingCart style={{ width: 22, height: 22, color: "#1F2937", flexShrink: 0 }} strokeWidth={1.5} />
             </div>
@@ -2808,7 +3691,7 @@ function GnbPreview({
                   flexShrink: 0,
                 }}
               >
-                <span>카테고리</span>
+                <span>{activeSite === "snaps" ? "전체 상품" : "카테고리"}</span>
                 <ChevronDown style={{ width: 16, height: 16 }} strokeWidth={2.5} />
               </div>
               <div
@@ -2831,7 +3714,7 @@ function GnbPreview({
                   flexWrap: "nowrap",
                 }}
               >
-                {data.categories.map((cat) => {
+                {data.categories.filter((c) => !c.isAllProducts).map((cat) => {
                   const isNewCat = highlightNew && !originalCategoryIds.includes(cat.id);
                   const isOpen = openId === cat.id;
                   return (
@@ -3034,7 +3917,7 @@ function DropdownColumn({ column, showGroupName, variant = "ohprint" }) {
     );
   }
 
-  // 오프린트미 variant (기존)
+  // 오프린트미 variant (기존) - Snaps도 동일한 스타일 사용
   return (
     <div style={{ minWidth: 0, display: "flex", flexDirection: "column", gap: "20px" }}>
       {column.groups.map((group) => (
@@ -3044,7 +3927,7 @@ function DropdownColumn({ column, showGroupName, variant = "ohprint" }) {
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: "2px",
+                gap: "4px",
                 marginBottom: "14px",
                 fontSize: "13px",
                 fontWeight: 700,
@@ -3054,6 +3937,26 @@ function DropdownColumn({ column, showGroupName, variant = "ohprint" }) {
             >
               <span>{group.name}</span>
               <ChevronRight style={{ width: 12, height: 12 }} strokeWidth={2.5} />
+              {group.groupBadge && (
+                <span
+                  style={{
+                    fontSize: "9px",
+                    fontWeight: 700,
+                    padding: "2px 5px",
+                    borderRadius: "9999px",
+                    lineHeight: 1,
+                    backgroundColor:
+                      group.groupBadge === "HOT" ? COLORS.badgeHot :
+                      group.groupBadge === "NEW" ? COLORS.badgeNew :
+                      group.groupBadge === "SALE" ? COLORS.badgeNew :
+                      COLORS.badgeNew,
+                    color: "#fff",
+                    marginLeft: "2px",
+                  }}
+                >
+                  {group.groupBadge}
+                </span>
+              )}
             </div>
           ) : null}
           <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
@@ -3860,8 +4763,9 @@ function DiffSummary({ before, after }) {
 // 영속 저장 키 (아티팩트 storage용) - 사이트별로 분리
 // ============================================================================
 const STORAGE_KEYS = {
-  ohprint: "ohprint-gnb-after-data-v3", // v3: 어패럴 카테고리 2열 재구성 반영
-  apparel: "apparel-gnb-after-data-v3", // v3: 자수/단체 추천에 아우터 추가
+  ohprint: "ohprint-gnb-after-data-v3",
+  apparel: "apparel-gnb-after-data-v3",
+  snaps: "snaps-gnb-after-data-v1", // v1: 신규 추가
 };
 
 // 사이트 메타데이터
@@ -3870,11 +4774,41 @@ const SITE_META = {
     label: "오프린트미",
     beforeData: INITIAL_DATA,
     getAfterData: getInitialAfterData,
+    platform: "ohprint", // OH PRINT.ME 플랫폼
   },
   apparel: {
     label: "어패럴",
     beforeData: APPAREL_INITIAL_DATA,
     getAfterData: getInitialApparelAfterData,
+    platform: "ohprint", // OH PRINT.ME 플랫폼
+  },
+  snaps: {
+    label: "Snaps",
+    beforeData: SNAPS_INITIAL_DATA,
+    getAfterData: getInitialSnapsAfterData,
+    platform: "snaps", // Snaps 플랫폼
+  },
+};
+
+// 플랫폼 메타 (상단 플랫폼 탭용)
+const PLATFORM_META = {
+  snaps: {
+    label: "snaps",
+    sites: ["snaps"], // 이 플랫폼에 속한 사이트들
+    enabled: true,
+    logoStyle: "snaps", // 로고 렌더링 스타일
+  },
+  ohprint: {
+    label: "OH PRINT.ME",
+    sites: ["ohprint", "apparel"],
+    enabled: true,
+    logoStyle: "ohprint",
+  },
+  podshop: {
+    label: "pod SHOP",
+    sites: [],
+    enabled: false, // 비활성 디스플레이
+    logoStyle: "podshop",
   },
 };
 
@@ -3888,6 +4822,7 @@ export default function OhprintGnbPrototype() {
   // 사이트별 개편안 데이터 (each site has its own state)
   const [ohprintAfterData, setOhprintAfterData] = useState(getInitialAfterData());
   const [apparelAfterData, setApparelAfterData] = useState(getInitialApparelAfterData());
+  const [snapsAfterData, setSnapsAfterData] = useState(getInitialSnapsAfterData());
 
   const [viewMode, setViewMode] = useState("compare");
   const [saveStatus, setSaveStatus] = useState("idle"); // idle | saving | saved | error
@@ -3896,8 +4831,17 @@ export default function OhprintGnbPrototype() {
 
   // 현재 활성 사이트의 데이터 (computed)
   const beforeData = SITE_META[activeSite].beforeData;
-  const afterData = activeSite === "ohprint" ? ohprintAfterData : apparelAfterData;
-  const setAfterData = activeSite === "ohprint" ? setOhprintAfterData : setApparelAfterData;
+  const afterData =
+    activeSite === "ohprint" ? ohprintAfterData :
+    activeSite === "apparel" ? apparelAfterData :
+    snapsAfterData;
+  const setAfterData =
+    activeSite === "ohprint" ? setOhprintAfterData :
+    activeSite === "apparel" ? setApparelAfterData :
+    setSnapsAfterData;
+
+  // 현재 활성 플랫폼 (computed)
+  const activePlatform = SITE_META[activeSite].platform;
 
   const originalCategoryIds = useMemo(
     () => beforeData.categories.map((c) => c.id),
@@ -3927,6 +4871,17 @@ export default function OhprintGnbPrototype() {
               const parsed = JSON.parse(apResult.value);
               if (parsed && Array.isArray(parsed.categories)) {
                 setApparelAfterData(parsed);
+              }
+            }
+          } catch (e) { /* no saved data */ }
+
+          // Snaps 복원
+          try {
+            const snResult = await window.storage.get(STORAGE_KEYS.snaps);
+            if (snResult && snResult.value) {
+              const parsed = JSON.parse(snResult.value);
+              if (parsed && Array.isArray(parsed.categories)) {
+                setSnapsAfterData(parsed);
               }
             }
           } catch (e) { /* no saved data */ }
@@ -3970,11 +4925,12 @@ export default function OhprintGnbPrototype() {
   const exportJson = () => {
     try {
       const unifiedData = {
-        version: 2,
+        version: 3, // v3: snaps 추가
         exportedAt: new Date().toISOString(),
         sites: {
           ohprint: ohprintAfterData,
           apparel: apparelAfterData,
+          snaps: snapsAfterData,
         },
       };
       const jsonStr = JSON.stringify(unifiedData, null, 2);
@@ -3982,7 +4938,7 @@ export default function OhprintGnbPrototype() {
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `ohprint-gnb-all-${new Date().toISOString().slice(0, 10)}.json`;
+      a.download = `webling-gnb-all-${new Date().toISOString().slice(0, 10)}.json`;
       a.style.display = "none";
       document.body.appendChild(a);
       a.click();
@@ -4005,7 +4961,7 @@ export default function OhprintGnbPrototype() {
       try {
         const parsed = JSON.parse(ev.target.result);
 
-        // 신 포맷 (v2): { version, sites: { ohprint, apparel } }
+        // 신 포맷 (v2/v3): { version, sites: { ohprint, apparel, snaps } }
         if (parsed && parsed.sites && typeof parsed.sites === "object") {
           const appliedSites = [];
           if (parsed.sites.ohprint && Array.isArray(parsed.sites.ohprint.categories)) {
@@ -4015,6 +4971,10 @@ export default function OhprintGnbPrototype() {
           if (parsed.sites.apparel && Array.isArray(parsed.sites.apparel.categories)) {
             setApparelAfterData(parsed.sites.apparel);
             appliedSites.push("어패럴");
+          }
+          if (parsed.sites.snaps && Array.isArray(parsed.sites.snaps.categories)) {
+            setSnapsAfterData(parsed.sites.snaps);
+            appliedSites.push("Snaps");
           }
           if (appliedSites.length > 0) {
             alert(`불러오기 완료: ${appliedSites.join(", ")} 데이터가 복원되었습니다.`);
@@ -4065,11 +5025,17 @@ export default function OhprintGnbPrototype() {
               <span
                 className="text-xs font-semibold px-2 py-0.5 rounded-full"
                 style={{
-                  backgroundColor: activeSite === "ohprint" ? "#FFF7ED" : "#EFF6FF",
-                  color: activeSite === "ohprint" ? "#C2410C" : "#1E40AF",
+                  backgroundColor:
+                    activeSite === "ohprint" ? "#FFF7ED" :
+                    activeSite === "apparel" ? "#EFF6FF" :
+                    "#F5F3FF", // snaps - 보라
+                  color:
+                    activeSite === "ohprint" ? "#C2410C" :
+                    activeSite === "apparel" ? "#1E40AF" :
+                    "#6D28D9", // snaps
                 }}
               >
-                {activeSite === "ohprint" ? "오프린트미" : "어패럴"}
+                {SITE_META[activeSite].label}
               </span>
               {/* 저장 상태 인디케이터 */}
               {saveStatus === "saving" && (
