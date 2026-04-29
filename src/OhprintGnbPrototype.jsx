@@ -654,8 +654,7 @@ const OHPRINT_AFTER_CATEGORIES = [
             items: [
               {
                 id: "s1",
-                name: "맞춤 싱글 스티커 (소량 가능)",
-                badge: "HOT"
+                name: "맞춤 싱글 스티커 (소량 가능)"
               },
               {
                 id: "s2",
@@ -710,8 +709,7 @@ const OHPRINT_AFTER_CATEGORIES = [
             items: [
               {
                 id: "sh1",
-                name: "맞춤 시트 스티커 (소량 가능)",
-                badge: "HOT"
+                name: "맞춤 시트 스티커 (소량 가능)"
               },
               {
                 id: "sh2",
@@ -817,6 +815,22 @@ const OHPRINT_AFTER_CATEGORIES = [
               {
                 id: "s7",
                 name: "띠부 스티커"
+              },
+              {
+                id: "mlu868ng",
+                name: "카드 커버 스티커"
+              },
+              {
+                id: "lvil8c2p",
+                name: "폰꾸 스티커"
+              },
+              {
+                id: "7wc8sb2t",
+                name: "말랑 투명 스티커"
+              },
+              {
+                id: "e06scdgp",
+                name: "롱포토 스티커"
               },
               {
                 id: "s8",
@@ -6528,9 +6542,9 @@ function DiffSummary({ before, after }) {
 // 영속 저장 키 (아티팩트 storage용) - 사이트별로 분리
 // ============================================================================
 const STORAGE_KEYS = {
-  ohprint: "ohprint-gnb-after-data-v4", // v4: 스티커 카테고리 5열 재구성 + 신규 라인업
+  ohprint: "ohprint-gnb-after-data-v5", // v5: 스티커에 카드 커버/폰꾸/말랑 투명/롱포토 스티커 추가
   apparel: "apparel-gnb-after-data-v3",
-  snaps: "snaps-gnb-after-data-v3", // v3: 스티커 카테고리 4열 정비 + 신규 라인업
+  snaps: "snaps-gnb-after-data-v3",
 };
 
 // 사이트 메타데이터
