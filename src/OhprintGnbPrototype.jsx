@@ -2452,7 +2452,7 @@ const getInitialApparelAfterData = () => {
 };
 
 // ============================================================================
-// Snaps 사이트 초기 데이터 (실제 홈페이지 기반)
+// Snaps 사이트 - 변경 전 데이터 (실제 현재 홈페이지 GNB 기반)
 // ============================================================================
 const SNAPS_INITIAL_DATA = {
   categories: [
@@ -3161,9 +3161,1412 @@ const SNAPS_INITIAL_DATA = {
   ],
 };
 
+// ============================================================================
+// Snaps 사이트 - 변경 후 데이터 (개편안 - 사용자 기획안 반영)
+// ============================================================================
+const SNAPS_AFTER_DATA = {
+  categories: [
+    {
+      id: "snaps-all",
+      name: "전체 상품",
+      hasDropdown: true,
+      isAllProducts: true,
+      columns: []
+    },
+    {
+      id: "snaps-photobook",
+      name: "포토북",
+      badge: "FREESHIP",
+      columns: [
+        {
+          id: "col-snaps-pb-1",
+          groups: [
+            {
+              id: "snaps-pb-recommend",
+              name: "추천",
+              items: [
+                {
+                  id: "spb-r1",
+                  name: "AI 포토북",
+                  badge: "NEW_AI"
+                },
+                {
+                  id: "spb-r2",
+                  name: "공동 포토북",
+                  badge: "NEW"
+                },
+                {
+                  id: "spb-r3",
+                  name: "시그니처 레이플랫 포토북"
+                },
+                {
+                  id: "spb-r4",
+                  name: "졸업앨범"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-pb-2",
+          groups: [
+            {
+              id: "snaps-pb-products",
+              name: "상품",
+              items: [
+                {
+                  id: "spb-p1",
+                  name: "하드커버 포토북"
+                },
+                {
+                  id: "spb-p2",
+                  name: "소프트커버 포토북"
+                },
+                {
+                  id: "spb-p3",
+                  name: "패브릭커버 포토북"
+                },
+                {
+                  id: "spb-p4",
+                  name: "레더커버 포토북"
+                },
+                {
+                  id: "spb-p5",
+                  name: "스탠다드 레이플랫 포토북"
+                },
+                {
+                  id: "spb-p6",
+                  name: "프리미엄 레이플랫 포토북"
+                },
+                {
+                  id: "spb-p7",
+                  name: "시그니처 레이플랫 포토북",
+                  badge: "NEW"
+                },
+                {
+                  id: "spb-p8",
+                  name: "미니 포토북"
+                },
+                {
+                  id: "spb-p9",
+                  name: "졸업앨범"
+                },
+                {
+                  id: "spb-p10",
+                  name: "포토북"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-pb-3",
+          groups: [
+            {
+              id: "snaps-pb-theme",
+              name: "테마",
+              items: [
+                {
+                  id: "spb-t1",
+                  name: "심플·일상"
+                },
+                {
+                  id: "spb-t2",
+                  name: "여행"
+                },
+                {
+                  id: "spb-t3",
+                  name: "커플·웨딩"
+                },
+                {
+                  id: "spb-t4",
+                  name: "아기·돌잔치"
+                },
+                {
+                  id: "spb-t5",
+                  name: "가족"
+                },
+                {
+                  id: "spb-t6",
+                  name: "시즌·기념일"
+                },
+                {
+                  id: "spb-t7",
+                  name: "반려동물"
+                },
+                {
+                  id: "spb-t8",
+                  name: "팬북"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "snaps-print",
+      name: "사진인화",
+      columns: [
+        {
+          id: "col-snaps-pr-1",
+          groups: [
+            {
+              id: "snaps-pr-general",
+              name: "일반사진",
+              items: [
+                {
+                  id: "spr-g1",
+                  name: "일반사진인화"
+                },
+                {
+                  id: "spr-g2",
+                  name: "대형사진인화"
+                },
+                {
+                  id: "spr-g3",
+                  name: "증명사진"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-pr-2",
+          groups: [
+            {
+              id: "snaps-pr-design",
+              name: "디자인 사진",
+              items: [
+                {
+                  id: "spr-d1",
+                  name: "필름 북마크"
+                },
+                {
+                  id: "spr-d2",
+                  name: "지갑용사진"
+                },
+                {
+                  id: "spr-d3",
+                  name: "아코디언카드"
+                },
+                {
+                  id: "spr-d4",
+                  name: "포스터"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-pr-3",
+          groups: [
+            {
+              id: "snaps-pr-pack",
+              name: "프린트팩",
+              items: [
+                {
+                  id: "spr-pk1",
+                  name: "폴라로이드팩"
+                },
+                {
+                  id: "spr-pk2",
+                  name: "엽서팩"
+                },
+                {
+                  id: "spr-pk3",
+                  name: "스퀘어프린트팩"
+                },
+                {
+                  id: "spr-pk4",
+                  name: "우드블럭+프린트"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-pr-4",
+          groups: [
+            {
+              id: "snaps-pr-acc",
+              name: "액세서리",
+              items: [
+                {
+                  id: "spr-a1",
+                  name: "사진앨범"
+                },
+                {
+                  id: "spr-a2",
+                  name: "우드 스탠드"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "snaps-frame",
+      name: "액자",
+      columns: [
+        {
+          id: "col-snaps-fr-1",
+          groups: [
+            {
+              id: "snaps-fr-main",
+              name: "상품",
+              items: [
+                {
+                  id: "sfr1",
+                  name: "원목액자"
+                },
+                {
+                  id: "sfr2",
+                  name: "메탈액자"
+                },
+                {
+                  id: "sfr3",
+                  name: "프리미엄 아크릴액자"
+                },
+                {
+                  id: "sfr4",
+                  name: "보드액자"
+                },
+                {
+                  id: "sfr5",
+                  name: "행잉액자"
+                },
+                {
+                  id: "sfr6",
+                  name: "알루미늄액자"
+                },
+                {
+                  id: "sfr7",
+                  name: "캔버스액자"
+                },
+                {
+                  id: "sfr8",
+                  name: "아크릴 자작나무액자"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "snaps-goods",
+      name: "#굿즈",
+      badge: "NEW",
+      columns: [
+        {
+          id: "col-snaps-gd-1",
+          groups: [
+            {
+              id: "snaps-gd-keyring",
+              name: "키링",
+              groupBadge: "NEW",
+              items: [
+                {
+                  id: "sgd-k1",
+                  name: "인형 키링"
+                },
+                {
+                  id: "sgd-k2",
+                  name: "만쥬 인형"
+                }
+              ]
+            },
+            {
+              id: "snaps-gd-acc",
+              name: "액세서리",
+              items: [
+                {
+                  id: "sgd-a1",
+                  name: "슬로건앨범"
+                },
+                {
+                  id: "sgd-a2",
+                  name: "포토카드 앨범"
+                },
+                {
+                  id: "sgd-a3",
+                  name: "탑로더, 슬리브"
+                },
+                {
+                  id: "sgd-a4",
+                  name: "올꾸팩"
+                },
+                {
+                  id: "sgd-a5",
+                  name: "데코용 핀셋"
+                },
+                {
+                  id: "sgd-a6",
+                  name: "홀로그램 지퍼백"
+                },
+                {
+                  id: "sgd-a7",
+                  name: "카드지갑"
+                },
+                {
+                  id: "sgd-a8",
+                  name: "볼 체인"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-gd-2",
+          groups: [
+            {
+              id: "snaps-gd-photocard",
+              name: "포토카드",
+              items: [
+                {
+                  id: "sgd-pc1",
+                  name: "포토카드(세트구성)",
+                  badge: "HOT"
+                },
+                {
+                  id: "sgd-pc2",
+                  name: "투명 포토카드(세트구성)",
+                  badge: "HOT"
+                },
+                {
+                  id: "sgd-pc3",
+                  name: "포토카드(10장세트)"
+                },
+                {
+                  id: "sgd-pc4",
+                  name: "투명 포토카드(10장세트)"
+                },
+                {
+                  id: "sgd-pc5",
+                  name: "포토티켓"
+                },
+                {
+                  id: "sgd-pc6",
+                  name: "폴라로이드"
+                },
+                {
+                  id: "sgd-pc7",
+                  name: "증명사진"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-gd-3",
+          groups: [
+            {
+              id: "snaps-gd-poster",
+              name: "포스터/슬로건",
+              items: [
+                {
+                  id: "sgd-ps1",
+                  name: "종이슬로건"
+                },
+                {
+                  id: "sgd-ps2",
+                  name: "반사 슬로건"
+                },
+                {
+                  id: "sgd-ps3",
+                  name: "매지컬 반사 슬로건"
+                },
+                {
+                  id: "sgd-ps4",
+                  name: "홀로그램 슬로건"
+                },
+                {
+                  id: "sgd-ps5",
+                  name: "포스터"
+                },
+                {
+                  id: "sgd-ps6",
+                  name: "패브릭 포스터"
+                },
+                {
+                  id: "sgd-ps7",
+                  name: "미니배너"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-gd-4",
+          groups: [
+            {
+              id: "snaps-gd-stationery",
+              name: "문구",
+              items: [
+                {
+                  id: "sgd-s1",
+                  name: "필름 북마크"
+                },
+                {
+                  id: "sgd-s2",
+                  name: "틴케이스"
+                },
+                {
+                  id: "sgd-s3",
+                  name: "핀뱃지"
+                },
+                {
+                  id: "sgd-s4",
+                  name: "버튼거울"
+                },
+                {
+                  id: "sgd-s5",
+                  name: "버튼자석"
+                },
+                {
+                  id: "sgd-s6",
+                  name: "떡메모지"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-gd-5",
+          groups: [
+            {
+              id: "snaps-gd-photobook",
+              name: "포토북",
+              items: [
+                {
+                  id: "sgd-pb1",
+                  name: "팬북"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "snaps-tech",
+      name: "테크 액세서리",
+      badge: "NEW",
+      columns: [
+        {
+          id: "col-snaps-tc-1",
+          groups: [
+            {
+              id: "snaps-tc-phone",
+              name: "폰케이스",
+              groupBadge: "NEW",
+              items: [
+                {
+                  id: "stc-p1",
+                  name: "투명 범퍼 젤하드 케이스",
+                  badge: "NEW"
+                },
+                {
+                  id: "stc-p2",
+                  name: "맥세이프 투명 범퍼 젤하드 케이스",
+                  badge: "NEW"
+                },
+                {
+                  id: "stc-p3",
+                  name: "하드 케이스",
+                  badge: "NEW"
+                },
+                {
+                  id: "stc-p4",
+                  name: "맥세이프 하드 케이스",
+                  badge: "NEW"
+                },
+                {
+                  id: "stc-p5",
+                  name: "투명 하드 케이스 (Z Fold)"
+                },
+                {
+                  id: "stc-p6",
+                  name: "하드 케이스 (Z Fold)"
+                },
+                {
+                  id: "stc-p7",
+                  name: "맥세이프 하드 케이스 (Z Fold)"
+                },
+                {
+                  id: "stc-p8",
+                  name: "투명 하드 케이스 (Z Flip)"
+                },
+                {
+                  id: "stc-p9",
+                  name: "하드 케이스 (Z Flip)"
+                },
+                {
+                  id: "stc-p10",
+                  name: "맥세이프 하드 케이스 (Z Flip)"
+                },
+                {
+                  id: "stc-p11",
+                  name: "투명 젤리",
+                  badge: "NEW"
+                },
+                {
+                  id: "stc-p12",
+                  name: "크리스탈 하이브리드"
+                },
+                {
+                  id: "stc-p13",
+                  name: "투명 젤하드"
+                },
+                {
+                  id: "stc-p14",
+                  name: "글리터"
+                },
+                {
+                  id: "stc-p15",
+                  name: "홀로그램"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-tc-2",
+          groups: [
+            {
+              id: "snaps-tc-smart",
+              name: "스마트 액세서리",
+              items: [
+                {
+                  id: "stc-s1",
+                  name: "맥세이프 투명 카드지갑",
+                  badge: "NEW"
+                },
+                {
+                  id: "stc-s2",
+                  name: "맥세이프 가죽 카드지갑",
+                  badge: "NEW"
+                },
+                {
+                  id: "stc-s3",
+                  name: "에어팟 케이스"
+                },
+                {
+                  id: "stc-s4",
+                  name: "버즈 케이스"
+                },
+                {
+                  id: "stc-s5",
+                  name: "스마트톡"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-tc-3",
+          groups: [
+            {
+              id: "snaps-tc-mouse",
+              name: "마우스패드",
+              groupBadge: "NEW",
+              items: [
+                {
+                  id: "stc-m1",
+                  name: "오바록 장패드"
+                },
+                {
+                  id: "stc-m2",
+                  name: "블랙 오바록 장패드"
+                },
+                {
+                  id: "stc-m3",
+                  name: "오바록 마우스패드"
+                },
+                {
+                  id: "stc-m4",
+                  name: "오바록 게이밍 마우스패드"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "snaps-acrylic",
+      name: "아크릴",
+      badge: "HOT",
+      columns: [
+        {
+          id: "col-snaps-ac-1",
+          groups: [
+            {
+              id: "snaps-ac-recommend",
+              name: "추천",
+              items: [
+                {
+                  id: "sac-r1",
+                  name: "DIY 아크릴 스탠드",
+                  badge: "HOT"
+                },
+                {
+                  id: "sac-r2",
+                  name: "컬러 아크릴 키링"
+                },
+                {
+                  id: "sac-r3",
+                  name: "입체 아크릴 코롯토 자율형"
+                },
+                {
+                  id: "sac-r4",
+                  name: "아크릴 스마트톡"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-ac-2",
+          groups: [
+            {
+              id: "snaps-ac-keyring",
+              name: "아크릴 키링",
+              items: [
+                {
+                  id: "sac-k1",
+                  name: "아크릴 키링",
+                  badge: "HOT"
+                },
+                {
+                  id: "sac-k2",
+                  name: "투명 컬러 아크릴 키링"
+                },
+                {
+                  id: "sac-k3",
+                  name: "컬러 아크릴 키링"
+                },
+                {
+                  id: "sac-k4",
+                  name: "글리터 아크릴 키링"
+                },
+                {
+                  id: "sac-k5",
+                  name: "반투명 아크릴 키링"
+                },
+                {
+                  id: "sac-k6",
+                  name: "파스텔 아크릴 키링"
+                },
+                {
+                  id: "sac-k7",
+                  name: "반투명 파스텔 아크릴 키링"
+                },
+                {
+                  id: "sac-k8",
+                  name: "자개 아크릴 키링"
+                },
+                {
+                  id: "sac-k9",
+                  name: "홀로그램 아크릴 키링"
+                },
+                {
+                  id: "sac-k10",
+                  name: "하프미러 아크릴 키링"
+                },
+                {
+                  id: "sac-k11",
+                  name: "미러 아크릴 키링"
+                },
+                {
+                  id: "sac-k12",
+                  name: "야광 아크릴 키링"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-ac-3",
+          groups: [
+            {
+              id: "snaps-ac-stand",
+              name: "아크릴 스탠드",
+              items: [
+                {
+                  id: "sac-s1",
+                  name: "DIY 아크릴 스탠드",
+                  badge: "HOT"
+                },
+                {
+                  id: "sac-s2",
+                  name: "아크릴 등신대"
+                },
+                {
+                  id: "sac-s3",
+                  name: "홀로그램 아크릴 등신대"
+                },
+                {
+                  id: "sac-s4",
+                  name: "회전 아크릴 등신대"
+                },
+                {
+                  id: "sac-s5",
+                  name: "아크릴 포토프롬"
+                },
+                {
+                  id: "sac-s6",
+                  name: "아크릴 스탠드 액자"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-ac-4",
+          groups: [
+            {
+              id: "snaps-ac-corotto",
+              name: "아크릴 코롯토",
+              items: [
+                {
+                  id: "sac-c1",
+                  name: "입체 아크릴 코롯토 자율형"
+                },
+                {
+                  id: "sac-c2",
+                  name: "입체 아크릴 코롯토 규격형"
+                },
+                {
+                  id: "sac-c3",
+                  name: "양면 아크릴 코롯토"
+                },
+                {
+                  id: "sac-c4",
+                  name: "아크릴 코롯토 자율형"
+                },
+                {
+                  id: "sac-c5",
+                  name: "아크릴 코롯토 규격형"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-ac-5",
+          groups: [
+            {
+              id: "snaps-ac-acc",
+              name: "아크릴 액세서리",
+              items: [
+                {
+                  id: "sac-a1",
+                  name: "아크릴 스마트톡"
+                },
+                {
+                  id: "sac-a2",
+                  name: "아크릴 데코 마그넷"
+                },
+                {
+                  id: "sac-a3",
+                  name: "아크릴 마그넷"
+                },
+                {
+                  id: "sac-a4",
+                  name: "아크릴 집게"
+                },
+                {
+                  id: "sac-a5",
+                  name: "아크릴 뱃지"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "snaps-sticker",
+      name: "스티커",
+      columns: [
+        {
+          id: "col-snaps-st-1",
+          groups: [
+            {
+              id: "snaps-st-custom",
+              name: "싱글 스티커",
+              items: [
+                {
+                  id: "sst-c2",
+                  name: "DIY 낱장 스티커"
+                },
+                {
+                  id: "sst-b1",
+                  name: "원형 싱글 스티커"
+                },
+                {
+                  id: "sst-b2",
+                  name: "정사각 싱글 스티커"
+                },
+                {
+                  id: "sst-b3",
+                  name: "타원 싱글 스티커"
+                },
+                {
+                  id: "aluqpciz",
+                  name: "직사각 싱글 스티커"
+                },
+                {
+                  id: "sst-c3",
+                  name: "자유 반칼 스티커"
+                }
+              ]
+            },
+            {
+              id: "gjlfizau",
+              name: "용지",
+              items: [
+                {
+                  id: "a2xlov0b",
+                  name: "소프트"
+                },
+                {
+                  id: "shfyky5x",
+                  name: "투명"
+                },
+                {
+                  id: "v07yz8kj",
+                  name: "리무버블"
+                },
+                {
+                  id: "voty3bx4",
+                  name: "홀로그램"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-st-2",
+          groups: [
+            {
+              id: "a2rrrckf",
+              name: "시트 스티커",
+              items: [
+                {
+                  id: "sst-c1",
+                  name: "DIY 스티커"
+                },
+                {
+                  id: "2t1qpn7h",
+                  name: "원형 시트 스티커"
+                },
+                {
+                  id: "m7qnxxdy",
+                  name: "정사각 시트 스티커"
+                },
+                {
+                  id: "k24zprf4",
+                  name: "타원 시트 스티커"
+                },
+                {
+                  id: "a1c1oetx",
+                  name: "직사각 시트 스티커"
+                },
+                {
+                  id: "jt22wjdt",
+                  name: "와이드 시트 스티커"
+                }
+              ]
+            },
+            {
+              id: "6bczho6g",
+              name: "용지",
+              items: [
+                {
+                  id: "dx9hga0l",
+                  name: "소프트 / 투명"
+                },
+                {
+                  id: "b73r8nrl",
+                  name: "리무버블 / 홀로그램"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-st-3",
+          groups: [
+            {
+              id: "dmxz54uw",
+              name: "용지별 스티커",
+              items: [
+                {
+                  id: "e8byixjm",
+                  name: "소프트 스티커"
+                },
+                {
+                  id: "gosawvyn",
+                  name: "투명 스티커"
+                },
+                {
+                  id: "t2e0sbgr",
+                  name: "리무버블 스티커"
+                },
+                {
+                  id: "h2wtnley",
+                  name: "홀로그램 스티커"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-st-4",
+          groups: [
+            {
+              id: "snaps-st-goods",
+              name: "굿즈 스티커",
+              items: [
+                {
+                  id: "sst-g5",
+                  name: "띠부 스티커"
+                },
+                {
+                  id: "sst-g4",
+                  name: "카드 커버 스티커"
+                },
+                {
+                  id: "sst-g1",
+                  name: "폰꾸 스티커"
+                },
+                {
+                  id: "sst-g8",
+                  name: "말랑 투명 스티커"
+                },
+                {
+                  id: "sst-g3",
+                  name: "롱포토 스티커"
+                },
+                {
+                  id: "sst-g7",
+                  name: "우표 조각 스티커"
+                },
+                {
+                  id: "sst-g6",
+                  name: "데코 스티커"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "u7cpavnh",
+          groups: [
+            {
+              id: "snaps-st-name",
+              name: "네임 스티커",
+              items: [
+                {
+                  id: "sst-n1",
+                  name: "유아 네임 스티커"
+                },
+                {
+                  id: "sst-n2",
+                  name: "네임 스티커"
+                },
+                {
+                  id: "sst-n3",
+                  name: "의류 라벨 스티커"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "snaps-fashion",
+      name: "패션의류",
+      columns: [
+        {
+          id: "col-snaps-fa-1",
+          groups: [
+            {
+              id: "snaps-fa-top",
+              name: "상의",
+              items: [
+                {
+                  id: "sfa-t1",
+                  name: "컴포트 티셔츠"
+                },
+                {
+                  id: "sfa-t2",
+                  name: "루즈핏 맨투맨"
+                },
+                {
+                  id: "sfa-t3",
+                  name: "데일리 후드티셔츠(남여공용)"
+                },
+                {
+                  id: "sfa-t4",
+                  name: "세미 크롭티셔츠"
+                },
+                {
+                  id: "sfa-t5",
+                  name: "레귤러핏 크루넥 티셔츠(여)"
+                },
+                {
+                  id: "sfa-t6",
+                  name: "레귤러핏 크루넥 티셔츠(남)"
+                },
+                {
+                  id: "sfa-t7",
+                  name: "스냅스 착한 반팔 티셔츠"
+                },
+                {
+                  id: "sfa-t8",
+                  name: "베이직 반팔 티셔츠"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-fa-2",
+          groups: [
+            {
+              id: "snaps-fa-eco",
+              name: "에코백",
+              items: [
+                {
+                  id: "sfa-e1",
+                  name: "미니 핸디 에코백"
+                },
+                {
+                  id: "sfa-e2",
+                  name: "스탠드 베이직 에코백"
+                },
+                {
+                  id: "sfa-e3",
+                  name: "빅사이즈 쇼퍼 에코백"
+                },
+                {
+                  id: "sfa-e4",
+                  name: "데일리 토트 에코백"
+                },
+                {
+                  id: "sfa-e5",
+                  name: "데일리 숄더 에코백"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-fa-3",
+          groups: [
+            {
+              id: "snaps-fa-bag",
+              name: "잡화",
+              items: [
+                {
+                  id: "sfa-b1",
+                  name: "베이직 플랫 파우치"
+                },
+                {
+                  id: "sfa-b2",
+                  name: "스탠드 삼각 파우치"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-fa-4",
+          groups: [
+            {
+              id: "snaps-fa-kids",
+              name: "유아동",
+              items: [
+                {
+                  id: "sfa-k1",
+                  name: "베이직 반팔 티셔츠 (키즈)"
+                },
+                {
+                  id: "sfa-k2",
+                  name: "릴렉스 원피스 (키즈)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "snaps-home",
+      name: "홈/리빙",
+      columns: [
+        {
+          id: "col-snaps-hm-1",
+          groups: [
+            {
+              id: "snaps-hm-fabric",
+              name: "패브릭",
+              items: [
+                {
+                  id: "shm-f1",
+                  name: "패브릭 포스터"
+                },
+                {
+                  id: "shm-f2",
+                  name: "쉬폰 패브릭 포스터"
+                },
+                {
+                  id: "shm-f3",
+                  name: "베이직 데일리 쿠션"
+                },
+                {
+                  id: "shm-f4",
+                  name: "따스한 양면 기모담요"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-hm-2",
+          groups: [
+            {
+              id: "snaps-hm-frame",
+              name: "액자",
+              items: [
+                {
+                  id: "shm-fr1",
+                  name: "원목액자"
+                },
+                {
+                  id: "shm-fr2",
+                  name: "메탈액자"
+                },
+                {
+                  id: "shm-fr3",
+                  name: "프리미엄 아크릴액자"
+                },
+                {
+                  id: "shm-fr4",
+                  name: "보드액자"
+                },
+                {
+                  id: "shm-fr5",
+                  name: "행잉액자"
+                },
+                {
+                  id: "shm-fr6",
+                  name: "알루미늄액자"
+                },
+                {
+                  id: "shm-fr7",
+                  name: "캔버스액자"
+                },
+                {
+                  id: "shm-fr8",
+                  name: "아크릴 자작나무액자"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-hm-3",
+          groups: [
+            {
+              id: "snaps-hm-mug",
+              name: "머그컵",
+              items: [
+                {
+                  id: "shm-m1",
+                  name: "포토 머그컵"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-hm-4",
+          groups: [
+            {
+              id: "snaps-hm-acc",
+              name: "액세서리",
+              items: [
+                {
+                  id: "shm-a1",
+                  name: "쿠션솜"
+                },
+                {
+                  id: "shm-a2",
+                  name: "커튼 액세서리"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "snaps-card",
+      name: "카드·문구",
+      columns: [
+        {
+          id: "col-snaps-cd-1",
+          groups: [
+            {
+              id: "snaps-cd-card",
+              name: "카드",
+              items: [
+                {
+                  id: "scd-c1",
+                  name: "청첩장"
+                },
+                {
+                  id: "scd-c2",
+                  name: "감사"
+                },
+                {
+                  id: "scd-c3",
+                  name: "초대"
+                },
+                {
+                  id: "scd-c4",
+                  name: "신년"
+                },
+                {
+                  id: "scd-c5",
+                  name: "기념/이벤트"
+                },
+                {
+                  id: "scd-c6",
+                  name: "축하"
+                },
+                {
+                  id: "scd-c7",
+                  name: "크리스마스"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-cd-2",
+          groups: [
+            {
+              id: "snaps-cd-stationery",
+              name: "문구",
+              items: [
+                {
+                  id: "scd-s1",
+                  name: "틴케이스"
+                },
+                {
+                  id: "scd-s2",
+                  name: "핀뱃지"
+                },
+                {
+                  id: "scd-s3",
+                  name: "버튼거울"
+                },
+                {
+                  id: "scd-s4",
+                  name: "버튼자석"
+                },
+                {
+                  id: "scd-s5",
+                  name: "필름 북마크",
+                  badge: "NEW"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-cd-3",
+          groups: [
+            {
+              id: "snaps-cd-note",
+              name: "노트/메모",
+              items: [
+                {
+                  id: "scd-n1",
+                  name: "노트"
+                },
+                {
+                  id: "scd-n2",
+                  name: "스프링 노트"
+                },
+                {
+                  id: "scd-n3",
+                  name: "떡메모지"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "snaps-calendar",
+      name: "달력",
+      columns: [
+        {
+          id: "col-snaps-cl-1",
+          groups: [
+            {
+              id: "snaps-cl-desk",
+              name: "탁상용",
+              items: [
+                {
+                  id: "scl-d1",
+                  name: "탁상달력"
+                },
+                {
+                  id: "scl-d2",
+                  name: "우드블럭 달력"
+                },
+                {
+                  id: "scl-d3",
+                  name: "스케줄러"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "col-snaps-cl-2",
+          groups: [
+            {
+              id: "snaps-cl-wall",
+              name: "벽걸이용",
+              items: [
+                {
+                  id: "scl-w1",
+                  name: "벽걸이달력"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
 
 const getInitialSnapsAfterData = () => {
-  return { categories: JSON.parse(JSON.stringify(SNAPS_INITIAL_DATA.categories)) };
+  return { categories: JSON.parse(JSON.stringify(SNAPS_AFTER_DATA.categories)) };
 };
 
 const uid = () => Math.random().toString(36).slice(2, 10);
@@ -4094,6 +5497,28 @@ function EditorPanel({ data, setData, originalCategoryIds }) {
   const [bulkAddTarget, setBulkAddTarget] = useState(null);
   const [dragging, setDragging] = useState(null);
   const [dragOverCol, setDragOverCol] = useState(null);
+  // 항목 드래그용 별도 상태 (그룹 드래그와 분리)
+  const [draggingItem, setDraggingItem] = useState(null);
+  const [dragOverItem, setDragOverItem] = useState(null);
+  const [dragOverGroupArea, setDragOverGroupArea] = useState(null);
+  // 삭제 확인용 - 두 번 클릭으로 삭제 실행 (window.confirm이 환경에 따라 차단되어 도입)
+  const [pendingDelete, setPendingDelete] = useState(null);
+
+  // 삭제 확인 헬퍼: 첫 클릭 → 확인 대기, 두 번째 클릭(2초 내) → 실행
+  const requestDelete = (key, action) => {
+    if (pendingDelete === key) {
+      // 두 번째 클릭: 실제 삭제
+      action();
+      setPendingDelete(null);
+    } else {
+      // 첫 클릭: 확인 대기 상태로 전환
+      setPendingDelete(key);
+      // 2초 안에 다시 클릭하지 않으면 자동 취소
+      setTimeout(() => {
+        setPendingDelete((current) => (current === key ? null : current));
+      }, 2000);
+    }
+  };
 
   const updateData = (updater) => {
     setData((prev) => {
@@ -4124,7 +5549,6 @@ function EditorPanel({ data, setData, originalCategoryIds }) {
   };
 
   const removeCategory = (catId) => {
-    if (!confirm("이 대카테고리를 삭제하시겠어요?")) return;
     updateData((d) => {
       d.categories = d.categories.filter((c) => c.id !== catId);
     });
@@ -4169,7 +5593,6 @@ function EditorPanel({ data, setData, originalCategoryIds }) {
   };
 
   const removeColumn = (catId, colId) => {
-    if (!confirm("이 열을 삭제하시겠어요? 안에 있는 그룹도 모두 삭제됩니다.")) return;
     updateData((d) => {
       const cat = d.categories.find((c) => c.id === catId);
       if (cat) cat.columns = cat.columns.filter((c) => c.id !== colId);
@@ -4187,7 +5610,6 @@ function EditorPanel({ data, setData, originalCategoryIds }) {
   };
 
   const removeGroup = (catId, colId, groupId) => {
-    if (!confirm("이 그룹을 삭제하시겠어요?")) return;
     updateData((d) => {
       const cat = d.categories.find((c) => c.id === catId);
       const col = cat?.columns.find((c) => c.id === colId);
@@ -4228,6 +5650,70 @@ function EditorPanel({ data, setData, originalCategoryIds }) {
       const newIdx = direction === "up" ? idx - 1 : idx + 1;
       if (newIdx < 0 || newIdx >= col.groups.length) return;
       [col.groups[idx], col.groups[newIdx]] = [col.groups[newIdx], col.groups[idx]];
+    });
+  };
+
+  const reorderItemInGroup = (catId, colId, groupId, itemId, direction) => {
+    updateData((d) => {
+      const cat = d.categories.find((c) => c.id === catId);
+      const col = cat?.columns.find((c) => c.id === colId);
+      const grp = col?.groups.find((g) => g.id === groupId);
+      if (!grp) return;
+      const idx = grp.items.findIndex((i) => i.id === itemId);
+      const newIdx = direction === "up" ? idx - 1 : idx + 1;
+      if (newIdx < 0 || newIdx >= grp.items.length) return;
+      [grp.items[idx], grp.items[newIdx]] = [grp.items[newIdx], grp.items[idx]];
+    });
+  };
+
+  // 항목을 다른 위치(같은 그룹 내 또는 다른 그룹)로 이동
+  const moveItem = (fromCatId, fromColId, fromGroupId, itemId, toCatId, toColId, toGroupId, toIndex) => {
+    updateData((d) => {
+      // 출발지 찾기
+      const fromCat = d.categories.find((c) => c.id === fromCatId);
+      const fromCol = fromCat?.columns.find((c) => c.id === fromColId);
+      const fromGrp = fromCol?.groups.find((g) => g.id === fromGroupId);
+      if (!fromGrp) return;
+      const itemIdx = fromGrp.items.findIndex((i) => i.id === itemId);
+      if (itemIdx === -1) return;
+
+      // 도착지 찾기
+      const toCat = d.categories.find((c) => c.id === toCatId);
+      const toCol = toCat?.columns.find((c) => c.id === toColId);
+      const toGrp = toCol?.groups.find((g) => g.id === toGroupId);
+      if (!toGrp) return;
+
+      // 같은 그룹 내 이동: 인덱스 보정 필요
+      const sameGroup = fromGrp === toGrp;
+      const [movedItem] = fromGrp.items.splice(itemIdx, 1);
+
+      let insertIdx = toIndex;
+      if (sameGroup && itemIdx < toIndex) {
+        insertIdx = toIndex - 1; // splice로 빠진 만큼 보정
+      }
+      if (insertIdx < 0) insertIdx = 0;
+      if (insertIdx > toGrp.items.length) insertIdx = toGrp.items.length;
+
+      toGrp.items.splice(insertIdx, 0, movedItem);
+    });
+  };
+
+  // 항목 복제 - 바로 아래에 복사본 생성
+  const duplicateItem = (catId, colId, groupId, itemId) => {
+    updateData((d) => {
+      const cat = d.categories.find((c) => c.id === catId);
+      const col = cat?.columns.find((c) => c.id === colId);
+      const grp = col?.groups.find((g) => g.id === groupId);
+      if (!grp) return;
+      const idx = grp.items.findIndex((i) => i.id === itemId);
+      if (idx === -1) return;
+      const original = grp.items[idx];
+      const clone = {
+        ...JSON.parse(JSON.stringify(original)),
+        id: uid(), // 새 고유 ID
+        name: `${original.name} (복사)`,
+      };
+      grp.items.splice(idx + 1, 0, clone);
     });
   };
 
@@ -4320,6 +5806,100 @@ function EditorPanel({ data, setData, originalCategoryIds }) {
     setDragOverCol(null);
   };
 
+  // ============= 항목 드래그 핸들러 =============
+  const handleItemDragStart = (catId, colId, groupId, itemId) => (e) => {
+    e.stopPropagation();
+    setDraggingItem({ catId, fromColId: colId, fromGroupId: groupId, itemId });
+    e.dataTransfer.effectAllowed = "move";
+    try {
+      e.dataTransfer.setData("text/plain", itemId);
+    } catch {}
+  };
+
+  // 다른 항목 위에 드래그 - 그 위치(앞/뒤)에 삽입 표시
+  const handleItemDragOver = (catId, colId, groupId, itemId, itemIdx) => (e) => {
+    if (!draggingItem) return;
+    e.preventDefault();
+    e.stopPropagation();
+    e.dataTransfer.dropEffect = "move";
+    // 마우스 위치로 위/아래 결정 (위쪽 절반이면 before, 아래쪽 절반이면 after)
+    const rect = e.currentTarget.getBoundingClientRect();
+    const offsetY = e.clientY - rect.top;
+    const insertBefore = offsetY < rect.height / 2;
+    const targetKey = `${catId}|${colId}|${groupId}|${itemId}|${insertBefore ? "before" : "after"}`;
+    if (
+      !dragOverItem ||
+      dragOverItem.targetKey !== targetKey
+    ) {
+      setDragOverItem({
+        catId,
+        colId,
+        groupId,
+        itemIdx,
+        insertBefore,
+        targetKey,
+      });
+    }
+  };
+
+  // 그룹의 빈 영역으로 드래그 (항목이 0개이거나 마지막 항목 아래)
+  const handleItemDragOverGroup = (catId, colId, groupId) => (e) => {
+    if (!draggingItem) return;
+    e.preventDefault();
+    e.stopPropagation();
+    e.dataTransfer.dropEffect = "move";
+    setDragOverGroupArea({ catId, colId, groupId });
+  };
+
+  const handleItemDrop = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!draggingItem) return;
+
+    if (dragOverItem) {
+      // 다른 항목 위에 드롭
+      const { catId, colId, groupId, itemIdx, insertBefore } = dragOverItem;
+      const targetIdx = insertBefore ? itemIdx : itemIdx + 1;
+      moveItem(
+        draggingItem.catId,
+        draggingItem.fromColId,
+        draggingItem.fromGroupId,
+        draggingItem.itemId,
+        catId,
+        colId,
+        groupId,
+        targetIdx
+      );
+    } else if (dragOverGroupArea) {
+      // 그룹의 빈 영역(끝)에 드롭
+      const { catId, colId, groupId } = dragOverGroupArea;
+      const targetCat = data.categories.find((c) => c.id === catId);
+      const targetCol = targetCat?.columns.find((c) => c.id === colId);
+      const targetGrp = targetCol?.groups.find((g) => g.id === groupId);
+      const endIdx = targetGrp ? targetGrp.items.length : 0;
+      moveItem(
+        draggingItem.catId,
+        draggingItem.fromColId,
+        draggingItem.fromGroupId,
+        draggingItem.itemId,
+        catId,
+        colId,
+        groupId,
+        endIdx
+      );
+    }
+
+    setDraggingItem(null);
+    setDragOverItem(null);
+    setDragOverGroupArea(null);
+  };
+
+  const handleItemDragEnd = () => {
+    setDraggingItem(null);
+    setDragOverItem(null);
+    setDragOverGroupArea(null);
+  };
+
   return (
     <>
       <div className="space-y-3">
@@ -4398,12 +5978,30 @@ function EditorPanel({ data, setData, originalCategoryIds }) {
                   >
                     {isExpanded ? "접기" : "펼치기"}
                   </button>
-                  <button
-                    onClick={() => removeCategory(cat.id)}
-                    className="text-gray-400 hover:text-red-500"
-                  >
-                    <Trash2 className="w-3.5 h-3.5" />
-                  </button>
+                  {(() => {
+                    const deleteKey = `cat:${cat.id}`;
+                    const isPending = pendingDelete === deleteKey;
+                    return (
+                      <button
+                        onClick={() => requestDelete(deleteKey, () => removeCategory(cat.id))}
+                        className={isPending ? "text-white" : "text-gray-400 hover:text-red-500"}
+                        style={
+                          isPending
+                            ? {
+                                backgroundColor: "#EF4444",
+                                padding: "2px 8px",
+                                borderRadius: "4px",
+                                fontSize: "10px",
+                                fontWeight: 600,
+                              }
+                            : {}
+                        }
+                        title={isPending ? "다시 클릭하면 삭제됩니다 (2초 이내)" : "대카테고리 삭제"}
+                      >
+                        {isPending ? "정말 삭제?" : <Trash2 className="w-3.5 h-3.5" />}
+                      </button>
+                    );
+                  })()}
                 </div>
 
                 {isExpanded && (
@@ -4451,13 +6049,36 @@ function EditorPanel({ data, setData, originalCategoryIds }) {
                               <span className="text-xs font-bold" style={{ color: COLORS.textSecondary }}>
                                 {colIdx + 1}열
                               </span>
-                              <button
-                                onClick={() => removeColumn(cat.id, col.id)}
-                                className="text-gray-300 hover:text-red-500"
-                                title="열 삭제"
-                              >
-                                <X className="w-3 h-3" />
-                              </button>
+                              {(() => {
+                                const deleteKey = `col:${cat.id}:${col.id}`;
+                                const isPending = pendingDelete === deleteKey;
+                                return (
+                                  <button
+                                    onClick={() =>
+                                      requestDelete(deleteKey, () => removeColumn(cat.id, col.id))
+                                    }
+                                    className={isPending ? "text-white" : "text-gray-300 hover:text-red-500"}
+                                    style={
+                                      isPending
+                                        ? {
+                                            backgroundColor: "#EF4444",
+                                            padding: "1px 6px",
+                                            borderRadius: "3px",
+                                            fontSize: "9px",
+                                            fontWeight: 600,
+                                          }
+                                        : {}
+                                    }
+                                    title={
+                                      isPending
+                                        ? "다시 클릭하면 열이 삭제됩니다 (2초 이내)"
+                                        : "열 삭제 (안에 있는 그룹도 함께 삭제)"
+                                    }
+                                  >
+                                    {isPending ? "정말?" : <X className="w-3 h-3" />}
+                                  </button>
+                                );
+                              })()}
                             </div>
 
                             <div className="space-y-2">
@@ -4550,67 +6171,183 @@ function EditorPanel({ data, setData, originalCategoryIds }) {
                                       >
                                         {grpExpanded ? "접기" : `${group.items.length}개`}
                                       </button>
-                                      <button
-                                        onClick={() => removeGroup(cat.id, col.id, group.id)}
-                                        className="text-gray-300 hover:text-red-500"
-                                        title="그룹 삭제"
-                                      >
-                                        <X className="w-3 h-3" />
-                                      </button>
+                                      {(() => {
+                                        const deleteKey = `grp:${cat.id}:${col.id}:${group.id}`;
+                                        const isPending = pendingDelete === deleteKey;
+                                        return (
+                                          <button
+                                            onClick={() =>
+                                              requestDelete(deleteKey, () =>
+                                                removeGroup(cat.id, col.id, group.id)
+                                              )
+                                            }
+                                            className={isPending ? "text-white" : "text-gray-300 hover:text-red-500"}
+                                            style={
+                                              isPending
+                                                ? {
+                                                    backgroundColor: "#EF4444",
+                                                    padding: "1px 6px",
+                                                    borderRadius: "3px",
+                                                    fontSize: "9px",
+                                                    fontWeight: 600,
+                                                  }
+                                                : {}
+                                            }
+                                            title={
+                                              isPending
+                                                ? "다시 클릭하면 그룹이 삭제됩니다 (2초 이내)"
+                                                : "그룹 삭제"
+                                            }
+                                          >
+                                            {isPending ? "정말?" : <X className="w-3 h-3" />}
+                                          </button>
+                                        );
+                                      })()}
                                     </div>
                                     {grpExpanded && (
                                       <div
                                         className="mt-2 space-y-1 pt-1"
                                         style={{ borderTop: `1px solid ${COLORS.borderLight}` }}
                                         onDragStart={(e) => e.stopPropagation()}
+                                        onDragOver={handleItemDragOverGroup(cat.id, col.id, group.id)}
+                                        onDrop={handleItemDrop}
                                         draggable={false}
                                       >
-                                        {group.items.map((item) => (
-                                          <div key={item.id} className="flex items-center gap-1">
-                                            <span className="text-gray-300 text-[10px]">·</span>
-                                            <input
-                                              type="text"
-                                              value={item.name}
-                                              onChange={(e) =>
-                                                renameItem(
-                                                  cat.id,
-                                                  col.id,
-                                                  group.id,
-                                                  item.id,
-                                                  e.target.value
-                                                )
-                                              }
-                                              className="flex-1 text-[11px] bg-white border border-gray-200 rounded px-1.5 py-0.5 focus:outline-none min-w-0"
-                                              draggable={false}
-                                            />
-                                            <select
-                                              value={item.badge || ""}
-                                              onChange={(e) =>
-                                                setItemBadge(
-                                                  cat.id,
-                                                  col.id,
-                                                  group.id,
-                                                  item.id,
-                                                  e.target.value
-                                                )
-                                              }
-                                              className="text-[10px] px-0.5 py-0.5 border border-gray-200 rounded bg-white"
+                                        {group.items.map((item, itemIdx) => {
+                                          const isDraggingThis = draggingItem?.itemId === item.id;
+                                          const isDropBefore =
+                                            dragOverItem?.targetKey ===
+                                            `${cat.id}|${col.id}|${group.id}|${item.id}|before`;
+                                          const isDropAfter =
+                                            dragOverItem?.targetKey ===
+                                            `${cat.id}|${col.id}|${group.id}|${item.id}|after`;
+                                          return (
+                                            <div
+                                              key={item.id}
+                                              draggable
+                                              onDragStart={handleItemDragStart(
+                                                cat.id,
+                                                col.id,
+                                                group.id,
+                                                item.id
+                                              )}
+                                              onDragOver={handleItemDragOver(
+                                                cat.id,
+                                                col.id,
+                                                group.id,
+                                                item.id,
+                                                itemIdx
+                                              )}
+                                              onDrop={handleItemDrop}
+                                              onDragEnd={handleItemDragEnd}
+                                              className="flex items-center gap-1"
+                                              style={{
+                                                opacity: isDraggingThis ? 0.4 : 1,
+                                                borderTop: isDropBefore
+                                                  ? `2px solid ${COLORS.logoBlue}`
+                                                  : "2px solid transparent",
+                                                borderBottom: isDropAfter
+                                                  ? `2px solid ${COLORS.logoBlue}`
+                                                  : "2px solid transparent",
+                                                transition: "border-color 0.1s, opacity 0.15s",
+                                              }}
                                             >
-                                              <option value="">-</option>
-                                              <option value="HOT">HOT</option>
-                                              <option value="NEW">NEW</option>
-                                              <option value="SALE">SALE</option>
-                                            </select>
-                                            <button
-                                              onClick={() =>
-                                                removeItem(cat.id, col.id, group.id, item.id)
-                                              }
-                                              className="text-gray-300 hover:text-red-500"
-                                            >
-                                              <X className="w-2.5 h-2.5" />
-                                            </button>
-                                          </div>
-                                        ))}
+                                              {/* 드래그 핸들 */}
+                                              <GripVertical
+                                                className="w-2.5 h-2.5 text-gray-300 flex-shrink-0"
+                                                style={{ cursor: "grab" }}
+                                              />
+                                              {/* ▲▼ 순서 변경 버튼 */}
+                                              <div className="flex flex-col flex-shrink-0">
+                                                <button
+                                                  onClick={() =>
+                                                    reorderItemInGroup(
+                                                      cat.id,
+                                                      col.id,
+                                                      group.id,
+                                                      item.id,
+                                                      "up"
+                                                    )
+                                                  }
+                                                  disabled={itemIdx === 0}
+                                                  className="text-gray-400 hover:text-gray-700 disabled:opacity-20 leading-none text-[9px] px-0.5"
+                                                  title="위로 이동"
+                                                >
+                                                  ▲
+                                                </button>
+                                                <button
+                                                  onClick={() =>
+                                                    reorderItemInGroup(
+                                                      cat.id,
+                                                      col.id,
+                                                      group.id,
+                                                      item.id,
+                                                      "down"
+                                                    )
+                                                  }
+                                                  disabled={itemIdx === group.items.length - 1}
+                                                  className="text-gray-400 hover:text-gray-700 disabled:opacity-20 leading-none text-[9px] px-0.5"
+                                                  title="아래로 이동"
+                                                >
+                                                  ▼
+                                                </button>
+                                              </div>
+                                              <input
+                                                type="text"
+                                                value={item.name}
+                                                onChange={(e) =>
+                                                  renameItem(
+                                                    cat.id,
+                                                    col.id,
+                                                    group.id,
+                                                    item.id,
+                                                    e.target.value
+                                                  )
+                                                }
+                                                onDragStart={(e) => e.stopPropagation()}
+                                                className="flex-1 text-[11px] bg-white border border-gray-200 rounded px-1.5 py-0.5 focus:outline-none min-w-0"
+                                                draggable={false}
+                                              />
+                                              <select
+                                                value={item.badge || ""}
+                                                onChange={(e) =>
+                                                  setItemBadge(
+                                                    cat.id,
+                                                    col.id,
+                                                    group.id,
+                                                    item.id,
+                                                    e.target.value
+                                                  )
+                                                }
+                                                className="text-[10px] px-0.5 py-0.5 border border-gray-200 rounded bg-white"
+                                              >
+                                                <option value="">-</option>
+                                                <option value="HOT">HOT</option>
+                                                <option value="NEW">NEW</option>
+                                                <option value="SALE">SALE</option>
+                                              </select>
+                                              {/* 복제 버튼 */}
+                                              <button
+                                                onClick={() =>
+                                                  duplicateItem(cat.id, col.id, group.id, item.id)
+                                                }
+                                                className="text-gray-300 hover:text-blue-500 flex-shrink-0"
+                                                title="이 항목 복제"
+                                                style={{ fontSize: "10px", lineHeight: 1 }}
+                                              >
+                                                ⎘
+                                              </button>
+                                              <button
+                                                onClick={() =>
+                                                  removeItem(cat.id, col.id, group.id, item.id)
+                                                }
+                                                className="text-gray-300 hover:text-red-500"
+                                              >
+                                                <X className="w-2.5 h-2.5" />
+                                              </button>
+                                            </div>
+                                          );
+                                        })}
                                         <button
                                           onClick={() => addItem(cat.id, col.id, group.id)}
                                           className="flex items-center gap-1 text-[10px] text-gray-500 hover:text-gray-900 mt-0.5"
@@ -4765,7 +6502,7 @@ function DiffSummary({ before, after }) {
 const STORAGE_KEYS = {
   ohprint: "ohprint-gnb-after-data-v3",
   apparel: "apparel-gnb-after-data-v3",
-  snaps: "snaps-gnb-after-data-v1", // v1: 신규 추가
+  snaps: "snaps-gnb-after-data-v2", // v2: 스티커 카테고리 5열 재구성 + 항목 변경 반영
 };
 
 // 사이트 메타데이터
@@ -4987,7 +6724,16 @@ export default function OhprintGnbPrototype() {
         // 구 포맷: { categories: [...] } - 현재 활성 사이트에만 적용
         if (parsed && Array.isArray(parsed.categories)) {
           const siteLabel = SITE_META[activeSite].label;
-          if (confirm(`구 포맷 파일입니다. 현재 활성 사이트(${siteLabel})에만 적용할까요?`)) {
+          let proceed = true;
+          try {
+            proceed = window.confirm(
+              `구 포맷 파일입니다. 현재 활성 사이트(${siteLabel})에만 적용할까요?`
+            );
+          } catch {
+            // confirm이 차단된 환경: 그냥 진행
+            proceed = true;
+          }
+          if (proceed) {
             setAfterData(parsed);
           }
           return;
@@ -5004,7 +6750,16 @@ export default function OhprintGnbPrototype() {
 
   const resetToInitial = async () => {
     const siteLabel = SITE_META[activeSite].label;
-    if (!confirm(`${siteLabel} 개편안을 초기 상태로 되돌리시겠어요? 자동 저장된 내용도 삭제됩니다.`)) return;
+    let proceed = true;
+    try {
+      proceed = window.confirm(
+        `${siteLabel} 개편안을 초기 상태로 되돌리시겠어요? 자동 저장된 내용도 삭제됩니다.`
+      );
+    } catch {
+      // confirm이 차단된 환경: 그냥 진행
+      proceed = true;
+    }
+    if (!proceed) return;
     setAfterData(SITE_META[activeSite].getAfterData());
     try {
       if (typeof window !== "undefined" && window.storage && typeof window.storage.delete === "function") {
@@ -5185,7 +6940,7 @@ export default function OhprintGnbPrototype() {
               className="text-xs px-3 py-2 rounded-md border"
               style={{ backgroundColor: "#EFF6FF", borderColor: "#DBEAFE", color: "#1E40AF" }}
             >
-              💡 <b>사용법</b>: 그룹 카드 왼쪽의 핸들(⋮⋮)을 잡고 다른 열로 드래그하세요. 한 열에 여러 그룹을 쌓을 수 있고, 최대 5열까지 배치 가능합니다. 스위처 버튼으로 오프린트미/어패럴 사이트를 전환할 수 있으며, 각자 독립적으로 자동 저장됩니다.
+              💡 <b>사용법</b>: 그룹 카드 왼쪽 핸들(⋮⋮)을 잡고 다른 열로 드래그할 수 있어요 (최대 5열). 그룹을 펼치면 개별 항목도 드래그로 순서 변경하거나 다른 그룹으로 이동할 수 있고, ⎘ 버튼으로 항목 복제도 가능합니다. <b>삭제 버튼은 두 번 클릭</b>해야 실행됩니다 (실수 방지). 스위처로 오프린트미/어패럴/Snaps 사이트를 전환하며, 각자 독립 자동 저장됩니다.
             </div>
           </div>
         )}
