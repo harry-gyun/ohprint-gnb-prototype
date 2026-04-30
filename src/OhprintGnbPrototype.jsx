@@ -46,7 +46,16 @@ const COLORS = {
   borderLight: "#F3F4F6",
   borderBase: "#E5E7EB",
 };
-const MAX_COLUMNS = 5;
+// 사이트별 최대 열 수
+const MAX_COLUMNS_BY_SITE = {
+  ohprint: 6,
+  apparel: 5,
+  snaps: 5,
+};
+// 절대 최대값 (어떤 사이트도 이를 초과할 수 없음 - 레이아웃 안전선)
+const MAX_COLUMNS = 6;
+// 사이트별 최대 열 수 조회 헬퍼
+const getMaxColumns = (siteKey) => MAX_COLUMNS_BY_SITE[siteKey] || 5;
 
 // ============================================================================
 // 초기 데이터 (열 기반 구조)
@@ -1220,62 +1229,6 @@ const OHPRINT_AFTER_CATEGORIES = [
         id: "col-goods-1",
         groups: [
           {
-            id: "goods-diary",
-            name: "다이어리/메모",
-            items: [
-              {
-                id: "gd1",
-                name: "하드커버 다이어리",
-                badge: "HOT"
-              },
-              {
-                id: "gd2",
-                name: "투명PVC커버 다이어리",
-                badge: "HOT"
-              },
-              {
-                id: "gd3",
-                name: "소프트커버 다이어리",
-                badge: "HOT"
-              },
-              {
-                id: "gd4",
-                name: "메모패드"
-              },
-              {
-                id: "gd5",
-                name: "노트패드"
-              }
-            ]
-          },
-          {
-            id: "lsnckkg5",
-            name: "스마트 액세서리",
-            items: [
-              {
-                id: "s7wnquuo",
-                name: "맥세이프 가죽 카드지갑"
-              },
-              {
-                id: "d2ng5gln",
-                name: "에어팟 케이스"
-              },
-              {
-                id: "t0378azp",
-                name: "버즈 케이스"
-              },
-              {
-                id: "i37015jl",
-                name: "스마트톡"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: "col-goods-2",
-        groups: [
-          {
             id: "57jexill",
             name: "아크릴 키링",
             items: [
@@ -1334,7 +1287,7 @@ const OHPRINT_AFTER_CATEGORIES = [
         ]
       },
       {
-        id: "col-goods-3",
+        id: "col-goods-2",
         groups: [
           {
             id: "goods-acrylic",
@@ -1397,23 +1350,82 @@ const OHPRINT_AFTER_CATEGORIES = [
         ]
       },
       {
+        id: "col-goods-3",
+        groups: [
+          {
+            id: "iw0ob41w",
+            name: "폰케이스",
+            items: [
+              {
+                id: "wmmtwu2o",
+                name: "투명 범퍼 젤하드 케이스"
+              },
+              {
+                id: "171f39us",
+                name: "맥세이프 투명 범퍼 젤하드 케이스"
+              },
+              {
+                id: "axy2kgwh",
+                name: "하드 케이스"
+              },
+              {
+                id: "o97zmyto",
+                name: "맥세이프 하드 케이스"
+              },
+              {
+                id: "trea8k4g",
+                name: "투명 하드 케이스 (Z Flip)"
+              },
+              {
+                id: "dq0mv93c",
+                name: "하드 케이스 (Z Flip)"
+              },
+              {
+                id: "rnpqiykv",
+                name: "맥세이프 하드 케이스 (Z Flip)"
+              },
+              {
+                id: "q72pi8qi",
+                name: "투명 하드 케이스 (Z Fold)"
+              },
+              {
+                id: "29ymqxvt",
+                name: "하드 케이스 (Z Fold)"
+              },
+              {
+                id: "m8v89wf5",
+                name: "맥세이프 하드 케이스 (Z Fold)"
+              },
+              {
+                id: "hcyd5brm",
+                name: "투명 젤리 케이스"
+              }
+            ]
+          }
+        ]
+      },
+      {
         id: "col-goods-4",
         groups: [
           {
-            id: "goods-btn",
-            name: "버튼",
+            id: "lsnckkg5",
+            name: "스마트 액세서리",
             items: [
               {
-                id: "gb1",
-                name: "핀 버튼"
+                id: "s7wnquuo",
+                name: "맥세이프 가죽 카드지갑"
               },
               {
-                id: "gb2",
-                name: "거울 버튼"
+                id: "d2ng5gln",
+                name: "에어팟 케이스"
               },
               {
-                id: "gb3",
-                name: "자석 버튼"
+                id: "t0378azp",
+                name: "버즈 케이스"
+              },
+              {
+                id: "i37015jl",
+                name: "스마트톡"
               }
             ]
           },
@@ -1443,6 +1455,58 @@ const OHPRINT_AFTER_CATEGORIES = [
       },
       {
         id: "col-goods-5",
+        groups: [
+          {
+            id: "goods-diary",
+            name: "다이어리/메모",
+            items: [
+              {
+                id: "gd1",
+                name: "하드커버 다이어리",
+                badge: "HOT"
+              },
+              {
+                id: "gd2",
+                name: "투명PVC커버 다이어리",
+                badge: "HOT"
+              },
+              {
+                id: "gd3",
+                name: "소프트커버 다이어리",
+                badge: "HOT"
+              },
+              {
+                id: "gd4",
+                name: "메모패드"
+              },
+              {
+                id: "gd5",
+                name: "노트패드"
+              }
+            ]
+          },
+          {
+            id: "goods-btn",
+            name: "버튼",
+            items: [
+              {
+                id: "gb1",
+                name: "핀 버튼"
+              },
+              {
+                id: "gb2",
+                name: "거울 버튼"
+              },
+              {
+                id: "gb3",
+                name: "자석 버튼"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "0k705l08",
         groups: [
           {
             id: "goods-pen",
@@ -5220,6 +5284,7 @@ function GnbPreview({
                 anchorRect={catRects[openCategory.id]}
                 barWidth={barRef.current?.offsetWidth || LAYOUT.containerMaxWidth}
                 variant={activeSite === "apparel" ? "apparel" : "ohprint"}
+                activeSite={activeSite}
               />
             )}
           </div>
@@ -5253,7 +5318,7 @@ function GnbPreview({
 // - 폭은 열 개수 × 컬럼 폭 기반으로 자동 결정
 // - 화면 우측을 넘어가지 않도록 자동 보정
 // ============================================================================
-function Dropdown({ category, anchorRect, barWidth, variant = "ohprint" }) {
+function Dropdown({ category, anchorRect, barWidth, variant = "ohprint", activeSite = "ohprint" }) {
   if (!category) return null;
   const columns = (category.columns || []).filter(
     (col) => (col.groups || []).length > 0
@@ -5261,7 +5326,8 @@ function Dropdown({ category, anchorRect, barWidth, variant = "ohprint" }) {
   if (columns.length === 0) return null;
 
   const showGroupName = hasAnyGroupName(category);
-  const columnCount = Math.min(columns.length, MAX_COLUMNS);
+  const maxCols = getMaxColumns(activeSite);
+  const columnCount = Math.min(columns.length, maxCols);
 
   // 레이아웃 상수 (사이트별 다르게)
   const COLUMN_WIDTH = variant === "apparel" ? 200 : 180;
@@ -5301,7 +5367,7 @@ function Dropdown({ category, anchorRect, barWidth, variant = "ohprint" }) {
           alignItems: "start",
         }}
       >
-        {columns.slice(0, MAX_COLUMNS).map((col) => (
+        {columns.slice(0, maxCols).map((col) => (
           <DropdownColumn
             key={col.id}
             column={col}
@@ -5533,7 +5599,8 @@ function BulkAddModal({ isOpen, onClose, onAdd, targetName }) {
 // ============================================================================
 // 편집 UI
 // ============================================================================
-function EditorPanel({ data, setData, originalCategoryIds }) {
+function EditorPanel({ data, setData, originalCategoryIds, activeSite = "ohprint" }) {
+  const maxCols = getMaxColumns(activeSite);
   const [expandedCategoryId, setExpandedCategoryId] = useState(null);
   const [expandedGroupIds, setExpandedGroupIds] = useState({});
   const [bulkAddTarget, setBulkAddTarget] = useState(null);
@@ -5625,7 +5692,7 @@ function EditorPanel({ data, setData, originalCategoryIds }) {
   const addColumn = (catId) => {
     updateData((d) => {
       const cat = d.categories.find((c) => c.id === catId);
-      if (cat && (cat.columns?.length || 0) < MAX_COLUMNS) {
+      if (cat && (cat.columns?.length || 0) < maxCols) {
         cat.columns.push({
           id: uid(),
           groups: [{ id: uid(), name: "새 그룹", items: [] }],
@@ -6012,7 +6079,7 @@ function EditorPanel({ data, setData, originalCategoryIds }) {
                     </span>
                   )}
                   <span className="text-xs text-gray-500">
-                    열 {cat.columns?.length || 0}/{MAX_COLUMNS}
+                    열 {cat.columns?.length || 0}/{maxCols}
                   </span>
                   <button
                     onClick={() => toggleCategory(cat.id)}
@@ -6057,7 +6124,7 @@ function EditorPanel({ data, setData, originalCategoryIds }) {
                     <div className="text-xs text-gray-500 mb-2 flex items-center gap-1">
                       <Columns3 className="w-3 h-3" />
                       <span>
-                        그룹을 드래그해서 다른 열로 이동할 수 있어요 (최대 {MAX_COLUMNS}열)
+                        그룹을 드래그해서 다른 열로 이동할 수 있어요 (최대 {maxCols}열)
                       </span>
                     </div>
                     <div
@@ -6416,14 +6483,14 @@ function EditorPanel({ data, setData, originalCategoryIds }) {
                       })}
                     </div>
 
-                    {cat.columns.length < MAX_COLUMNS && (
+                    {cat.columns.length < maxCols && (
                       <button
                         onClick={() => addColumn(cat.id)}
                         className="mt-2 flex items-center gap-1 text-xs text-gray-600 hover:text-gray-900 px-3 py-1.5 border border-dashed rounded"
                         style={{ borderColor: COLORS.borderBase }}
                       >
                         <Plus className="w-3 h-3" />
-                        열 추가 ({cat.columns.length}/{MAX_COLUMNS})
+                        열 추가 ({cat.columns.length}/{maxCols})
                       </button>
                     )}
                   </div>
@@ -6542,7 +6609,7 @@ function DiffSummary({ before, after }) {
 // 영속 저장 키 (아티팩트 storage용) - 사이트별로 분리
 // ============================================================================
 const STORAGE_KEYS = {
-  ohprint: "ohprint-gnb-after-data-v5", // v5: 스티커에 카드 커버/폰꾸/말랑 투명/롱포토 스티커 추가
+  ohprint: "ohprint-gnb-after-data-v6", // v6: 굿즈 6열 확장 + 폰케이스 라인업 추가
   apparel: "apparel-gnb-after-data-v3",
   snaps: "snaps-gnb-after-data-v3",
 };
@@ -6855,7 +6922,7 @@ export default function OhprintGnbPrototype() {
               )}
             </h1>
             <p className="text-xs text-gray-500 mt-0.5">
-              실제 홈페이지 기준 콘텐츠 폭 {LAYOUT.containerMaxWidth}px · 중앙 정렬 · 최대 5열 그리드 · 편집 시 자동 저장 · 스위처로 사이트 전환
+              실제 홈페이지 기준 콘텐츠 폭 {LAYOUT.containerMaxWidth}px · 중앙 정렬 · 최대 {getMaxColumns(activeSite)}열 그리드 · 편집 시 자동 저장 · 스위처로 사이트 전환
             </p>
           </div>
           <div className="flex items-center gap-2">
@@ -6976,13 +7043,14 @@ export default function OhprintGnbPrototype() {
                 data={afterData}
                 setData={setAfterData}
                 originalCategoryIds={originalCategoryIds}
+                activeSite={activeSite}
               />
             </div>
             <div
               className="text-xs px-3 py-2 rounded-md border"
               style={{ backgroundColor: "#EFF6FF", borderColor: "#DBEAFE", color: "#1E40AF" }}
             >
-              💡 <b>사용법</b>: 그룹 카드 왼쪽 핸들(⋮⋮)을 잡고 다른 열로 드래그할 수 있어요 (최대 5열). 그룹을 펼치면 개별 항목도 드래그로 순서 변경하거나 다른 그룹으로 이동할 수 있고, ⎘ 버튼으로 항목 복제도 가능합니다. <b>삭제 버튼은 두 번 클릭</b>해야 실행됩니다 (실수 방지). 스위처로 오프린트미/어패럴/Snaps 사이트를 전환하며, 각자 독립 자동 저장됩니다.
+              💡 <b>사용법</b>: 그룹 카드 왼쪽 핸들(⋮⋮)을 잡고 다른 열로 드래그할 수 있어요 (오프린트미는 최대 6열, 어패럴/Snaps는 최대 5열). 그룹을 펼치면 개별 항목도 드래그로 순서 변경하거나 다른 그룹으로 이동할 수 있고, ⎘ 버튼으로 항목 복제도 가능합니다. <b>삭제 버튼은 두 번 클릭</b>해야 실행됩니다 (실수 방지). 스위처로 오프린트미/어패럴/Snaps 사이트를 전환하며, 각자 독립 자동 저장됩니다.
             </div>
           </div>
         )}
