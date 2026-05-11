@@ -700,10 +700,6 @@ const OHPRINT_AFTER_CATEGORIES = [
               {
                 id: "y4dquode",
                 name: "홀로그램 싱글 스티커"
-              },
-              {
-                id: "i33oki7h",
-                name: "크라프트 싱글 스티커"
               }
             ]
           }
@@ -4167,10 +4163,6 @@ const SNAPS_AFTER_DATA = {
                 {
                   id: "ivj31tzh",
                   name: "홀로그램 싱글 스티커"
-                },
-                {
-                  id: "d8c2ym7t",
-                  name: "크라프트 싱글 스티커"
                 }
               ]
             }
@@ -6609,9 +6601,9 @@ function DiffSummary({ before, after }) {
 // 영속 저장 키 (아티팩트 storage용) - 사이트별로 분리
 // ============================================================================
 const STORAGE_KEYS = {
-  ohprint: "ohprint-gnb-after-data-v6", // v6: 굿즈 6열 확장 + 폰케이스 라인업 추가
+  ohprint: "ohprint-gnb-after-data-v7", // v7: 스티커에서 크라프트 싱글 스티커 제거
   apparel: "apparel-gnb-after-data-v3",
-  snaps: "snaps-gnb-after-data-v3",
+  snaps: "snaps-gnb-after-data-v4", // v4: 스티커에서 크라프트 싱글 스티커 제거
 };
 
 // 사이트 메타데이터
