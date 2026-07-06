@@ -818,6 +818,16 @@ const OHPRINT_AFTER_CATEGORIES = [
             name: "굿즈 스티커",
             items: [
               {
+                id: "cog5w7m7",
+                name: "에폭시 스티커",
+                badge: "NEW"
+              },
+              {
+                id: "nrvx7gam",
+                name: "PVC 스티커",
+                badge: "NEW"
+              },
+              {
                 id: "s7",
                 name: "띠부 스티커"
               },
@@ -1230,8 +1240,7 @@ const OHPRINT_AFTER_CATEGORIES = [
             items: [
               {
                 id: "hma5t6sr",
-                name: "아크릴 키링",
-                badge: "HOT"
+                name: "아크릴 키링"
               },
               {
                 id: "03zl09ja",
@@ -1239,8 +1248,7 @@ const OHPRINT_AFTER_CATEGORIES = [
               },
               {
                 id: "92m5odi0",
-                name: "컬러 아크릴 키링",
-                badge: "HOT"
+                name: "컬러 아크릴 키링"
               },
               {
                 id: "bjqooqot",
@@ -1291,8 +1299,7 @@ const OHPRINT_AFTER_CATEGORIES = [
             items: [
               {
                 id: "t8snvucx",
-                name: "DIY 아크릴 스탠드",
-                badge: "HOT"
+                name: "DIY 아크릴 스탠드"
               },
               {
                 id: "90ntni6y",
@@ -1322,8 +1329,7 @@ const OHPRINT_AFTER_CATEGORIES = [
             items: [
               {
                 id: "75saky9z",
-                name: "아크릴 스마트톡",
-                badge: "HOT"
+                name: "아크릴 스마트톡"
               },
               {
                 id: "q6fnec76",
@@ -1365,6 +1371,11 @@ const OHPRINT_AFTER_CATEGORIES = [
                 name: "하드 케이스"
               },
               {
+                id: "sywx0gxf",
+                name: "에폭시 케이스",
+                badge: "NEW"
+              },
+              {
                 id: "o97zmyto",
                 name: "맥세이프 하드 케이스"
               },
@@ -1397,6 +1408,28 @@ const OHPRINT_AFTER_CATEGORIES = [
                 name: "투명 젤리 케이스"
               }
             ]
+          },
+          {
+            id: "goods-btn",
+            name: "버튼/액세서리",
+            items: [
+              {
+                id: "gb1",
+                name: "핀 버튼"
+              },
+              {
+                id: "gb2",
+                name: "거울 버튼"
+              },
+              {
+                id: "gb3",
+                name: "자석 버튼"
+              },
+              {
+                id: "yer8wrv5",
+                name: "오바록 마우스패드"
+              }
+            ]
           }
         ]
       },
@@ -1426,76 +1459,57 @@ const OHPRINT_AFTER_CATEGORIES = [
             ]
           },
           {
-            id: "103banaq",
-            name: "마우스 패드",
+            id: "goods-photo",
+            name: "포토 굿즈",
             items: [
               {
-                id: "beiaxdfy",
-                name: "오바록 장패드"
+                id: "gph1",
+                name: "필름 북마크"
               },
               {
-                id: "o4lamekc",
-                name: "블랙 오바록 장패드"
-              },
-              {
-                id: "ua3tqhf0",
-                name: "오바록 마우스패드"
-              },
-              {
-                id: "oxd677d5",
-                name: "오바록 게이밍 마우스패드"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: "col-goods-5",
-        groups: [
-          {
-            id: "goods-diary",
-            name: "다이어리/메모",
-            items: [
-              {
-                id: "gd1",
-                name: "하드커버 다이어리",
-                badge: "HOT"
-              },
-              {
-                id: "gd2",
-                name: "투명PVC커버 다이어리",
-                badge: "HOT"
-              },
-              {
-                id: "gd3",
-                name: "소프트커버 다이어리",
-                badge: "HOT"
-              },
-              {
-                id: "gd4",
-                name: "메모패드"
-              },
-              {
-                id: "gd5",
-                name: "노트패드"
+                id: "gph2",
+                name: "포토 티켓"
               }
             ]
           },
           {
-            id: "goods-btn",
-            name: "버튼",
+            id: "1ln4ee41",
+            name: "키캡",
             items: [
               {
-                id: "gb1",
-                name: "핀 버튼"
+                id: "y0paqjs9",
+                name: "풀 컬러 키캡",
+                badge: "NEW"
               },
               {
-                id: "gb2",
-                name: "거울 버튼"
+                id: "qwq06l2q",
+                name: "블랙 LED 키캡",
+                badge: "NEW"
               },
               {
-                id: "gb3",
-                name: "자석 버튼"
+                id: "egyfh707",
+                name: "화이트 LED 키캡",
+                badge: "NEW"
+              },
+              {
+                id: "reinfqtl",
+                name: "레진 키캡",
+                badge: "NEW"
+              },
+              {
+                id: "nik72rgx",
+                name: "레진 LED 키캡 키링",
+                badge: "NEW"
+              },
+              {
+                id: "8dngswdv",
+                name: "화이트 LED 키캡 키링",
+                badge: "NEW"
+              },
+              {
+                id: "dg6jw0zx",
+                name: "블랙 LED 키캡 키링",
+                badge: "NEW"
               }
             ]
           }
@@ -1523,26 +1537,48 @@ const OHPRINT_AFTER_CATEGORIES = [
             ]
           },
           {
-            id: "goods-photo",
-            name: "포토 굿즈",
+            id: "goods-diary",
+            name: "다이어리/메모",
             items: [
               {
-                id: "gph1",
-                name: "필름 북마크"
+                id: "gd1",
+                name: "하드커버 다이어리"
               },
               {
-                id: "gph2",
-                name: "포토 티켓"
+                id: "gd2",
+                name: "투명PVC커버 다이어리"
+              },
+              {
+                id: "gd3",
+                name: "소프트커버 다이어리"
+              },
+              {
+                id: "gd4",
+                name: "메모패드"
+              },
+              {
+                id: "gd5",
+                name: "노트패드"
               }
             ]
           },
           {
             id: "goods-fan",
-            name: "부채",
+            name: "부채/피켓",
             items: [
               {
                 id: "gf1",
                 name: "부채"
+              },
+              {
+                id: "kvywbdua",
+                name: "이미지 피켓",
+                badge: "NEW"
+              },
+              {
+                id: "kake8jtg",
+                name: "이미지 피켓 키링",
+                badge: "NEW"
               }
             ]
           }
@@ -1564,7 +1600,7 @@ const OHPRINT_AFTER_CATEGORIES = [
             items: [
               {
                 id: "ctm1",
-                name: "본차이나 머그컵 S/M"
+                name: "본차이나 머그컵"
               },
               {
                 id: "ctm2",
@@ -1595,11 +1631,11 @@ const OHPRINT_AFTER_CATEGORIES = [
             items: [
               {
                 id: "vz2n7hkk",
-                name: "내열유리 머그컵 S/M/L"
+                name: "내열유리 머그컵"
               },
               {
                 id: "ltz889v0",
-                name: "내열유리 블럭 머그컵 S/M"
+                name: "내열유리 블럭 머그컵"
               },
               {
                 id: "jq0fgj1n",
@@ -2197,380 +2233,384 @@ const APPAREL_INITIAL_DATA = {
 
 // 어패럴 개편안 - 아티팩트에서 편집 후 반영된 실제 기획안 구조
 const APPAREL_AFTER_CATEGORIES = [
-    {
-      id: "ap-tshirt",
-      name: "티셔츠",
-      columns: [
-        {
-          id: "col-ap-t-1",
-          groups: [
-            {
-              id: "ap-t-main",
-              name: "",
-              items: [
-                {
-                  id: "apt1",
-                  name: "반소매 티셔츠"
-                },
-                {
-                  id: "apt2",
-                  name: "긴소매 티셔츠"
-                },
-                {
-                  id: "apt3",
-                  name: "민소매 티셔츠"
-                },
-                {
-                  id: "apt4",
-                  name: "폴로셔츠"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          id: "col-ap-t-2",
-          groups: [
-            {
-              id: "ap-t-sub",
-              name: "",
-              items: [
-                {
-                  id: "apt5",
-                  name: "유아동"
-                },
-                {
-                  id: "apt6",
-                  name: "원피스"
-                },
-                {
-                  id: "apt7",
-                  name: "자수"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "ap-mtm-hood",
-      name: "맨투맨/후드/집업",
-      columns: [
-        {
-          id: "col-ap-mh-1",
-          groups: [
-            {
-              id: "ap-mh-main",
-              name: "",
-              items: [
-                {
-                  id: "apmh1",
-                  name: "맨투맨"
-                },
-                {
-                  id: "apmh2",
-                  name: "후드"
-                },
-                {
-                  id: "apmh3",
-                  name: "후드집업"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          id: "col-ap-mh-2",
-          groups: [
-            {
-              id: "ap-mh-sub",
-              name: "",
-              items: [
-                {
-                  id: "apmh4",
-                  name: "유아동"
-                },
-                {
-                  id: "apmh5",
-                  name: "바지"
-                },
-                {
-                  id: "apmh6",
-                  name: "자수"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "ap-outer",
-      name: "아우터",
-      isNew: true,
-      columns: [
-        {
-          id: "col-ap-o-1",
-          groups: [
-            {
-              id: "ap-o-1",
-              name: "",
-              items: [
-                {
-                  id: "apo1",
-                  name: "바람막이"
-                },
-                {
-                  id: "apo2",
-                  name: "자켓"
-                },
-                {
-                  id: "apo3",
-                  name: "조끼"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          id: "col-ap-o-2",
-          groups: [
-            {
-              id: "ap-o-2",
-              name: "",
-              items: [
-                {
-                  id: "apo4",
-                  name: "플리스"
-                },
-                {
-                  id: "apo5",
-                  name: "패딩"
-                },
-                {
-                  id: "apo6",
-                  name: "자수"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "ap-hat",
-      name: "모자",
-      badge: "NEW",
-      columns: [
-        {
-          id: "col-ap-h-1",
-          groups: [
-            {
-              id: "ap-h-main",
-              name: "",
-              items: [
-                {
-                  id: "aph1",
-                  name: "볼캡"
-                },
-                {
-                  id: "aph2",
-                  name: "스냅백"
-                },
-                {
-                  id: "aph3",
-                  name: "비니"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          id: "col-ap-h-2",
-          groups: [
-            {
-              id: "ap-h-sub",
-              name: "",
-              items: [
-                {
-                  id: "aph4",
-                  name: "버킷햇"
-                },
-                {
-                  id: "aph5",
-                  name: "자수"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "ap-bag",
-      name: "잡화",
-      columns: [
-        {
-          id: "col-ap-b-1",
-          groups: [
-            {
-              id: "ap-b-1",
-              name: "",
-              items: [
-                {
-                  id: "apb1",
-                  name: "에코백"
-                },
-                {
-                  id: "apb2",
-                  name: "파우치"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          id: "col-ap-b-2",
-          groups: [
-            {
-              id: "ap-b-2",
-              name: "",
-              items: [
-                {
-                  id: "apb3",
-                  name: "앞치마"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "ap-embroidery",
-      name: "자수",
-      badge: "NEW",
-      columns: [
-        {
-          id: "col-ap-e-1",
-          groups: [
-            {
-              id: "ap-e-1",
-              name: "",
-              items: [
-                {
-                  id: "ape1",
-                  name: "티셔츠"
-                },
-                {
-                  id: "ape2",
-                  name: "폴로셔츠"
-                },
-                {
-                  id: "djv6j54d",
-                  name: "아우터"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          id: "col-ap-e-2",
-          groups: [
-            {
-              id: "ap-e-2",
-              name: "",
-              items: [
-                {
-                  id: "ape3",
-                  name: "맨투맨/후드/후드집업"
-                },
-                {
-                  id: "ape4",
-                  name: "모자"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "ap-group",
-      name: "단체 추천",
-      columns: [
-        {
-          id: "col-ap-g-1",
-          groups: [
-            {
-              id: "ap-g-1",
-              name: "",
-              items: [
-                {
-                  id: "apg1",
-                  name: "티셔츠"
-                },
-                {
-                  id: "apg2",
-                  name: "맨투맨/후드/후드집업"
-                },
-                {
-                  id: "59oijjyr",
-                  name: "아우터"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          id: "col-ap-g-2",
-          groups: [
-            {
-              id: "ap-g-2",
-              name: "",
-              items: [
-                {
-                  id: "7mmlkn0c",
-                  name: "모자"
-                },
-                {
-                  id: "p1dvh8kd",
-                  name: "잡화"
-                },
-                {
-                  id: "npvc3k9d",
-                  name: "자수"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "ap-clearance",
-      name: "클리어런스",
-      badge: "SALE",
-      columns: [
-        {
-          id: "col-ap-c-1",
-          groups: [
-            {
-              id: "ap-c-main",
-              name: "",
-              items: [
-                {
-                  id: "apc1",
-                  name: "클리어런스"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ];
+  {
+    id: "ap-tshirt",
+    name: "티셔츠",
+    columns: [
+      {
+        id: "col-ap-t-1",
+        groups: [
+          {
+            id: "ap-t-main",
+            name: "",
+            items: [
+              {
+                id: "apt1",
+                name: "반소매 티셔츠"
+              },
+              {
+                id: "apt2",
+                name: "긴소매 티셔츠"
+              },
+              {
+                id: "apt3",
+                name: "민소매 티셔츠"
+              },
+              {
+                id: "apt4",
+                name: "폴로셔츠"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "col-ap-t-2",
+        groups: [
+          {
+            id: "ap-t-sub",
+            name: "",
+            items: [
+              {
+                id: "apt5",
+                name: "유아동"
+              },
+              {
+                id: "apt6",
+                name: "원피스"
+              },
+              {
+                id: "apt7",
+                name: "자수"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "ap-mtm-hood",
+    name: "맨투맨/후드/집업",
+    columns: [
+      {
+        id: "col-ap-mh-1",
+        groups: [
+          {
+            id: "ap-mh-main",
+            name: "",
+            items: [
+              {
+                id: "apmh1",
+                name: "맨투맨"
+              },
+              {
+                id: "apmh2",
+                name: "후드"
+              },
+              {
+                id: "apmh3",
+                name: "후드집업"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "col-ap-mh-2",
+        groups: [
+          {
+            id: "ap-mh-sub",
+            name: "",
+            items: [
+              {
+                id: "apmh4",
+                name: "유아동"
+              },
+              {
+                id: "apmh5",
+                name: "바지"
+              },
+              {
+                id: "apmh6",
+                name: "자수"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "ap-outer",
+    name: "아우터",
+    isNew: true,
+    columns: [
+      {
+        id: "col-ap-o-1",
+        groups: [
+          {
+            id: "ap-o-1",
+            name: "",
+            items: [
+              {
+                id: "apo1",
+                name: "바람막이"
+              },
+              {
+                id: "apo2",
+                name: "자켓"
+              },
+              {
+                id: "apo3",
+                name: "조끼"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "col-ap-o-2",
+        groups: [
+          {
+            id: "ap-o-2",
+            name: "",
+            items: [
+              {
+                id: "apo4",
+                name: "플리스"
+              },
+              {
+                id: "apo5",
+                name: "패딩"
+              },
+              {
+                id: "apo6",
+                name: "자수"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "ap-hat",
+    name: "모자",
+    badge: "NEW",
+    columns: [
+      {
+        id: "col-ap-h-1",
+        groups: [
+          {
+            id: "ap-h-main",
+            name: "",
+            items: [
+              {
+                id: "aph1",
+                name: "볼캡"
+              },
+              {
+                id: "aph2",
+                name: "스냅백"
+              },
+              {
+                id: "aph3",
+                name: "비니"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "col-ap-h-2",
+        groups: [
+          {
+            id: "ap-h-sub",
+            name: "",
+            items: [
+              {
+                id: "aph4",
+                name: "버킷햇"
+              },
+              {
+                id: "24cbibg9",
+                name: "썬캡"
+              },
+              {
+                id: "aph5",
+                name: "자수"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "ap-bag",
+    name: "잡화",
+    columns: [
+      {
+        id: "col-ap-b-1",
+        groups: [
+          {
+            id: "ap-b-1",
+            name: "",
+            items: [
+              {
+                id: "apb1",
+                name: "에코백"
+              },
+              {
+                id: "apb2",
+                name: "파우치"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "col-ap-b-2",
+        groups: [
+          {
+            id: "ap-b-2",
+            name: "",
+            items: [
+              {
+                id: "apb3",
+                name: "앞치마"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "ap-embroidery",
+    name: "자수",
+    badge: "NEW",
+    columns: [
+      {
+        id: "col-ap-e-1",
+        groups: [
+          {
+            id: "ap-e-1",
+            name: "",
+            items: [
+              {
+                id: "ape1",
+                name: "티셔츠"
+              },
+              {
+                id: "ape2",
+                name: "폴로셔츠"
+              },
+              {
+                id: "djv6j54d",
+                name: "아우터"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "col-ap-e-2",
+        groups: [
+          {
+            id: "ap-e-2",
+            name: "",
+            items: [
+              {
+                id: "ape3",
+                name: "맨투맨/후드/후드집업"
+              },
+              {
+                id: "ape4",
+                name: "모자"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "ap-group",
+    name: "단체 추천",
+    columns: [
+      {
+        id: "col-ap-g-1",
+        groups: [
+          {
+            id: "ap-g-1",
+            name: "",
+            items: [
+              {
+                id: "apg1",
+                name: "티셔츠"
+              },
+              {
+                id: "apg2",
+                name: "맨투맨/후드/후드집업"
+              },
+              {
+                id: "59oijjyr",
+                name: "아우터"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "col-ap-g-2",
+        groups: [
+          {
+            id: "ap-g-2",
+            name: "",
+            items: [
+              {
+                id: "7mmlkn0c",
+                name: "모자"
+              },
+              {
+                id: "p1dvh8kd",
+                name: "잡화"
+              },
+              {
+                id: "npvc3k9d",
+                name: "자수"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "ap-clearance",
+    name: "클리어런스",
+    badge: "SALE",
+    columns: [
+      {
+        id: "col-ap-c-1",
+        groups: [
+          {
+            id: "ap-c-main",
+            name: "",
+            items: [
+              {
+                id: "apc1",
+                name: "클리어런스"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+];
 
 const getInitialApparelAfterData = () => {
   return { categories: JSON.parse(JSON.stringify(APPAREL_AFTER_CATEGORIES)) };
@@ -3451,6 +3491,11 @@ const SNAPS_AFTER_DATA = {
                 {
                   id: "spr-g3",
                   name: "증명사진"
+                },
+                {
+                  id: "szj4jbru",
+                  name: "최애 증사",
+                  badge: "NEW"
                 }
               ]
             }
@@ -3532,6 +3577,27 @@ const SNAPS_AFTER_DATA = {
       ]
     },
     {
+      id: "sn5zvoaz",
+      name: "Disney",
+      columns: [
+        {
+          id: "z9uosf93",
+          groups: [
+            {
+              id: "7p03ws2t",
+              name: "",
+              items: [
+                {
+                  id: "woq6qntu",
+                  name: "새 항목"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       id: "snaps-frame",
       name: "액자",
       columns: [
@@ -3600,44 +3666,52 @@ const SNAPS_AFTER_DATA = {
                 {
                   id: "sgd-k2",
                   name: "만쥬 인형"
+                },
+                {
+                  id: "77nzbj53",
+                  name: "이미지 피켓 키링",
+                  badge: "NEW"
+                },
+                {
+                  id: "sf63ecj1",
+                  name: "블랙 LED 키캡 키링",
+                  badge: "NEW"
+                },
+                {
+                  id: "xnpk2yes",
+                  name: "화이트 LED 키캡 키링",
+                  badge: "NEW"
+                },
+                {
+                  id: "2v0acu0m",
+                  name: "레진 LED 키캡 키링",
+                  badge: "NEW"
                 }
               ]
             },
             {
-              id: "snaps-gd-acc",
-              name: "액세서리",
+              id: "gkys5bon",
+              name: "키캡",
               items: [
                 {
-                  id: "sgd-a1",
-                  name: "슬로건앨범"
+                  id: "3jn6e2n4",
+                  name: "풀 컬러 키캡",
+                  badge: "NEW"
                 },
                 {
-                  id: "sgd-a2",
-                  name: "포토카드 앨범"
+                  id: "bpvhscld",
+                  name: "블랙 LED 키캡",
+                  badge: "NEW"
                 },
                 {
-                  id: "sgd-a3",
-                  name: "탑로더, 슬리브"
+                  id: "l186qe12",
+                  name: "화이트 LED 키캡",
+                  badge: "NEW"
                 },
                 {
-                  id: "sgd-a4",
-                  name: "올꾸팩"
-                },
-                {
-                  id: "sgd-a5",
-                  name: "데코용 핀셋"
-                },
-                {
-                  id: "sgd-a6",
-                  name: "홀로그램 지퍼백"
-                },
-                {
-                  id: "sgd-a7",
-                  name: "카드지갑"
-                },
-                {
-                  id: "sgd-a8",
-                  name: "볼 체인"
+                  id: "ys8shzh2",
+                  name: "레진 키캡",
+                  badge: "NEW"
                 }
               ]
             }
@@ -3652,13 +3726,11 @@ const SNAPS_AFTER_DATA = {
               items: [
                 {
                   id: "sgd-pc1",
-                  name: "포토카드(세트구성)",
-                  badge: "HOT"
+                  name: "포토카드(세트구성)"
                 },
                 {
                   id: "sgd-pc2",
-                  name: "투명 포토카드(세트구성)",
-                  badge: "HOT"
+                  name: "투명 포토카드(세트구성)"
                 },
                 {
                   id: "sgd-pc3",
@@ -3667,6 +3739,11 @@ const SNAPS_AFTER_DATA = {
                 {
                   id: "sgd-pc4",
                   name: "투명 포토카드(10장세트)"
+                },
+                {
+                  id: "xtdiq4ih",
+                  name: "최애 증사",
+                  badge: "NEW"
                 },
                 {
                   id: "sgd-pc5",
@@ -3679,6 +3756,16 @@ const SNAPS_AFTER_DATA = {
                 {
                   id: "sgd-pc7",
                   name: "증명사진"
+                }
+              ]
+            },
+            {
+              id: "snaps-gd-photobook",
+              name: "포토북",
+              items: [
+                {
+                  id: "sgd-pb1",
+                  name: "팬북"
                 }
               ]
             }
@@ -3718,6 +3805,17 @@ const SNAPS_AFTER_DATA = {
                 {
                   id: "sgd-ps7",
                   name: "미니배너"
+                }
+              ]
+            },
+            {
+              id: "7ecwlsrl",
+              name: "부채/피켓",
+              items: [
+                {
+                  id: "uf5w809s",
+                  name: "이미지 피켓",
+                  badge: "NEW"
                 }
               ]
             }
@@ -3762,14 +3860,113 @@ const SNAPS_AFTER_DATA = {
           id: "col-snaps-gd-5",
           groups: [
             {
-              id: "snaps-gd-photobook",
-              name: "포토북",
+              id: "snaps-gd-acc",
+              name: "액세서리",
               items: [
                 {
-                  id: "sgd-pb1",
-                  name: "팬북"
+                  id: "sgd-a1",
+                  name: "슬로건앨범"
+                },
+                {
+                  id: "sgd-a2",
+                  name: "포토카드 앨범"
+                },
+                {
+                  id: "sgd-a3",
+                  name: "탑로더, 슬리브"
+                },
+                {
+                  id: "sgd-a4",
+                  name: "올꾸팩"
+                },
+                {
+                  id: "sgd-a5",
+                  name: "데코용 핀셋"
+                },
+                {
+                  id: "sgd-a6",
+                  name: "홀로그램 지퍼백"
+                },
+                {
+                  id: "sgd-a7",
+                  name: "카드지갑"
+                },
+                {
+                  id: "sgd-a8",
+                  name: "볼 체인"
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "snaps-fashion",
+      name: "어패럴",
+      columns: [
+        {
+          id: "col-snaps-fa-1",
+          groups: [
+            {
+              id: "gv4bpwdf",
+              name: "추천",
+              items: []
+            },
+            {
+              id: "hwbuf2xm",
+              name: "반소매 티셔츠",
+              items: []
+            },
+            {
+              id: "hgejpyuy",
+              name: "긴소매 티셔츠",
+              items: []
+            },
+            {
+              id: "xv0udly9",
+              name: "민소매 티셔츠",
+              items: []
+            },
+            {
+              id: "qa2p4bl8",
+              name: "폴로셔츠",
+              items: []
+            },
+            {
+              id: "1y8799gr",
+              name: "맨투맨/후드/집업",
+              items: []
+            }
+          ]
+        },
+        {
+          id: "col-snaps-fa-2",
+          groups: [
+            {
+              id: "ez5yjkca",
+              name: "아우터",
+              items: []
+            },
+            {
+              id: "5c3sksta",
+              name: "모자",
+              items: []
+            },
+            {
+              id: "j40lomyu",
+              name: "잡화",
+              items: []
+            },
+            {
+              id: "scd8yozw",
+              name: "유아동",
+              items: []
+            },
+            {
+              id: "42llzfua",
+              name: "클리어런스",
+              items: []
             }
           ]
         }
@@ -3790,22 +3987,23 @@ const SNAPS_AFTER_DATA = {
               items: [
                 {
                   id: "stc-p1",
-                  name: "투명 범퍼 젤하드 케이스",
-                  badge: "NEW"
+                  name: "투명 범퍼 젤하드 케이스"
                 },
                 {
                   id: "stc-p2",
-                  name: "맥세이프 투명 범퍼 젤하드 케이스",
-                  badge: "NEW"
+                  name: "맥세이프 투명 범퍼 젤하드 케이스"
                 },
                 {
                   id: "stc-p3",
-                  name: "하드 케이스",
-                  badge: "NEW"
+                  name: "하드 케이스"
                 },
                 {
                   id: "stc-p4",
-                  name: "맥세이프 하드 케이스",
+                  name: "맥세이프 하드 케이스"
+                },
+                {
+                  id: "aelfa94g",
+                  name: "에폭시 케이스",
                   badge: "NEW"
                 },
                 {
@@ -3834,8 +4032,7 @@ const SNAPS_AFTER_DATA = {
                 },
                 {
                   id: "stc-p11",
-                  name: "투명 젤리",
-                  badge: "NEW"
+                  name: "투명 젤리"
                 },
                 {
                   id: "stc-p12",
@@ -3866,13 +4063,11 @@ const SNAPS_AFTER_DATA = {
               items: [
                 {
                   id: "stc-s1",
-                  name: "맥세이프 투명 카드지갑",
-                  badge: "NEW"
+                  name: "맥세이프 투명 카드지갑"
                 },
                 {
                   id: "stc-s2",
-                  name: "맥세이프 가죽 카드지갑",
-                  badge: "NEW"
+                  name: "맥세이프 가죽 카드지갑"
                 },
                 {
                   id: "stc-s3",
@@ -3885,6 +4080,10 @@ const SNAPS_AFTER_DATA = {
                 {
                   id: "stc-s5",
                   name: "스마트톡"
+                },
+                {
+                  id: "rrbde4xs",
+                  name: "아크릴 스마트톡"
                 }
               ]
             }
@@ -3913,6 +4112,52 @@ const SNAPS_AFTER_DATA = {
                 {
                   id: "stc-m4",
                   name: "오바록 게이밍 마우스패드"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "frwk6d85",
+          groups: [
+            {
+              id: "nk3l7leq",
+              name: "키캡",
+              items: [
+                {
+                  id: "169xneku",
+                  name: "풀 컬러 키캡",
+                  badge: "NEW"
+                },
+                {
+                  id: "3zkpo70b",
+                  name: "블랙 LED 키캡",
+                  badge: "NEW"
+                },
+                {
+                  id: "a5udxhyh",
+                  name: "화이트 LED 키캡",
+                  badge: "NEW"
+                },
+                {
+                  id: "kylvxqok",
+                  name: "레진 키캡",
+                  badge: "NEW"
+                },
+                {
+                  id: "tvmg0mqg",
+                  name: "블랙 LED 키캡 키링",
+                  badge: "NEW"
+                },
+                {
+                  id: "0g3w1lt9",
+                  name: "화이트 LED 키캡 키링",
+                  badge: "NEW"
+                },
+                {
+                  id: "5szzi3gl",
+                  name: "레진 LED 키캡 키링",
+                  badge: "NEW"
                 }
               ]
             }
@@ -4231,6 +4476,16 @@ const SNAPS_AFTER_DATA = {
               name: "굿즈 스티커",
               items: [
                 {
+                  id: "abezijwf",
+                  name: "PVC 스티커",
+                  badge: "NEW"
+                },
+                {
+                  id: "7uyht9gi",
+                  name: "에폭시 스티커",
+                  badge: "NEW"
+                },
+                {
                   id: "sst-g5",
                   name: "띠부 스티커"
                 },
@@ -4288,116 +4543,123 @@ const SNAPS_AFTER_DATA = {
       ]
     },
     {
-      id: "snaps-fashion",
-      name: "패션의류",
+      id: "k898mgvt",
+      name: "컵/텀블러",
       columns: [
         {
-          id: "col-snaps-fa-1",
+          id: "dzcffefc",
           groups: [
             {
-              id: "snaps-fa-top",
-              name: "상의",
+              id: "jg8elui8",
+              name: "머그컵",
               items: [
                 {
-                  id: "sfa-t1",
-                  name: "컴포트 티셔츠"
+                  id: "xyq5r3c1",
+                  name: "포토 머그컵"
                 },
                 {
-                  id: "sfa-t2",
-                  name: "루즈핏 맨투맨"
+                  id: "dsu5u2fm",
+                  name: "내열유리 반투명 머그컵"
                 },
                 {
-                  id: "sfa-t3",
-                  name: "데일리 후드티셔츠(남여공용)"
-                },
-                {
-                  id: "sfa-t4",
-                  name: "세미 크롭티셔츠"
-                },
-                {
-                  id: "sfa-t5",
-                  name: "레귤러핏 크루넥 티셔츠(여)"
-                },
-                {
-                  id: "sfa-t6",
-                  name: "레귤러핏 크루넥 티셔츠(남)"
-                },
-                {
-                  id: "sfa-t7",
-                  name: "스냅스 착한 반팔 티셔츠"
-                },
-                {
-                  id: "sfa-t8",
-                  name: "베이직 반팔 티셔츠"
+                  id: "y9xl6dm3",
+                  name: "본차이나 머그컵"
                 }
               ]
             }
           ]
         },
         {
-          id: "col-snaps-fa-2",
+          id: "9hssuzeg",
           groups: [
             {
-              id: "snaps-fa-eco",
-              name: "에코백",
+              id: "xy416qzm",
+              name: "유리컵",
               items: [
                 {
-                  id: "sfa-e1",
-                  name: "미니 핸디 에코백"
-                },
-                {
-                  id: "sfa-e2",
-                  name: "스탠드 베이직 에코백"
-                },
-                {
-                  id: "sfa-e3",
-                  name: "빅사이즈 쇼퍼 에코백"
-                },
-                {
-                  id: "sfa-e4",
-                  name: "데일리 토트 에코백"
-                },
-                {
-                  id: "sfa-e5",
-                  name: "데일리 숄더 에코백"
+                  id: "ezhjfq51",
+                  name: "뉴 스택 글라스"
                 }
               ]
             }
           ]
         },
         {
-          id: "col-snaps-fa-3",
+          id: "aq4dwnun",
           groups: [
             {
-              id: "snaps-fa-bag",
-              name: "잡화",
+              id: "cvk4b69y",
+              name: "리유저블컵",
               items: [
                 {
-                  id: "sfa-b1",
-                  name: "베이직 플랫 파우치"
+                  id: "c6inhrtq",
+                  name: "에코 텀블러"
                 },
                 {
-                  id: "sfa-b2",
-                  name: "스탠드 삼각 파우치"
+                  id: "h4dmpd59",
+                  name: "리유저블컵"
                 }
               ]
             }
           ]
         },
         {
-          id: "col-snaps-fa-4",
+          id: "nhg3d5n9",
           groups: [
             {
-              id: "snaps-fa-kids",
-              name: "유아동",
+              id: "cvub0euv",
+              name: "텀블러",
               items: [
                 {
-                  id: "sfa-k1",
-                  name: "베이직 반팔 티셔츠 (키즈)"
+                  id: "d68gc2pd",
+                  name: "제로마크 맥스 텀블러"
                 },
                 {
-                  id: "sfa-k2",
-                  name: "릴렉스 원피스 (키즈)"
+                  id: "ws6sg6ty",
+                  name: "제로마크 몰리 스트로 텀블러"
+                },
+                {
+                  id: "lgry9jg0",
+                  name: "제로마크 슬로링 텀블러"
+                },
+                {
+                  id: "uajd7bhk",
+                  name: "제로마크 패스트 텀블러"
+                },
+                {
+                  id: "xb4m85vd",
+                  name: "제로마크 카리브 텀블러"
+                },
+                {
+                  id: "upptga8l",
+                  name: "제로마크 다이브 텀블러"
+                },
+                {
+                  id: "qr3kdnqt",
+                  name: "제로마크 더벅스 텀블러"
+                },
+                {
+                  id: "zapdwywq",
+                  name: "제로마크 코린 텀블러"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "2hqysgrp",
+          groups: [
+            {
+              id: "mopdsuni",
+              name: "워터보틀",
+              items: [
+                {
+                  id: "eb31gdfv",
+                  name: "트라이탄 보틀"
+                },
+                {
+                  id: "ilb2jek4",
+                  name: "트라이탄 메탈캡 보틀"
                 }
               ]
             }
@@ -4474,21 +4736,6 @@ const SNAPS_AFTER_DATA = {
                 {
                   id: "shm-fr8",
                   name: "아크릴 자작나무액자"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          id: "col-snaps-hm-3",
-          groups: [
-            {
-              id: "snaps-hm-mug",
-              name: "머그컵",
-              items: [
-                {
-                  id: "shm-m1",
-                  name: "포토 머그컵"
                 }
               ]
             }
@@ -6601,9 +6848,9 @@ function DiffSummary({ before, after }) {
 // 영속 저장 키 (아티팩트 storage용) - 사이트별로 분리
 // ============================================================================
 const STORAGE_KEYS = {
-  ohprint: "ohprint-gnb-after-data-v7", // v7: 스티커에서 크라프트 싱글 스티커 제거
-  apparel: "apparel-gnb-after-data-v3",
-  snaps: "snaps-gnb-after-data-v4", // v4: 스티커에서 크라프트 싱글 스티커 제거
+  ohprint: "ohprint-gnb-after-data-v8", // v8: 스티커/굿즈/컵텀블러 라인업 갱신 (에폭시·키캡·통합사이즈)
+  apparel: "apparel-gnb-after-data-v4", // v4: 모자에 썬캡 추가
+  snaps: "snaps-gnb-after-data-v5", // v5: Disney·컵텀블러 신규 카테고리 + 어패럴 개편 + 키캡 라인업
 };
 
 // 사이트 메타데이터
